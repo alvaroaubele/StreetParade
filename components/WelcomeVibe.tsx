@@ -11,45 +11,15 @@ const MUTE_KEY = "parademtach-vibe-muted";
  * refused the first tap anywhere starts it; the speaker toggle always
  * renders once the track is resolved, so muting is reversible.
  *
- * Loudness: element volume (works everywhere except iOS), upgraded to a
- * WebAudio gain node the first time playback starts inside a user gesture —
- * never earlier. An AudioContext created outside a gesture starts suspended,
- * and a media element routed into a suspended context plays in silence,
- * which is exactly the bug this ordering avoids. If the element errors with
- * crossOrigin set (a CDN response without CORS), it retries plain and keeps
- * the volume-property path.
+ * Deliberately a plain media element: a WebAudio gain graph (tried for iOS
+ * volume control) permanently claims the element's output, so any CORS
+ * hiccup on any CDN hop turns into unrecoverable silence. Element volume
+ * works everywhere except iOS, which plays at hardware volume — acceptable.
  */
 export function WelcomeVibe() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const ctxRef = useRef<AudioContext | null>(null);
-  const gainWired = useRef(false);
-  const corsFallback = useRef(false);
   const [muted, setMuted] = useState(true);
   const [ready, setReady] = useState(false);
-
-  /** Only ever called from inside a user-gesture handler. */
-  const wireGainInGesture = () => {
-    const audio = audioRef.current;
-    if (!audio || corsFallback.current) return;
-    try {
-      if (!gainWired.current) {
-        type AC = typeof AudioContext;
-        const Ctx: AC | undefined =
-          window.AudioContext ?? (window as unknown as { webkitAudioContext?: AC }).webkitAudioContext;
-        if (!Ctx) return;
-        const ctx = new Ctx();
-        const src = ctx.createMediaElementSource(audio);
-        const gain = ctx.createGain();
-        gain.gain.value = 0.3;
-        src.connect(gain).connect(ctx.destination);
-        ctxRef.current = ctx;
-        gainWired.current = true;
-      }
-      ctxRef.current?.resume().catch(() => {});
-    } catch {
-      // Graph refused — element volume keeps working on non-iOS.
-    }
-  };
 
   useEffect(() => {
     const wantsMute = localStorage.getItem(MUTE_KEY) === "1";
@@ -60,27 +30,12 @@ export function WelcomeVibe() {
 
     let cancelled = false;
     let cleanupGesture = () => {};
-    const onError = () => {
-      // crossOrigin + a non-CORS CDN response kills the load entirely;
-      // retry plain and give up on the WebAudio path.
-      if (audio.crossOrigin && !corsFallback.current) {
-        corsFallback.current = true;
-        const src = audio.src;
-        audio.removeAttribute("crossorigin");
-        audio.src = src;
-        audio.load();
-        if (!localStorage.getItem(MUTE_KEY)) audio.play().catch(() => {});
-      }
-    };
-    audio.addEventListener("error", onError);
-
     (async () => {
       try {
         const res = await fetch(`/api/preview?provider=${vibe.track.provider}&id=${vibe.track.trackId}`);
         if (!res.ok) return;
         const { url } = await res.json();
         if (cancelled) return;
-        audio.crossOrigin = "anonymous";
         audio.src = url;
         audio.loop = true;
         audio.volume = 0.3;
@@ -89,15 +44,9 @@ export function WelcomeVibe() {
         try {
           await audio.play();
           setMuted(false);
-          // Autoplay without a gesture succeeded; upgrade to the gain node
-          // at the first interaction so iOS gets real volume control too.
-          const upgrade = () => wireGainInGesture();
-          window.addEventListener("pointerdown", upgrade, { once: true });
-          cleanupGesture = () => window.removeEventListener("pointerdown", upgrade);
         } catch {
-          // Autoplay blocked — start (and wire the gain) on the first tap.
+          // Autoplay blocked — start on the first interaction anywhere.
           const start = () => {
-            wireGainInGesture();
             audio.play().then(() => setMuted(false)).catch(() => {});
             cleanupGesture();
           };
@@ -115,10 +64,8 @@ export function WelcomeVibe() {
     return () => {
       cancelled = true;
       cleanupGesture();
-      audio.removeEventListener("error", onError);
       audio.pause();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggle = () => {
@@ -127,10 +74,7 @@ export function WelcomeVibe() {
     if (muted) {
       localStorage.removeItem(MUTE_KEY);
       setMuted(false);
-      if (audio.src) {
-        wireGainInGesture(); // toggle click is a gesture
-        audio.play().catch(() => {});
-      }
+      if (audio.src) audio.play().catch(() => {});
     } else {
       localStorage.setItem(MUTE_KEY, "1");
       setMuted(true);

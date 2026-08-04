@@ -1,0 +1,5 @@
+{
+  "comment": "Manual identity corrections applied last by scripts/build-catalog.mjs. 'blocked': normKey'd artist names whose provider match is a namesake — kept out of the swipe deck no matter what the automatic checks say. 'forceTrust': the opposite escape hatch. Add an entry and re-run `npm run catalog`.",
+  "blocked": [],
+  "forceTrust": []
+}
