@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #0a0a0f;
+  color: #f2f2f7;
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+.spin-paused {
+  animation-play-state: paused;
+}
