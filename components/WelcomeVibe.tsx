@@ -34,10 +34,12 @@ export function WelcomeVibe() {
     audio.loop = true;
     audio.volume = 0.3;
     const ok = () => setMuted(false);
-    audio.play().then(ok).catch(() => {
-      // A fetch that failed before the tap can wedge the element; load()
-      // resets it, and the retry is still inside the gesture, so autoplay
-      // policy allows it.
+    audio.play().then(ok).catch((err: unknown) => {
+      // NotAllowedError means this event carried no user activation (e.g.
+      // the tail of a scroll) — leave the element alone; a later gesture
+      // will carry it. Anything else is a wedged fetch: load() resets it,
+      // and the retry is still inside the gesture, so policy allows it.
+      if ((err as DOMException)?.name === "NotAllowedError") return;
       audio.load();
       audio.play().then(ok).catch(() => {});
     });
@@ -58,9 +60,14 @@ export function WelcomeVibe() {
     const start = () => {
       if (!userMuted.current) startPlayback();
     };
+    // Completed-gesture events only: WebKit withholds user activation at
+    // pointerdown (the finger might be starting a scroll) and grants it at
+    // gesture completion — which is why the mute toggle's click always
+    // worked while taps elsewhere stayed silent on iPhones. keydown is the
+    // exception: it activates everywhere.
+    const gestures = ["pointerup", "click", "touchend", "keydown"] as const;
     const detach = () => {
-      window.removeEventListener("pointerdown", start);
-      window.removeEventListener("keydown", start);
+      for (const g of gestures) window.removeEventListener(g, start);
     };
     const onPlaying = () => {
       setMuted(false);
@@ -70,8 +77,7 @@ export function WelcomeVibe() {
     // Free autoplay where the browser allows it (desktop mostly)…
     audio.play().catch(() => {});
     // …and every interaction is a fresh chance until sound actually starts.
-    window.addEventListener("pointerdown", start);
-    window.addEventListener("keydown", start);
+    for (const g of gestures) window.addEventListener(g, start);
     return () => {
       audio.removeEventListener("playing", onPlaying);
       detach();
