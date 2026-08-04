@@ -132,7 +132,7 @@ function parseLineup(html) {
     const name = clean($el.find("h3.h2").first().text());
     if (!name) return;
     const info = clean($el.find(".info-list").first().text());
-    const time = info.match(/\d{1,2}:\d{2}(?=\s)/)?.[0] ?? null;
+    const time = info.match(/^\d{1,2}:\d{2}(?=\s|$)/)?.[0] ?? null;
     const venue = clean(info.replace(/^\d{1,2}:\d{2}\s*/, ""));
     const headliner = $el.hasClass("headliner-item");
     addSocials(name, socialsFrom($, el));
@@ -151,16 +151,17 @@ function mergeLineupIntoVenues(venues, lineup) {
     let venue = null;
     if (numMatch) venue = byNum.get(Number(numMatch[1]));
     if (!venue) {
+      // Exact name first; then one-direction prefix only — two-way substring
+      // matching can bind a roster artist to the wrong venue on a re-scrape.
       const key = e.venue.replace(/\s*\(.*\)$/, "").toLowerCase();
       venue =
         byName.get(key) ??
-        venues.find(
-          (v) =>
-            key.includes(v.name.toLowerCase()) ||
-            v.name.toLowerCase().includes(key)
-        );
+        venues.find((v) => key.startsWith(v.name.toLowerCase()));
     }
-    if (!venue) continue;
+    if (!venue) {
+      console.warn(`  ! line-up entry not matched to a venue: "${e.name}" → "${e.venue}"`);
+      continue;
+    }
     const existing = venue.artists.find(
       (a) => a.name.toLowerCase() === e.name.toLowerCase()
     );

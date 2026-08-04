@@ -121,16 +121,21 @@ export function recommend(votes: Record<string, VoteTally>): Recommendation {
     )[0];
     locked.push(best);
   }
-  const lockAt = (t: number) => locked.find((l) => l.start <= t && t < l.end);
-  // A later lock wins where two locked sets unavoidably overlap (fewest-
-  // options-first means the constrained artist placed the earlier claim).
-  const lockedAsc = [...locked].sort((a, b) => a.start - b.start);
-
+  // Where locked sets overlap, split the contested slots so every superliked
+  // artist keeps time on the route: each 30-min slot goes to the contender
+  // with the fewest slots assigned so far (ties → the earlier-placed, i.e.
+  // more constrained, artist). Guarantees ≥1 block per locked artist whenever
+  // their set spans more than one slot.
+  const assigned = new Map<Slot, number>();
   const picks: (Slot & { locked?: boolean })[] = [];
   for (let t = 13 * 60; t < 24 * 60; t += 30) {
-    const lockHits = lockedAsc.filter((l) => l.start <= t && t < l.end);
+    const lockHits = locked.filter((l) => l.start <= t && t < l.end);
     if (lockHits.length) {
-      picks.push({ ...lockHits[lockHits.length - 1], start: t, end: t + 30, locked: true });
+      let pick = lockHits[0];
+      for (const l of lockHits)
+        if ((assigned.get(l) ?? 0) < (assigned.get(pick) ?? 0)) pick = l;
+      assigned.set(pick, (assigned.get(pick) ?? 0) + 1);
+      picks.push({ ...pick, start: t, end: t + 30, locked: true });
       continue;
     }
     const live = slots.filter((s) => s.start <= t && t < s.end);
@@ -183,7 +188,11 @@ export function recommend(votes: Record<string, VoteTally>): Recommendation {
 }
 
 /** Plain-text route summary for pasting into the group chat. */
-export function shareText(rec: Recommendation, voteCount: number): string {
+export function shareText(
+  rec: Recommendation,
+  voteCount: number,
+  links?: { mapsUrl?: string | null; appUrl?: string }
+): string {
   const lines: string[] = [`My ParadeMatch route · Street Parade 8 Aug (from ${voteCount} blind votes)`];
   for (const b of rec.timeline)
     lines.push(`${b.from}–${b.to}  ${b.artist} @ ${b.stage}${b.locked ? " ⭐" : b.score > 1.5 ? " 🔥" : ""}`);
@@ -193,5 +202,7 @@ export function shareText(rec: Recommendation, voteCount: number): string {
     for (const m of mobiles)
       lines.push(`· ${m.starred ? "⭐ " : ""}${m.label}${m.timeWindow ? ` (${m.timeWindow})` : ""}`);
   }
+  if (links?.mapsUrl) lines.push(`Map: ${links.mapsUrl}`);
+  if (links?.appUrl) lines.push(`Make yours: ${links.appUrl}`);
   return lines.join("\n");
 }

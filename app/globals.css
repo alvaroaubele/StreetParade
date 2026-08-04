@@ -4,9 +4,13 @@
   color-scheme: dark;
 }
 
+/* Background lives on html only: an opaque body background would paint over
+   the fixed z-index:-1 aurora layer and hide it on phone-width viewports. */
+html {
+  background: #0a0a0f;
+}
 html,
 body {
-  background: #0a0a0f;
   color: #f2f2f7;
   min-height: 100dvh;
   -webkit-tap-highlight-color: transparent;
@@ -83,7 +87,8 @@ body {
   to { transform: translate(-10vmax, 14vmax) scale(1.2); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .aurora-blob {
+  .aurora-blob,
+  .spin-slow {
     animation: none;
   }
 }

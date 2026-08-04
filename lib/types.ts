@@ -90,4 +90,6 @@ export interface SwipeState {
   deck: DeckCard[];
   position: number;
   votes: Record<string, VoteTally>;
+  /** Vote history for undo; survives remounts. Absent in pre-v6 states. */
+  history?: { key: string; vote: 1 | -1 | 0 | 2 }[];
 }

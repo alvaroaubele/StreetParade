@@ -2,13 +2,15 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { catalog } from "@/lib/data";
-import { loadState, saveState } from "@/lib/store";
+import { catalog, welcomeTrack } from "@/lib/data";
+import { countVotes, loadState, saveState } from "@/lib/store";
 import { ArtistLinks } from "@/components/ArtistLinks";
 import type { CatalogTrack, DeckCard, SwipeState, VoteTally } from "@/lib/types";
 
 const MIN_VOTES = 10;
 const OPTIMAL_VOTES = 40;
+/** Deezer preview URLs live 15 min; re-resolve well before that. */
+const URL_TTL_MS = 5 * 60 * 1000;
 /** 1 like · -1 nope · 0 skip · 2 superlike (locks artist into the route) */
 type Vote = 1 | -1 | 0 | 2;
 
@@ -24,8 +26,25 @@ const unbump = (t: VoteTally, v: Vote): VoteTally => ({
   s: t.s - (v === 0 ? 1 : 0),
   sl: (t.sl ?? 0) - (v === 2 ? 1 : 0),
 });
-const totalVotes = (votes: Record<string, VoteTally>) =>
-  Object.values(votes).reduce((n, t) => n + t.l + t.n + (t.sl ?? 0), 0);
+
+function PlayIcon({ playing, error }: { playing: boolean; error: boolean }) {
+  if (error)
+    return (
+      <svg viewBox="0 0 24 24" className="z-10 h-12 w-12 fill-amber-400" aria-hidden>
+        <path d="M12 2 1 21h22L12 2zm1 14h-2v2h2v-2zm0-7h-2v5h2V9z" />
+      </svg>
+    );
+  return playing ? (
+    <svg viewBox="0 0 24 24" className="z-10 h-12 w-12 fill-neutral-200" aria-hidden>
+      <rect x="6" y="4" width="4" height="16" rx="1" />
+      <rect x="14" y="4" width="4" height="16" rx="1" />
+    </svg>
+  ) : (
+    <svg viewBox="0 0 24 24" className="z-10 h-12 w-12 fill-neutral-200" aria-hidden>
+      <path d="M8 5v14l11-7L8 5z" />
+    </svg>
+  );
+}
 
 export default function SwipePage() {
   const router = useRouter();
@@ -35,13 +54,12 @@ export default function SwipePage() {
   const [needsTap, setNeedsTap] = useState(false);
   const [audioErr, setAudioErr] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [celebrate, setCelebrate] = useState(false);
   const [drag, setDrag] = useState<{ dx: number; dy: number; active: boolean }>({ dx: 0, dy: 0, active: false });
   const [flyOut, setFlyOut] = useState<Vote | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const historyRef = useRef<{ key: string; vote: Vote }[]>([]);
-  const urlCache = useRef<Map<string, string>>(new Map());
+  const urlCache = useRef<Map<string, { url: string; at: number }>>(new Map());
   const dragStart = useRef<{ x: number; y: number } | null>(null);
-  const triedTracks = useRef<Set<string>>(new Set());
 
   useEffect(() => {
     const s = loadState();
@@ -55,41 +73,50 @@ export default function SwipePage() {
   const card = state && state.position < state.deck.length ? state.deck[state.position] : null;
   const nextCard = state && state.position + 1 < state.deck.length ? state.deck[state.position + 1] : null;
 
-  const resolveUrl = useCallback(async (track: CatalogTrack): Promise<string> => {
+  const resolveUrl = useCallback(async (track: CatalogTrack, fresh = false): Promise<string> => {
     const key = `${track.provider}:${track.trackId}`;
     const hit = urlCache.current.get(key);
-    if (hit) return hit;
+    if (!fresh && hit && Date.now() - hit.at < URL_TTL_MS) return hit.url;
     const res = await fetch(`/api/preview?provider=${track.provider}&id=${track.trackId}`);
-    if (!res.ok) throw new Error("no preview");
+    if (!res.ok) {
+      urlCache.current.delete(key);
+      throw new Error("no preview");
+    }
     const { url } = await res.json();
-    urlCache.current.set(key, url);
+    urlCache.current.set(key, { url, at: Date.now() });
     return url;
   }, []);
 
-  /** Other tracks of the same artist, for when one snippet is dead. */
+  /** Other deck-eligible tracks of the same artist, for when a snippet is
+   * dead. The welcome-vibe track is excluded — playing it would break the
+   * blind (everyone has heard it on the landing page). */
   const siblingTracks = useCallback((c: DeckCard): CatalogTrack[] => {
     const all = catalog.artists[c.artistKey]?.tracks ?? [];
-    return all.filter((t) => `${t.provider}:${t.trackId}` !== `${c.track.provider}:${c.track.trackId}`);
+    const welcome = welcomeTrack();
+    return all.filter(
+      (t) =>
+        `${t.provider}:${t.trackId}` !== `${c.track.provider}:${c.track.trackId}` &&
+        !(welcome && t.provider === welcome.track.provider && t.trackId === welcome.track.trackId)
+    );
   }, []);
 
-  const swapCardTrack = useCallback(
-    (track: CatalogTrack) => {
-      setState((s) => {
-        if (!s) return s;
-        const deck = [...s.deck];
-        deck[s.position] = { ...deck[s.position], track };
-        const next = { ...s, deck };
-        saveState(next);
-        return next;
-      });
-    },
-    []
-  );
+  const swapCardTrack = useCallback((track: CatalogTrack) => {
+    setState((s) => {
+      if (!s) return s;
+      const deck = [...s.deck];
+      deck[s.position] = { ...deck[s.position], track };
+      const next = { ...s, deck };
+      saveState(next);
+      return next;
+    });
+  }, []);
 
-  // Load + play the current snippet; on a dead track, fall back to another
-  // track of the same artist before surfacing an error. Prefetch the next card.
+  // Load + play the current snippet. A failing track gets one fresh re-resolve
+  // (expired-URL case) before falling back to the artist's other tracks.
+  // Runs on position change even while the reveal is up, so the next snippet
+  // is already playing when the reveal is dismissed.
   useEffect(() => {
-    if (!card || revealed) return;
+    if (!card) return;
     let cancelled = false;
     setAudioErr(false);
     setProgress(0);
@@ -97,14 +124,7 @@ export default function SwipePage() {
     if (!audio) return;
     audio.pause();
 
-    const tryPlay = async (track: CatalogTrack): Promise<boolean> => {
-      triedTracks.current.add(`${track.provider}:${track.trackId}`);
-      let url: string;
-      try {
-        url = await resolveUrl(track);
-      } catch {
-        return false;
-      }
+    const loadAndPlay = async (url: string): Promise<boolean> => {
       if (cancelled) return true;
       const loaded = new Promise<boolean>((resolve) => {
         const ok = () => { cleanup(); resolve(true); };
@@ -132,12 +152,23 @@ export default function SwipePage() {
       return true;
     };
 
+    const tryTrack = async (track: CatalogTrack): Promise<boolean> => {
+      try {
+        if (await loadAndPlay(await resolveUrl(track))) return true;
+      } catch {}
+      if (cancelled) return true;
+      // Cached URL may have expired — one forced fresh resolve, then give up.
+      try {
+        if (await loadAndPlay(await resolveUrl(track, true))) return true;
+      } catch {}
+      return false;
+    };
+
     (async () => {
-      triedTracks.current = new Set();
-      if (await tryPlay(card.track)) return;
+      if (await tryTrack(card.track)) return;
       for (const t of siblingTracks(card)) {
         if (cancelled) return;
-        if (await tryPlay(t)) {
+        if (await tryTrack(t)) {
           if (!cancelled) swapCardTrack(t);
           return;
         }
@@ -150,7 +181,7 @@ export default function SwipePage() {
       audio.pause();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [card?.artistKey, card?.track.trackId, revealed === null]);
+  }, [card?.artistKey, card?.track.trackId]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -169,15 +200,21 @@ export default function SwipePage() {
   const vote = useCallback(
     (v: Vote, viaSwipe = false) => {
       if (!state || !card || flyOut !== null) return;
-      audioRef.current?.pause();
-      setPlaying(false);
-      navigator.vibrate?.(v === 0 ? 5 : v === 2 ? [10, 40, 20] : 15);
-      historyRef.current.push({ key: card.artistKey, vote: v });
+      const before = countVotes(state.votes);
       const next: SwipeState = {
         ...state,
         votes: { ...state.votes, [card.artistKey]: bump(state.votes[card.artistKey], v) },
         position: state.position + 1,
+        history: [...(state.history ?? []), { key: card.artistKey, vote: v }],
       };
+      const after = countVotes(next.votes);
+      if (before < MIN_VOTES && after >= MIN_VOTES) {
+        setCelebrate(true);
+        navigator.vibrate?.([30, 50, 30]);
+        setTimeout(() => setCelebrate(false), 2600);
+      } else {
+        navigator.vibrate?.(v === 0 ? 5 : v === 2 ? [10, 40, 20] : 15);
+      }
       saveState(next);
       if (viaSwipe && v !== 0) {
         setFlyOut(v);
@@ -196,20 +233,26 @@ export default function SwipePage() {
     [state, card, flyOut]
   );
 
+  // Undo works from the blind card AND the reveal (that's where mis-swipes
+  // become visible). History persists in state, so it survives remounts.
   const undo = useCallback(() => {
-    if (!state || !historyRef.current.length || revealed) return;
-    const last = historyRef.current.pop()!;
+    if (!state || flyOut !== null) return;
+    const history = state.history ?? [];
+    if (!history.length) return;
+    const last = history[history.length - 1];
     const tally = state.votes[last.key];
     if (!tally) return;
     const next: SwipeState = {
       ...state,
       votes: { ...state.votes, [last.key]: unbump(tally, last.vote) },
       position: Math.max(0, state.position - 1),
+      history: history.slice(0, -1),
     };
     saveState(next);
     setState(next);
+    setRevealed(null);
     navigator.vibrate?.(8);
-  }, [state, revealed]);
+  }, [state, flyOut]);
 
   // Desktop keyboard shortcuts.
   useEffect(() => {
@@ -219,7 +262,7 @@ export default function SwipePage() {
         if (e.key === "Enter" || e.key === " " || e.key === "ArrowRight") {
           e.preventDefault();
           setRevealed(null);
-        }
+        } else if (e.key === "u" || e.key === "z") undo();
         return;
       }
       if (e.key === "ArrowRight") vote(1);
@@ -261,8 +304,9 @@ export default function SwipePage() {
 
   if (!state) return null;
 
-  const votedCount = totalVotes(state.votes);
+  const votedCount = countVotes(state.votes);
   const total = state.deck.length;
+  const hasHistory = (state.history ?? []).length > 0;
 
   // ---------- reveal card ----------
   if (revealed) {
@@ -270,22 +314,29 @@ export default function SwipePage() {
     const done = state.position >= total;
     return (
       <main className="flex min-h-dvh flex-col pt-10 pb-6">
-        <Progress votedCount={votedCount} position={state.position} total={total} />
+        <Progress votedCount={votedCount} celebrate={celebrate} />
         <div
-          className={`mt-6 flex-1 rounded-3xl border p-6 ${
+          onClick={() => !done && setRevealed(null)}
+          className={`mt-6 flex-1 cursor-pointer rounded-3xl border p-6 ${
             v === 2 ? "border-amber-500/60 bg-amber-950/15" : "border-neutral-800 bg-neutral-900"
           }`}
+          aria-live="polite"
         >
+          {celebrate && (
+            <p className="mb-3 rounded-xl border border-fuchsia-500/60 bg-fuchsia-950/40 p-3 text-center text-sm font-bold text-fuchsia-200">
+              🎉 Route unlocked — keep going, it gets sharper to 40
+            </p>
+          )}
           <p
             className={`text-sm font-bold uppercase tracking-widest ${
-              v === 2 ? "text-amber-400" : v === 1 ? "text-emerald-400" : v === -1 ? "text-rose-400" : "text-neutral-500"
+              v === 2 ? "text-amber-400" : v === 1 ? "text-emerald-400" : v === -1 ? "text-rose-400" : "text-neutral-400"
             }`}
           >
             {v === 2 ? "⭐ Superliked — locked into your route. It was" : v === 1 ? "Liked — it was" : v === -1 ? "Not for you — it was" : "Skipped — it was"}
           </p>
           <h2 className="mt-2 text-3xl font-black">{c.artistName}</h2>
           <p className="mt-1 text-lg text-neutral-300">“{c.track.title}”</p>
-          <div className="mt-4">
+          <div className="mt-4" onClick={(e) => e.stopPropagation()}>
             <ArtistLinks artistKey={c.artistKey} artistName={c.artistName} />
           </div>
           <div className="mt-5 space-y-2">
@@ -302,13 +353,23 @@ export default function SwipePage() {
               </div>
             ))}
           </div>
-          <div className="mt-4 flex flex-wrap gap-1.5">
+          <div className="mt-4 flex flex-wrap items-center gap-1.5">
             {c.genres.map((g) => (
               <span key={g} className="rounded-full bg-neutral-800 px-2.5 py-1 text-xs text-neutral-400">
                 {g}
               </span>
             ))}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                undo();
+              }}
+              className="ml-auto rounded-full border border-neutral-600 px-3 py-1.5 text-sm text-neutral-300 transition active:scale-95"
+            >
+              Undo vote
+            </button>
           </div>
+          {!done && <p className="mt-4 text-center text-sm text-neutral-400">next snippet is already playing — tap to continue</p>}
         </div>
         <div className="mt-4 flex gap-2">
           {votedCount >= MIN_VOTES && (
@@ -332,10 +393,19 @@ export default function SwipePage() {
     return (
       <main className="flex min-h-dvh flex-col items-center justify-center gap-4 text-center">
         <h2 className="text-2xl font-black">Deck complete</h2>
-        <p className="text-neutral-400">{votedCount} votes in.</p>
-        <button onClick={() => router.push("/results")} className="w-full rounded-2xl bg-fuchsia-600 py-4 font-bold">
-          Build my route
-        </button>
+        <p className="text-neutral-300">{votedCount} votes in.</p>
+        {votedCount >= 1 ? (
+          <button onClick={() => router.push("/results")} className="w-full rounded-2xl bg-fuchsia-600 py-4 font-bold">
+            Build my route
+          </button>
+        ) : (
+          <>
+            <p className="text-sm text-neutral-400">No votes yet — a route needs at least a few likes or nopes.</p>
+            <button onClick={() => router.push("/")} className="w-full rounded-2xl bg-fuchsia-600 py-4 font-bold">
+              Back to filters
+            </button>
+          </>
+        )}
       </main>
     );
   }
@@ -350,7 +420,7 @@ export default function SwipePage() {
 
   return (
     <main className="flex min-h-dvh select-none flex-col pt-10 pb-6">
-      <Progress votedCount={votedCount} position={state.position} total={total} />
+      <Progress votedCount={votedCount} celebrate={celebrate} />
       <audio
         ref={audioRef}
         onEnded={() => setPlaying(false)}
@@ -361,6 +431,9 @@ export default function SwipePage() {
       />
       <div className="relative mt-6 flex flex-1 touch-none flex-col items-center justify-center">
         <div
+          role="button"
+          tabIndex={0}
+          aria-label={audioErr ? "snippet unavailable" : playing ? "pause snippet" : "play snippet"}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
@@ -402,18 +475,18 @@ export default function SwipePage() {
           >
             ⭐ SUPER
           </span>
-          <span className="z-10 text-5xl">{audioErr ? "⚠️" : playing ? "❚❚" : "▶"}</span>
+          <PlayIcon playing={playing} error={audioErr} />
         </div>
-        <p className="mt-6 px-6 text-center text-sm text-neutral-500">
+        <p className="mt-6 px-6 text-center text-sm text-neutral-400">
           {audioErr
             ? "No playable snippet for this one — skip it."
             : needsTap
               ? "Tap the disc to play"
               : "Drag right to like, left to nope, up to ⭐ lock into your route."}
         </p>
-        {historyRef.current.length > 0 && (
-          <button onClick={undo} className="mt-3 rounded-full border border-neutral-700 px-4 py-1.5 text-sm text-neutral-400 transition active:scale-95">
-            ↩ undo
+        {hasHistory && (
+          <button onClick={undo} className="mt-3 rounded-full border border-neutral-600 px-4 py-2 text-sm text-neutral-300 transition active:scale-95">
+            Undo last vote
           </button>
         )}
       </div>
@@ -435,27 +508,27 @@ export default function SwipePage() {
   );
 }
 
-function Progress({ votedCount, position, total }: { votedCount: number; position: number; total: number }) {
+function Progress({ votedCount, celebrate }: { votedCount: number; celebrate: boolean }) {
   const pct = Math.min(100, (votedCount / OPTIMAL_VOTES) * 100);
   return (
     <div>
-      <div className="flex justify-between text-xs text-neutral-500">
-        <span>
-          {votedCount < MIN_VOTES
-            ? `${votedCount}/${MIN_VOTES} votes to unlock your route`
-            : votedCount < OPTIMAL_VOTES
-              ? `route unlocked · ${OPTIMAL_VOTES - votedCount} more to the optimal match`
-              : "optimal match reached — keep going if you like"}
-        </span>
-        <span>card {Math.min(position + 1, total)}/{total}</span>
+      <div className="text-sm text-neutral-400">
+        {votedCount < MIN_VOTES
+          ? `${votedCount}/${MIN_VOTES} votes to unlock your route`
+          : votedCount < OPTIMAL_VOTES
+            ? `route unlocked · ${OPTIMAL_VOTES - votedCount} more to the optimal match`
+            : "optimal match reached — keep going if you like"}
       </div>
-      <div className="relative mt-1.5 h-1.5 overflow-hidden rounded bg-neutral-800">
+      <div
+        role="progressbar"
+        aria-valuenow={votedCount}
+        aria-valuemin={0}
+        aria-valuemax={OPTIMAL_VOTES}
+        aria-label="votes toward optimal match"
+        className={`relative mt-1.5 h-1.5 overflow-hidden rounded bg-neutral-800 ${celebrate ? "ring-2 ring-fuchsia-400" : ""}`}
+      >
         <div className="h-full bg-fuchsia-500 transition-all" style={{ width: `${pct}%` }} />
-        <div
-          className="absolute top-0 h-full w-0.5 bg-neutral-500"
-          style={{ left: `${(MIN_VOTES / OPTIMAL_VOTES) * 100}%` }}
-          title="route unlocks"
-        />
+        <div className="absolute top-0 h-full w-0.5 bg-neutral-400" style={{ left: `${(MIN_VOTES / OPTIMAL_VOTES) * 100}%` }} />
       </div>
     </div>
   );

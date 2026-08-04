@@ -1,6 +1,11 @@
 "use client";
 
-import type { SwipeState } from "./types";
+import type { SwipeState, VoteTally } from "./types";
+
+/** Vote events (like + nope + superlike; skips excluded) — the one counting
+ * rule every surface uses. */
+export const countVotes = (votes: Record<string, VoteTally>) =>
+  Object.values(votes).reduce((n, t) => n + t.l + t.n + (t.sl ?? 0), 0);
 
 const KEY = "parademtach-state-v3";
 

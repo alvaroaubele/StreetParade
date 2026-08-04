@@ -8,14 +8,17 @@ export const eventData = eventJson as unknown as EventData;
 export const catalog = catalogJson as unknown as Catalog;
 
 /** Canonical genres, each with keywords matched against venue style strings. */
+// Lookbehinds, not lookaheads: the qualifier ("Afro", "Psy") precedes the
+// noun, so "Afro House" must not tag plain House and "Psy-Trance" must not
+// tag plain Trance — while "House, Afrohouse" still tags House.
 const GENRE_KEYWORDS: [string, RegExp][] = [
-  ["House", /\bhouse\b(?!.*afro)|future house|indie house|deep house/i],
+  ["House", /(?<!afro[\s-])\bhouse\b|future house|indie house|deep house/i],
   ["Tech House", /tech\s*house/i],
   ["Techno", /\btechno\b/i],
   ["Hard Techno", /hard\s*techno|peak time/i],
   ["Melodic", /melodic/i],
   ["Afro House", /afro\s*house|afrohouse/i],
-  ["Trance", /\btrance\b(?!.*psy)/i],
+  ["Trance", /(?<!psy[\s-])\btrance\b/i],
   ["Hardtrance", /hardtrance|hard trance/i],
   ["Psytrance", /psy[\s-]*trance|psytrance|\bpsy\b|psychedelic/i],
   ["Drum and Bass", /drum\s*and\s*bass|drum'n'bass|dnb/i],
@@ -196,15 +199,54 @@ export function buildDeck(filters: Filters, seed = Date.now()): DeckCard[] {
       });
     }
   }
+  // Interleave by artist so the same artist never plays back-to-back:
+  // shuffle each artist's cards, then repeatedly draw a random card from any
+  // artist other than the previous one — except when a single artist holds
+  // more cards than half the remaining slots, where they must be drawn now
+  // or adjacency becomes unavoidable. Provably clean whenever no artist owns
+  // more than ceil(n/2) cards (max here is 6 of 369).
   const rand = rng(seed);
-  for (let i = cards.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1));
-    [cards[i], cards[j]] = [cards[j], cards[i]];
+  const buckets = new Map<string, DeckCard[]>();
+  for (const c of cards) {
+    const b = buckets.get(c.artistKey) ?? [];
+    b.push(c);
+    buckets.set(c.artistKey, b);
   }
-  // Greedy de-clump: push a card one slot back when it repeats the previous artist.
-  for (let i = 1; i < cards.length - 1; i++) {
-    if (cards[i].artistKey === cards[i - 1].artistKey)
-      [cards[i], cards[i + 1]] = [cards[i + 1], cards[i]];
+  for (const b of buckets.values())
+    for (let i = b.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1));
+      [b[i], b[j]] = [b[j], b[i]];
+    }
+  const out: DeckCard[] = [];
+  let remaining = cards.length;
+  let prev: string | null = null;
+  while (remaining > 0) {
+    let forced: string | null = null;
+    for (const [key, b] of buckets)
+      if (b.length * 2 > remaining && key !== prev) forced = key;
+    let pickKey: string;
+    if (forced) {
+      pickKey = forced;
+    } else {
+      // Weighted by remaining count so large buckets drain evenly.
+      let r = Math.floor(rand() * (remaining - (prev ? (buckets.get(prev)?.length ?? 0) : 0)));
+      pickKey = "";
+      for (const [key, b] of buckets) {
+        if (key === prev || !b.length) continue;
+        if (r < b.length) {
+          pickKey = key;
+          break;
+        }
+        r -= b.length;
+      }
+      if (!pickKey) for (const [key, b] of buckets) if (b.length && key !== prev) pickKey = key;
+      if (!pickKey) pickKey = prev!; // single-artist deck: adjacency unavoidable
+    }
+    const bucket = buckets.get(pickKey)!;
+    out.push(bucket.pop()!);
+    if (!bucket.length) buckets.delete(pickKey);
+    prev = pickKey;
+    remaining--;
   }
-  return cards;
+  return out;
 }

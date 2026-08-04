@@ -16,16 +16,17 @@ const STAGE_GEO: Record<string, [number, number]> = {
 };
 
 /**
- * Walking route through the given stages in visit order.
- * Returns null when no stage has coordinates.
+ * Walking route through the given stages, each stage once, in first-visit
+ * order — a literal repeat-every-block route reads as an 11-leg pinball in
+ * Google Maps. Returns null when no stage has coordinates.
  */
 export function mapsRouteUrl(stagesInOrder: string[]): string | null {
+  const seen = new Set<string>();
   const stops: [number, number][] = [];
   for (const name of stagesInOrder) {
     const geo = STAGE_GEO[name];
-    if (!geo) continue;
-    const last = stops[stops.length - 1];
-    if (last && last[0] === geo[0] && last[1] === geo[1]) continue;
+    if (!geo || seen.has(name)) continue;
+    seen.add(name);
     stops.push(geo);
   }
   if (!stops.length) return null;
