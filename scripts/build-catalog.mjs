@@ -39,6 +39,19 @@ async function getJSON(url, tries = 3) {
   }
 }
 
+// A name match is not an identity match: "Valentino" the techno DJ resolves
+// to a reggaeton artist of the same name. Provider genres are the identity
+// check — every act at this event is electronic, so a match whose genres
+// are known and contain nothing electronic is a namesake, not the DJ.
+// Some namesakes carry a stray "Dance" tag (a children's-music act did),
+// so hard-reject genres win over the accept list.
+const ELECTRONIC = /electro|techno|house|dance|trance|drum|dubstep|edm|hard/i;
+const HARD_REJECT = /children|kids|kinder|comedy|spoken|karaoke/i;
+
+const overrides = JSON.parse(readFileSync(DATA + "overrides.json", "utf8"));
+const blockedKeys = new Set((overrides.blocked ?? []).map((n) => normKey(n)));
+const forceTrustKeys = new Set((overrides.forceTrust ?? []).map((n) => normKey(n)));
+
 async function deezerLookup(name) {
   const q = encodeURIComponent(name);
   const search = await getJSON(`https://api.deezer.com/search/artist?q=${q}&limit=5`);
@@ -50,17 +63,26 @@ async function deezerLookup(name) {
   }
   if (!best || bestScore < 0.8) return null;
   const top = await getJSON(`https://api.deezer.com/artist/${best.id}/top?limit=10`);
-  const tracks = (top?.data ?? [])
-    .filter((t) => t.preview)
-    .slice(0, 6)
+  const rawTracks = (top?.data ?? []).filter((t) => t.preview);
+  if (!rawTracks.length) return null;
+  let providerGenres = [];
+  const albumId = rawTracks[0]?.album?.id;
+  if (albumId) {
+    await sleep(150);
+    const album = await getJSON(`https://api.deezer.com/album/${albumId}`);
+    providerGenres = (album?.genres?.data ?? []).map((g) => g.name);
+  }
+  const tracks = rawTracks
+    .slice(0, 10)
     .map((t) => ({ provider: "deezer", trackId: String(t.id), title: t.title }));
-  if (!tracks.length) return null;
   return {
     provider: "deezer",
     providerArtist: best.name,
     providerArtistId: String(best.id),
     fans: best.nb_fan ?? null,
     score: bestScore,
+    providerGenres,
+    genreOk: providerGenres.length ? providerGenres.some((g) => ELECTRONIC.test(g)) : null,
     tracks,
   };
 }
@@ -75,20 +97,24 @@ async function itunesLookup(name) {
     if (!r.previewUrl) continue;
     const s = similarity(name, r.artistName);
     if (s < 0.8) continue;
-    if (!byArtist.has(r.artistName)) byArtist.set(r.artistName, { score: s, tracks: [] });
+    if (!byArtist.has(r.artistName)) byArtist.set(r.artistName, { score: s, tracks: [], genres: new Set() });
     const e = byArtist.get(r.artistName);
-    if (e.tracks.length < 6)
+    if (r.primaryGenreName) e.genres.add(r.primaryGenreName);
+    if (e.tracks.length < 10)
       e.tracks.push({ provider: "itunes", trackId: String(r.trackId), title: r.trackName });
   }
   let bestName = null, best = null;
   for (const [n, e] of byArtist) if (!best || e.score > best.score) { bestName = n; best = e; }
   if (!best) return null;
+  const providerGenres = [...best.genres];
   return {
     provider: "itunes",
     providerArtist: bestName,
     providerArtistId: null,
     fans: null,
     score: best.score,
+    providerGenres,
+    genreOk: providerGenres.length ? providerGenres.some((g) => ELECTRONIC.test(g)) : null,
     tracks: best.tracks,
   };
 }
@@ -128,13 +154,22 @@ for (const [key, displayName] of unique) {
     console.warn(`  ! ${displayName}: ${e.message}`);
   }
   if (entry) {
-    // Generic one-word names risk matching a famous namesake instead of the
-    // local DJ — trust them only if the event bills them as a headliner or
-    // the matched artist has a substantial fanbase.
+    // Two independent guards: (1) known provider genres with nothing
+    // electronic = a namesake, rejected outright regardless of name shape
+    // or fame; (2) generic one-word names additionally need a headliner
+    // billing or a substantial fanbase, since a namesake can be electronic
+    // too. Unknown genres stay neutral — small local DJs often lack tags.
     const isHeadliner = headlinerKeys.has(key);
-    const trusted =
-      !isGenericName(displayName) || isHeadliner || (entry.fans ?? 0) >= 10000;
+    const hardReject = (entry.providerGenres ?? []).some((g) => HARD_REJECT.test(g));
+    const genreReject = hardReject || entry.genreOk === false;
+    let trusted =
+      !genreReject &&
+      (!isGenericName(displayName) || isHeadliner || (entry.fans ?? 0) >= 10000);
+    if (blockedKeys.has(key)) trusted = false;
+    if (forceTrustKeys.has(key)) trusted = true;
     catalog[key] = { name: displayName, ...entry, trusted };
+    if (!trusted && (genreReject || blockedKeys.has(key)))
+      console.log(`  ✗ rejected: ${displayName} → "${entry.providerArtist}" [${(entry.providerGenres ?? []).join(", ")}]${blockedKeys.has(key) ? " (override)" : ""}`);
     trusted ? hits++ : generic++;
   } else {
     catalog[key] = { name: displayName, provider: null, tracks: [], trusted: false };

@@ -1,13 +1,17 @@
 {
-  "builtAt": "2026-08-04T16:19:49.725Z",
+  "builtAt": "2026-08-04T17:51:48.112Z",
   "artists": {
     "rampa": {
       "name": "Rampa",
       "provider": "deezer",
       "providerArtist": "Rampa",
       "providerArtistId": "427945",
-      "fans": 18965,
+      "fans": 18966,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -33,6 +37,16 @@
           "provider": "deezer",
           "trackId": "3367072751",
           "title": "Crazy For It"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "419089892",
+          "title": "Muyè"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2989813521",
+          "title": "Neverender (Rampa Remix)"
         }
       ],
       "trusted": true
@@ -42,8 +56,13 @@
       "provider": "deezer",
       "providerArtist": "Blond:ish",
       "providerArtistId": "1179872",
-      "fans": 13199,
+      "fans": 13203,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -69,6 +88,16 @@
           "provider": "deezer",
           "trackId": "1906729817",
           "title": "Hold Tight (feat. Darla Jade) (Dombresky Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3360431401",
+          "title": "Natural Blues"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2299597225",
+          "title": "Call My Name"
         }
       ],
       "trusted": true
@@ -78,8 +107,10 @@
       "provider": "deezer",
       "providerArtist": "Vintage Culture",
       "providerArtistId": "4782876",
-      "fans": 530216,
+      "fans": 530223,
       "score": 1,
+      "providerGenres": [],
+      "genreOk": null,
       "tracks": [
         {
           "provider": "deezer",
@@ -105,6 +136,16 @@
           "provider": "deezer",
           "trackId": "4043532201",
           "title": "Toxic"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2617772492",
+          "title": "Weak"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "522858982",
+          "title": "Pour Over"
         }
       ],
       "trusted": true
@@ -116,6 +157,12 @@
       "providerArtistId": "1224771",
       "fans": 92957,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance",
+        "Disco"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -141,6 +188,16 @@
           "provider": "deezer",
           "trackId": "2195281357",
           "title": "Can't Leave You"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1234385992",
+          "title": "Shadow (Maceo Plex Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "13434810",
+          "title": "Gravy Train (Nicolas Jaar Remix)"
         }
       ],
       "trusted": true
@@ -152,6 +209,8 @@
       "providerArtistId": "145050",
       "fans": 14304,
       "score": 1,
+      "providerGenres": [],
+      "genreOk": null,
       "tracks": [
         {
           "provider": "deezer",
@@ -177,6 +236,16 @@
           "provider": "deezer",
           "trackId": "3434762791",
           "title": "Melodia (feat. PollyAnna)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4129384371",
+          "title": "Assunto"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3461079151",
+          "title": "Summer Skies (Love To Cry)"
         }
       ],
       "trusted": true
@@ -186,8 +255,13 @@
       "provider": "deezer",
       "providerArtist": "Marlon Hoffstadt",
       "providerArtistId": "3926781",
-      "fans": 13252,
+      "fans": 13253,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -213,6 +287,16 @@
           "provider": "deezer",
           "trackId": "2882409592",
           "title": "We Want More"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4115969521",
+          "title": "Party People"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3951178231",
+          "title": "Stomp Your Feet (1991 Remix)"
         }
       ],
       "trusted": true
@@ -230,6 +314,10 @@
       "providerArtistId": "261179031",
       "fans": 8,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -251,6 +339,8 @@
       "providerArtistId": "5060356",
       "fans": 40,
       "score": 1,
+      "providerGenres": [],
+      "genreOk": null,
       "tracks": [
         {
           "provider": "deezer",
@@ -292,6 +382,10 @@
       "providerArtistId": "119265692",
       "fans": 456,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -317,6 +411,16 @@
           "provider": "deezer",
           "trackId": "3016403871",
           "title": "Made For Me (HoneyLuv AfroLuv Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3369473911",
+          "title": "Fever"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2023369247",
+          "title": "Sway (feat. Dope Earth Alien)"
         }
       ],
       "trusted": true
@@ -328,6 +432,11 @@
       "providerArtistId": "372665",
       "fans": 1685,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -353,6 +462,16 @@
           "provider": "deezer",
           "trackId": "3535563631",
           "title": "Reset"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "143331320",
+          "title": "The Message (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3146697651",
+          "title": "Lucky Ones"
         }
       ],
       "trusted": true
@@ -364,6 +483,12 @@
       "providerArtistId": "5417873",
       "fans": 83,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -380,6 +505,11 @@
       "providerArtistId": "148074032",
       "fans": 228,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -405,6 +535,16 @@
           "provider": "deezer",
           "trackId": "3301650741",
           "title": "Untitled Punk"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2222640607",
+          "title": "The Girl Next Door"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3204779971",
+          "title": "Please You (Edit)"
         }
       ],
       "trusted": true
@@ -414,8 +554,14 @@
       "provider": "deezer",
       "providerArtist": "Sonny Fodera",
       "providerArtistId": "431341",
-      "fans": 31672,
+      "fans": 31673,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -441,6 +587,16 @@
           "provider": "deezer",
           "trackId": "3833088221",
           "title": "My Loving"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1139478882",
+          "title": "Turn Back Time"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1473940002",
+          "title": "Stuck In My Head (feat. Rug Wilson)"
         }
       ],
       "trusted": true
@@ -452,6 +608,10 @@
       "providerArtistId": "491428",
       "fans": 1590,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -477,6 +637,16 @@
           "provider": "deezer",
           "trackId": "1446879452",
           "title": "Final String"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3014898821",
+          "title": "Weak (Andrea Oliva Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3556745951",
+          "title": "Loud Enough"
         }
       ],
       "trusted": true
@@ -488,6 +658,11 @@
       "providerArtistId": "6920979",
       "fans": 885,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -513,6 +688,16 @@
           "provider": "deezer",
           "trackId": "1694880277",
           "title": "Hydrogene"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1419472062",
+          "title": "Outline"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3839816711",
+          "title": "Touch Me"
         }
       ],
       "trusted": true
@@ -542,6 +727,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Jazz"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -563,6 +752,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Christian"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -579,6 +772,10 @@
       "providerArtistId": "12448964",
       "fans": 44,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -619,6 +816,11 @@
       "providerArtistId": "282769461",
       "fans": 32,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -651,6 +853,11 @@
       "providerArtistId": "191706807",
       "fans": 330,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -687,6 +894,12 @@
       "providerArtistId": "11966387",
       "fans": 102,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -703,6 +916,10 @@
       "providerArtistId": "2031",
       "fans": 62169,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -728,6 +945,16 @@
           "provider": "deezer",
           "trackId": "4005319221",
           "title": "Riot"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3980659151",
+          "title": "Cruising"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "486369052",
+          "title": "Leave Me Alone"
         }
       ],
       "trusted": true
@@ -739,6 +966,11 @@
       "providerArtistId": "71456032",
       "fans": 388,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -770,6 +1002,10 @@
       "providerArtistId": "153965",
       "fans": 208,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -813,6 +1049,10 @@
       "providerArtistId": "350447",
       "fans": 3306,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -838,6 +1078,11 @@
           "provider": "deezer",
           "trackId": "76649019",
           "title": "Keep Control (feat. Jan Blomqvist)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "67098034",
+          "title": "Sensation (Animal Trainer Remix)"
         }
       ],
       "trusted": true
@@ -849,6 +1094,11 @@
       "providerArtistId": "281657791",
       "fans": 10,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -870,6 +1120,10 @@
       "providerArtistId": "187269007",
       "fans": 62,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -895,6 +1149,11 @@
           "provider": "deezer",
           "trackId": "4007125321",
           "title": "Little Jaguar"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3613547562",
+          "title": "Rocks"
         }
       ],
       "trusted": true
@@ -906,6 +1165,10 @@
       "providerArtistId": "62288",
       "fans": 3433,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -931,6 +1194,11 @@
           "provider": "deezer",
           "trackId": "1444179452",
           "title": "Venus Vibes (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "535135552",
+          "title": "Duke (Jiggler Remix)"
         }
       ],
       "trusted": true
@@ -942,6 +1210,8 @@
       "providerArtistId": "97285762",
       "fans": 43,
       "score": 1,
+      "providerGenres": [],
+      "genreOk": null,
       "tracks": [
         {
           "provider": "deezer",
@@ -973,6 +1243,12 @@
       "providerArtistId": "263325991",
       "fans": 7,
       "score": 1,
+      "providerGenres": [
+        "Alternative",
+        "Indie Pop",
+        "Pop"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -995,6 +1271,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1020,6 +1300,16 @@
           "provider": "itunes",
           "trackId": "1636910020",
           "title": "Leprechaun"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1640145437",
+          "title": "Leprechaun"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1646286837",
+          "title": "Leprechaun"
         }
       ],
       "trusted": true
@@ -1037,6 +1327,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1062,6 +1356,16 @@
           "provider": "itunes",
           "trackId": "1808631097",
           "title": "Snake Enchanters"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1808631098",
+          "title": "Footprints in Time"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1808631102",
+          "title": "Against All Odds"
         }
       ],
       "trusted": true
@@ -1073,6 +1377,12 @@
       "providerArtistId": "7370844",
       "fans": 1459,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance",
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1098,6 +1408,11 @@
           "provider": "deezer",
           "trackId": "1755122667",
           "title": "Motherfking Jazz"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3580088041",
+          "title": "Surreal Symphony"
         }
       ],
       "trusted": true
@@ -1109,6 +1424,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1134,6 +1453,16 @@
           "provider": "itunes",
           "trackId": "1701697160",
           "title": "The Sky Is Always Blue"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1701697161",
+          "title": "Hydroscope"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1878027538",
+          "title": "K-Walker"
         }
       ],
       "trusted": true
@@ -1151,6 +1480,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Dubstep",
+        "Rock"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1181,6 +1515,11 @@
           "provider": "itunes",
           "trackId": "1810114174",
           "title": "Here We Go"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1810109460",
+          "title": "Mechanism"
         }
       ],
       "trusted": false
@@ -1192,6 +1531,10 @@
       "providerArtistId": "261780491",
       "fans": 3,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1244,6 +1587,10 @@
       "providerArtistId": "48737741",
       "fans": 562,
       "score": 1,
+      "providerGenres": [
+        "Alternative"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -1274,6 +1621,26 @@
           "provider": "deezer",
           "trackId": "2999677011",
           "title": "Self Assured"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2999677021",
+          "title": "Sleepless"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3532018501",
+          "title": "Pendulum"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2999677041",
+          "title": "Precious"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2297647025",
+          "title": "Just Like Her Father"
         }
       ],
       "trusted": false
@@ -1285,6 +1652,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Alternative"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -1307,6 +1678,11 @@
       "providerArtistId": "468677",
       "fans": 9365,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1332,6 +1708,16 @@
           "provider": "deezer",
           "trackId": "2970492101",
           "title": "Set It Right"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3411960341",
+          "title": "Dusk Till Dawn"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3140569081",
+          "title": "Roll the Dice (Konstantin Sibold Remix)"
         }
       ],
       "trusted": true
@@ -1343,6 +1729,11 @@
       "providerArtistId": "230773425",
       "fans": 149,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1359,6 +1750,11 @@
       "providerArtistId": "11953297",
       "fans": 1031,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1389,6 +1785,26 @@
           "provider": "deezer",
           "trackId": "4088405291",
           "title": "RAMsterdam (FSOE967)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3375749531",
+          "title": "Aurora"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1021065892",
+          "title": "While We Wait (Mixed)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2079490177",
+          "title": "The Only Way (ASOT 1100)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4033020281",
+          "title": "Shining Bright"
         }
       ],
       "trusted": false
@@ -1400,6 +1816,10 @@
       "providerArtistId": "114059722",
       "fans": 1,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1416,6 +1836,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Trance",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1441,6 +1866,11 @@
           "provider": "itunes",
           "trackId": "1497871521",
           "title": "13th District (Mixed)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "960725985",
+          "title": "Yukatan (Madwave's Uplifter Mix)"
         }
       ],
       "trusted": true
@@ -1452,6 +1882,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Techno"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1473,6 +1907,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Trance",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1498,6 +1937,16 @@
           "provider": "itunes",
           "trackId": "983585564",
           "title": "The Edge (Radio Edit)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "966174431",
+          "title": "The Edge (Radio Edit)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "436375005",
+          "title": "Between the Rays"
         }
       ],
       "trusted": true
@@ -1515,6 +1964,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1540,6 +1994,16 @@
           "provider": "itunes",
           "trackId": "1669729907",
           "title": "Purple Genie"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1798674264",
+          "title": "Et Videt Te"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1720765033",
+          "title": "Guc Ci"
         }
       ],
       "trusted": true
@@ -1569,6 +2033,11 @@
       "providerArtistId": "102011",
       "fans": 8214,
       "score": 1,
+      "providerGenres": [
+        "Reggaeton",
+        "Latin Music"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -1594,9 +2063,34 @@
           "provider": "deezer",
           "trackId": "457686042",
           "title": "Boom Boom (feat. J Alvarez, Nova La Amenaza & Jory Boy)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "457686122",
+          "title": "Olvidarte No Quiero (feat. Nicky Jam & Alberto Stylee)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1223644942",
+          "title": "Detenganse"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1223641122",
+          "title": "Revivir La Aventura"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "457686022",
+          "title": "Morir de Amor (feat. Arcangel)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1223644992",
+          "title": "Quieren Verme Muerto"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "bonzai": {
       "name": "Bonzai",
@@ -1611,6 +2105,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1638,6 +2136,10 @@
       "providerArtistId": "4983843",
       "fans": 26,
       "score": 1,
+      "providerGenres": [
+        "Latin Music"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -1650,7 +2152,7 @@
           "title": "Te Vas de Mi"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "johan gielen": {
       "name": "Johan Gielen",
@@ -1659,6 +2161,11 @@
       "providerArtistId": "10979",
       "fans": 1779,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1684,6 +2191,16 @@
           "provider": "deezer",
           "trackId": "2109803787",
           "title": "Beachbreeze [Remember The Summer] (Original Vocal Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4153548322",
+          "title": "Save Face (Interplay 617) (Arkayne Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2103116027",
+          "title": "Twisted (Svenson & Gielen Energy Mix)"
         }
       ],
       "trusted": true
@@ -1695,6 +2212,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1736,6 +2257,10 @@
       "providerArtistId": "102131",
       "fans": 125,
       "score": 1,
+      "providerGenres": [
+        "Country"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -1766,9 +2291,29 @@
           "provider": "deezer",
           "trackId": "15686159",
           "title": "Jesus Gave Me Water"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686300",
+          "title": "Heaven Alone Will Satisfy Me"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686174",
+          "title": "Jesus Walked On The Water"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686363",
+          "title": "My Heavenly Home"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3652966602",
+          "title": "Help Is On The Way (Live)"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "s p h e r e": {
       "name": "S.P.H.E.R.E",
@@ -1783,6 +2328,10 @@
       "providerArtistId": "144003",
       "fans": 3250,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1804,6 +2353,10 @@
       "providerArtistId": "7178246",
       "fans": 670,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1834,6 +2387,11 @@
           "provider": "deezer",
           "trackId": "509585922",
           "title": "Want From U"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2190920207",
+          "title": "Domino (Radio Edit)"
         }
       ],
       "trusted": true
@@ -1845,6 +2403,10 @@
       "providerArtistId": "185523757",
       "fans": 171,
       "score": 1,
+      "providerGenres": [
+        "Rap/Hip Hop"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -1861,6 +2423,10 @@
       "providerArtistId": "329162061",
       "fans": 0,
       "score": 1,
+      "providerGenres": [
+        "African Music"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -1868,7 +2434,7 @@
           "title": "Under the Sun"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "dominic strike": {
       "name": "Dominic Strike",
@@ -1877,6 +2443,10 @@
       "providerArtistId": "14178119",
       "fans": 66,
       "score": 1,
+      "providerGenres": [
+        "Pop"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -1899,7 +2469,7 @@
           "title": "Heartbeat"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "lenny lou": {
       "name": "Lenny Lou",
@@ -1908,6 +2478,13 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "House",
+        "Funk",
+        "Downtempo",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -1938,6 +2515,11 @@
           "provider": "itunes",
           "trackId": "1873530026",
           "title": "Dream"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1815259879",
+          "title": "Tonight"
         }
       ],
       "trusted": true
@@ -1949,6 +2531,10 @@
       "providerArtistId": "10374888",
       "fans": 124,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -1979,6 +2565,26 @@
           "provider": "deezer",
           "trackId": "2095879117",
           "title": "Bloody Mary"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "526720752",
+          "title": "Calm Dawn"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1670152862",
+          "title": "Habits (Stay High)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3557748511",
+          "title": "California Skies"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3522454381",
+          "title": "The King's Affirmation"
         }
       ],
       "trusted": false
@@ -1990,6 +2596,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Jungle/Drum'n'bass"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2031,6 +2641,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2047,6 +2661,10 @@
       "providerArtistId": "1235607",
       "fans": 993,
       "score": 1,
+      "providerGenres": [
+        "Latin Music"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -2074,7 +2692,7 @@
           "title": "Arabesco de Alambra"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "mario ferrini": {
       "name": "Mario Ferrini",
@@ -2083,6 +2701,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Ambient"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2120,6 +2743,14 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Trance",
+        "Dance",
+        "Techno",
+        "House",
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2161,6 +2792,12 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "House",
+        "Dance",
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2202,6 +2839,10 @@
       "providerArtistId": "7000331",
       "fans": 5485,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2261,6 +2902,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2293,6 +2939,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Afro House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2309,6 +2959,10 @@
       "providerArtistId": "6740085",
       "fans": 89,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2325,6 +2979,11 @@
       "providerArtistId": "1631548",
       "fans": 986,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2341,6 +3000,12 @@
       "providerArtistId": "313789",
       "fans": 4760,
       "score": 1,
+      "providerGenres": [
+        "African Music",
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2382,6 +3047,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Children's Music",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2412,9 +3082,29 @@
           "provider": "itunes",
           "trackId": "1450994234",
           "title": "Me Gustan los Gusanos"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994246",
+          "title": "Yes, I'M a Snail"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994235",
+          "title": "Tengo una Gata Maullera (feat. Jean Paul Strauss)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994239",
+          "title": "Perico de los Palitos (feat. Julie Freundt & Germán Gonzáles)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "346147458",
+          "title": "The Hollow Hearted"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "rick lee": {
       "name": "Rick Lee",
@@ -2423,6 +3113,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Singer/Songwriter",
+        "Rock"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -2455,7 +3150,7 @@
           "title": "Always"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "chris p": {
       "name": "Chris.P",
@@ -2464,6 +3159,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -2480,6 +3179,10 @@
       "providerArtistId": "8406800",
       "fans": 467,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2496,6 +3199,8 @@
       "providerArtistId": "73546812",
       "fans": 75,
       "score": 1,
+      "providerGenres": [],
+      "genreOk": null,
       "tracks": [
         {
           "provider": "deezer",
@@ -2518,6 +3223,11 @@
       "providerArtistId": "172500",
       "fans": 1627,
       "score": 1,
+      "providerGenres": [
+        "Reggaeton",
+        "Latin Music"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -2530,7 +3240,7 @@
           "title": "Lucho Por Sobrevivir"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "drs": {
       "name": "DRS",
@@ -2539,6 +3249,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Worldwide"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -2560,6 +3274,12 @@
       "providerArtistId": "213156917",
       "fans": 25,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Rock",
+        "Hard Rock"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2617,6 +3337,10 @@
       "providerArtistId": "146900",
       "fans": 10247,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2664,6 +3388,11 @@
       "providerArtistId": "117835712",
       "fans": 40,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2700,6 +3429,11 @@
       "providerArtistId": "380054",
       "fans": 4381,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2741,6 +3475,10 @@
       "providerArtistId": "99061222",
       "fans": 7,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2757,6 +3495,10 @@
       "providerArtistId": "91817272",
       "fans": 6,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2791,6 +3533,10 @@
       "providerArtistId": "3122811",
       "fans": 146,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2833,6 +3579,11 @@
       "providerArtistId": "130922",
       "fans": 12379,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2874,6 +3625,8 @@
       "providerArtistId": "450214",
       "fans": 8828,
       "score": 1,
+      "providerGenres": [],
+      "genreOk": null,
       "tracks": [
         {
           "provider": "deezer",
@@ -2915,6 +3668,10 @@
       "providerArtistId": "4066344",
       "fans": 934,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2945,6 +3702,16 @@
           "provider": "deezer",
           "trackId": "3375747531",
           "title": "Emotional Khaos"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3760946912",
+          "title": "Eternal Rain"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2863948112",
+          "title": "Chaos Knights"
         }
       ],
       "trusted": false
@@ -2956,6 +3723,10 @@
       "providerArtistId": "303814131",
       "fans": 4,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2982,6 +3753,12 @@
       "providerArtistId": "156521",
       "fans": 892,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -2998,6 +3775,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Downtempo"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -3028,9 +3809,29 @@
           "provider": "itunes",
           "trackId": "1750032650",
           "title": "Serenata del Crepuscolo"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032657",
+          "title": "Reverie di Mezzanotte"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032678",
+          "title": "L'ora Più Buia"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032893",
+          "title": "Perso Nelle Melodie"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032901",
+          "title": "Perduto"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "paranomasia": {
       "name": "Paranomasia",
@@ -3045,6 +3846,11 @@
       "providerArtistId": "4617661",
       "fans": 230,
       "score": 1,
+      "providerGenres": [
+        "Alternative",
+        "Rock"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -3086,6 +3892,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -3139,6 +3950,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -3165,6 +3980,11 @@
       "providerArtistId": "2280961",
       "fans": 620,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3186,6 +4006,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Trance",
+        "Techno"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -3227,6 +4052,11 @@
       "providerArtistId": "817097",
       "fans": 2528,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3257,6 +4087,11 @@
           "provider": "deezer",
           "trackId": "61187302",
           "title": "Communication (Mas Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "60681291",
+          "title": "Technoarmony (Mariopiu Mix)"
         }
       ],
       "trusted": true
@@ -3286,6 +4121,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Rock"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -3308,7 +4147,7 @@
           "title": "Agent_C"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "darius d": {
       "name": "Darius D",
@@ -3341,6 +4180,10 @@
       "providerArtistId": "6883355",
       "fans": 100,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3381,6 +4224,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -3407,6 +4254,10 @@
       "providerArtistId": "54829882",
       "fans": 255,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3438,6 +4289,12 @@
       "providerArtistId": "15201259",
       "fans": 1699,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Techno/House",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3479,6 +4336,10 @@
       "providerArtistId": "13158",
       "fans": 2765,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3520,6 +4381,10 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Electronic"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -3554,6 +4419,10 @@
       "providerArtistId": "146",
       "fans": 1372,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3584,6 +4453,11 @@
           "provider": "deezer",
           "trackId": "3575535991",
           "title": "Infected (Radio Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3437499321",
+          "title": "On The Move (Zany Remix)"
         }
       ],
       "trusted": true
@@ -3595,6 +4469,10 @@
       "providerArtistId": "73226732",
       "fans": 247,
       "score": 1,
+      "providerGenres": [
+        "Metal"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -3625,6 +4503,26 @@
           "provider": "deezer",
           "trackId": "5062353",
           "title": "Life Lock"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062356",
+          "title": "Drowning In The Mainstream"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062367",
+          "title": "Fear Of The Future"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062341",
+          "title": "Sick Joke '89"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062360",
+          "title": "Stop-Gap"
         }
       ],
       "trusted": false
@@ -3636,6 +4534,11 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Afro-Beat",
+        "Afrobeats"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "itunes",
@@ -3648,7 +4551,7 @@
           "title": "Nyr"
         }
       ],
-      "trusted": true
+      "trusted": false
     },
     "mind x": {
       "name": "Mind-X",
@@ -3657,6 +4560,8 @@
       "providerArtistId": "247629",
       "fans": 237,
       "score": 1,
+      "providerGenres": [],
+      "genreOk": null,
       "tracks": [
         {
           "provider": "deezer",
@@ -3702,6 +4607,13 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Techno",
+        "House",
+        "Electronic",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -3743,6 +4655,11 @@
       "providerArtistId": "5562288",
       "fans": 655,
       "score": 1,
+      "providerGenres": [
+        "Alternative",
+        "Rock"
+      ],
+      "genreOk": false,
       "tracks": [
         {
           "provider": "deezer",
@@ -3773,6 +4690,26 @@
           "provider": "deezer",
           "trackId": "114303324",
           "title": "Thorn In The Side"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "735901092",
+          "title": "The Granite Face"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "124251214",
+          "title": "Lives Of Others"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "735901102",
+          "title": "Farewell to Exile"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "735901172",
+          "title": "Temporary Hope"
         }
       ],
       "trusted": false
@@ -3784,6 +4721,10 @@
       "providerArtistId": "321837391",
       "fans": 2,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3806,6 +4747,10 @@
       "providerArtistId": "4656417",
       "fans": 92,
       "score": 1,
+      "providerGenres": [
+        "Electro"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3845,6 +4790,11 @@
       "providerArtistId": "5752130",
       "fans": 7,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3871,6 +4821,12 @@
       "providerArtistId": null,
       "fans": null,
       "score": 1,
+      "providerGenres": [
+        "Baladas y Boleros",
+        "Dance",
+        "Christian"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "itunes",
@@ -3912,6 +4868,11 @@
       "providerArtistId": "533202",
       "fans": 1397,
       "score": 1,
+      "providerGenres": [
+        "Dance",
+        "Trance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3953,6 +4914,11 @@
       "providerArtistId": "69514",
       "fans": 2460,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -3994,6 +4960,10 @@
       "providerArtistId": "72396062",
       "fans": 139,
       "score": 1,
+      "providerGenres": [
+        "Dance"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
@@ -4030,6 +5000,12 @@
       "providerArtistId": "6536",
       "fans": 14920,
       "score": 1,
+      "providerGenres": [
+        "Electro",
+        "Dance",
+        "Disco"
+      ],
+      "genreOk": true,
       "tracks": [
         {
           "provider": "deezer",
