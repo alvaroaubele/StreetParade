@@ -153,3 +153,13 @@ verified (with evidence), and any gaps with their fill-in path.
    and the choice persists. That exact track is excluded from the blind
    deck since everyone has heard it.
 
+## v5 scope (owner feedback, 2026-08-04, after v4 merged)
+
+1. **Deck back to exactly 369** — the catalog pool grows to 370 so the
+   swipeable deck is 369 after the welcome-track exclusion; every count
+   shown in the UI uses the same exclusion.
+2. **Aurora backdrop** — three large blurred glows (fuchsia, violet, cyan)
+   drifting slowly behind all pages over the near-black base, with a faint
+   grain to prevent banding. Pure CSS, `prefers-reduced-motion` disables
+   the drift.
+

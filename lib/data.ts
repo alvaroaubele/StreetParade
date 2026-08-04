@@ -145,12 +145,17 @@ function rng(seed: number) {
 }
 
 export function playableCount(filters: Filters): { snippets: number; artists: number } {
+  const welcome = welcomeTrack();
   let snippets = 0, artists = 0;
   for (const info of eligibleArtists(filters)) {
     const cat = catalog.artists[info.key];
     if (cat?.trusted && cat.tracks.length) {
       artists++;
       snippets += cat.tracks.length;
+      // The welcome-vibe track never enters the deck, so don't count it.
+      if (welcome && info.key === welcome.artistKey &&
+          cat.tracks.some((t) => t.provider === welcome.track.provider && t.trackId === welcome.track.trackId))
+        snippets--;
     }
   }
   return { snippets, artists };

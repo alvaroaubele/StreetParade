@@ -17,7 +17,14 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="mx-auto max-w-md px-4 pb-10 antialiased">{children}</body>
+      <body className="mx-auto max-w-md px-4 pb-10 antialiased">
+        <div className="aurora" aria-hidden>
+          <div className="aurora-blob" />
+          <div className="aurora-blob" />
+          <div className="aurora-blob" />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
