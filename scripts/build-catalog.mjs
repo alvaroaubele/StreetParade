@@ -143,9 +143,11 @@ for (const [key, displayName] of unique) {
   if (i % 20 === 0) console.log(`  ${i}/${unique.size} (${hits} trusted, ${generic} generic-flagged, ${misses} no preview)`);
 }
 
-// Trim the playable pool to exactly 369 snippets, shaving from the artists
-// with the most tracks first so nobody drops below their share.
-const POOL_TARGET = 369;
+// Trim the playable pool so the swipe deck holds exactly 369 snippets:
+// 370 here because the landing page's welcome track is excluded from the
+// deck. Shaves from the artists with the most tracks first, and the trim
+// pops from the tail so the welcome pick (an artist's first track) survives.
+const POOL_TARGET = 370;
 const trusted = Object.values(catalog).filter((a) => a.trusted && a.tracks.length);
 let pool = trusted.reduce((n, a) => n + a.tracks.length, 0);
 while (pool > POOL_TARGET) {

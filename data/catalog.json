@@ -1,12 +1,12 @@
 {
-  "builtAt": "2026-08-04T15:29:15.011Z",
+  "builtAt": "2026-08-04T16:19:49.725Z",
   "artists": {
     "rampa": {
       "name": "Rampa",
       "provider": "deezer",
       "providerArtist": "Rampa",
       "providerArtistId": "427945",
-      "fans": 18964,
+      "fans": 18965,
       "score": 1,
       "tracks": [
         {
@@ -78,7 +78,7 @@
       "provider": "deezer",
       "providerArtist": "Vintage Culture",
       "providerArtistId": "4782876",
-      "fans": 530213,
+      "fans": 530216,
       "score": 1,
       "tracks": [
         {
@@ -150,7 +150,7 @@
       "provider": "deezer",
       "providerArtist": "Argy",
       "providerArtistId": "145050",
-      "fans": 14303,
+      "fans": 14304,
       "score": 1,
       "tracks": [
         {
@@ -186,7 +186,7 @@
       "provider": "deezer",
       "providerArtist": "Marlon Hoffstadt",
       "providerArtistId": "3926781",
-      "fans": 13251,
+      "fans": 13252,
       "score": 1,
       "tracks": [
         {
@@ -1720,6 +1720,11 @@
           "provider": "itunes",
           "trackId": "1624070220",
           "title": "Mental Thing 2005 (Extended Mix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1624070300",
+          "title": "Mental Thing 2005"
         }
       ],
       "trusted": true
@@ -2693,7 +2698,7 @@
       "provider": "deezer",
       "providerArtist": "Mark Reeve",
       "providerArtistId": "380054",
-      "fans": 4380,
+      "fans": 4381,
       "score": 1,
       "tracks": [
         {
