@@ -16,10 +16,15 @@ const VIBE_SRC = "/api/vibe";
  *
  * The element's src is our own /api/vibe stream, set once at mount. Same
  * origin, no signed URL, no expiry, no geo-blocked CDN edge — so the gesture
- * path has nothing to resolve and nothing to await: mobile autoplay policy
- * only trusts play() calls made synchronously inside the gesture, and that
- * is exactly what it gets. Interactions keep re-arming until sound actually
- * starts, so one flaky network moment doesn't mean permanent silence.
+ * path has nothing to resolve and nothing to await.
+ *
+ * Start order is a cascade against autoplay policy, which no site can beat,
+ * only meet: (1) audible from page open where the browser permits it;
+ * (2) otherwise muted playback from page open — universally allowed — so the
+ * track is already running and the first completed gesture just flips the
+ * volume on, mid-groove, with zero start-up latency; (3) if even muted play
+ * is refused, the gesture starts playback outright. Interactions keep
+ * re-arming until sound is actually audible.
  */
 export function WelcomeVibe() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -27,12 +32,14 @@ export function WelcomeVibe() {
   const userMuted = useRef(false);
   const [muted, setMuted] = useState(true);
 
-  /** Synchronous by design — safe to call directly from gesture handlers. */
+  /** Synchronous by design — safe to call directly from gesture handlers.
+   * Unmutes as it starts: the element may already be playing silently. */
   const startPlayback = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
     audio.loop = true;
     audio.volume = 0.3;
+    audio.muted = false;
     const ok = () => setMuted(false);
     audio.play().then(ok).catch((err: unknown) => {
       // NotAllowedError means this event carried no user activation (e.g.
@@ -69,17 +76,34 @@ export function WelcomeVibe() {
     const detach = () => {
       for (const g of gestures) window.removeEventListener(g, start);
     };
-    const onPlaying = () => {
+    // Detach only once AUDIBLE: the muted warm start also fires "playing",
+    // and the gesture unmute arrives as "volumechange" — either event may
+    // complete the pair (playing && unmuted).
+    const sync = () => {
+      if (audio.muted || audio.paused) return;
       setMuted(false);
       detach();
     };
-    audio.addEventListener("playing", onPlaying);
-    // Free autoplay where the browser allows it (desktop mostly)…
-    audio.play().catch(() => {});
-    // …and every interaction is a fresh chance until sound actually starts.
+    audio.addEventListener("playing", sync);
+    audio.addEventListener("volumechange", sync);
+    // (1) Audible from page open where the browser permits it…
+    audio.muted = false;
+    audio
+      .play()
+      .then(() => setMuted(false))
+      .catch(() => {
+        // (2) …else warm-start silently — allowed everywhere — so the first
+        // gesture unmutes a track that is already mid-flow.
+        audio.muted = true;
+        audio.play().catch(() => {
+          // (3) even muted play refused — the gesture will start it cold.
+        });
+      });
+    // Every interaction is a fresh chance until sound is audible.
     for (const g of gestures) window.addEventListener(g, start);
     return () => {
-      audio.removeEventListener("playing", onPlaying);
+      audio.removeEventListener("playing", sync);
+      audio.removeEventListener("volumechange", sync);
       detach();
       audio.pause();
     };
