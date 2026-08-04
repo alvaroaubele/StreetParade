@@ -167,14 +167,21 @@ export function playableCount(filters: Filters): { snippets: number; artists: nu
 /**
  * The landing-page ambience track: warm, mid-spectrum, nothing that would
  * polarize a blind test (no hardstyle/psy). Preference-ordered so it stays
- * stable across catalog rebuilds.
+ * stable across catalog rebuilds. The full candidate list exists so the
+ * /api/vibe stream can fall through to the next artist if the first one's
+ * preview stops resolving upstream.
  */
-export function welcomeTrack(): { artistKey: string; artistName: string; track: import("./types").CatalogTrack } | null {
+export function welcomeTrackCandidates(): { artistKey: string; artistName: string; track: import("./types").CatalogTrack }[] {
+  const out: { artistKey: string; artistName: string; track: import("./types").CatalogTrack }[] = [];
   for (const key of ["blond ish", "animal trainer", "andrea oliva", "sonny fodera", "vintage culture"]) {
     const cat = catalog.artists[key];
-    if (cat?.trusted && cat.tracks.length) return { artistKey: key, artistName: cat.name, track: cat.tracks[0] };
+    if (cat?.trusted && cat.tracks.length) out.push({ artistKey: key, artistName: cat.name, track: cat.tracks[0] });
   }
-  return null;
+  return out;
+}
+
+export function welcomeTrack(): { artistKey: string; artistName: string; track: import("./types").CatalogTrack } | null {
+  return welcomeTrackCandidates()[0] ?? null;
 }
 
 /**
