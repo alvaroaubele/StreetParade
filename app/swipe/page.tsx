@@ -9,8 +9,9 @@ import type { CatalogTrack, DeckCard, SwipeState, VoteTally } from "@/lib/types"
 
 const MIN_VOTES = 10;
 const OPTIMAL_VOTES = 40;
-/** Deezer preview URLs live 15 min; re-resolve well before that. */
-const URL_TTL_MS = 5 * 60 * 1000;
+/** Deezer preview URLs live 15 min and arrive up to ~4 min old through the
+ * CDN layers; hold them client-side only briefly. */
+const URL_TTL_MS = 2 * 60 * 1000;
 /** 1 like · -1 nope · 0 skip · 2 superlike (locks artist into the route) */
 type Vote = 1 | -1 | 0 | 2;
 
@@ -77,7 +78,10 @@ export default function SwipePage() {
     const key = `${track.provider}:${track.trackId}`;
     const hit = urlCache.current.get(key);
     if (!fresh && hit && Date.now() - hit.at < URL_TTL_MS) return hit.url;
-    const res = await fetch(`/api/preview?provider=${track.provider}&id=${track.trackId}`);
+    // `fresh` must also bust the CDN cache — a retry that re-reads the same
+    // cached (possibly expired) URL is no retry at all.
+    const bust = fresh ? `&fresh=${Date.now()}` : "";
+    const res = await fetch(`/api/preview?provider=${track.provider}&id=${track.trackId}${bust}`);
     if (!res.ok) {
       urlCache.current.delete(key);
       throw new Error("no preview");
