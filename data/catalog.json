@@ -1,0 +1,3153 @@
+{
+  "builtAt": "2026-08-04T13:21:38.063Z",
+  "artists": {
+    "rampa": {
+      "name": "Rampa",
+      "provider": "deezer",
+      "providerArtist": "Rampa",
+      "providerArtistId": "427945",
+      "fans": 18962,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3026091641",
+          "title": "Say What"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3476066671",
+          "title": "See You Again"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2684663852",
+          "title": "Thandaza"
+        }
+      ],
+      "trusted": true
+    },
+    "blond ish": {
+      "name": "Blond:ish",
+      "provider": "deezer",
+      "providerArtist": "Blond:ish",
+      "providerArtistId": "1179872",
+      "fans": 13198,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4001349051",
+          "title": "Lovers On The Dancefloor"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4114901551",
+          "title": "$MONEY"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2871918512",
+          "title": "Never Walk Alone"
+        }
+      ],
+      "trusted": true
+    },
+    "vintage culture": {
+      "name": "Vintage Culture",
+      "provider": "deezer",
+      "providerArtist": "Vintage Culture",
+      "providerArtistId": "4782876",
+      "fans": 530206,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4153996702",
+          "title": "Think Too Much"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1048015732",
+          "title": "Coffee (Give Me Something)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2079969417",
+          "title": "You Give Me A Feeling"
+        }
+      ],
+      "trusted": true
+    },
+    "maceo plex": {
+      "name": "Maceo Plex",
+      "provider": "deezer",
+      "providerArtist": "Maceo Plex",
+      "providerArtistId": "1224771",
+      "fans": 92956,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4105939421",
+          "title": "Lonely Drive"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4105939411",
+          "title": "The Plan (feat. Baby Monsta)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2200125307",
+          "title": "Solitary Daze"
+        }
+      ],
+      "trusted": true
+    },
+    "argy": {
+      "name": "Argy",
+      "provider": "deezer",
+      "providerArtist": "Argy",
+      "providerArtistId": "145050",
+      "fans": 14300,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2563894342",
+          "title": "Aria"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3462070211",
+          "title": "Voices In My Head (Amelie Lens Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2662867772",
+          "title": "Dreamstates"
+        }
+      ],
+      "trusted": true
+    },
+    "marlon hoffstadt": {
+      "name": "Marlon Hoffstadt",
+      "provider": "deezer",
+      "providerArtist": "Marlon Hoffstadt",
+      "providerArtistId": "3926781",
+      "fans": 13251,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2843812632",
+          "title": "It's That Time (FISHER Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4144976972",
+          "title": "Get Buck"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3719324372",
+          "title": "Makina Time"
+        }
+      ],
+      "trusted": true
+    },
+    "daria kolosova": {
+      "name": "Daria Kolosova",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "adam beyer": {
+      "name": "Adam Beyer",
+      "provider": "deezer",
+      "providerArtist": "Adam Beyer",
+      "providerArtistId": "261179031",
+      "fans": 8,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4080978451",
+          "title": "Desolate Lands"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2195645707",
+          "title": "Break It Up"
+        }
+      ],
+      "trusted": true
+    },
+    "jaquet": {
+      "name": "Jaquet",
+      "provider": "deezer",
+      "providerArtist": "Jaquet",
+      "providerArtistId": "5060356",
+      "fans": 40,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3450242411",
+          "title": "Mess Around (Baby Baby)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3368101381",
+          "title": "Soft"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3840091101",
+          "title": "Make Sense"
+        }
+      ],
+      "trusted": false
+    },
+    "honeyluv": {
+      "name": "Honeyluv",
+      "provider": "deezer",
+      "providerArtist": "HoneyLuv",
+      "providerArtistId": "119265692",
+      "fans": 456,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3982158351",
+          "title": "I Need U (feat. Ellie Maxwell)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2645179582",
+          "title": "This Is My Life (Bontan Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3856160011",
+          "title": "Don't Stop"
+        }
+      ],
+      "trusted": true
+    },
+    "archie hamilton": {
+      "name": "Archie Hamilton",
+      "provider": "deezer",
+      "providerArtist": "Archie Hamilton",
+      "providerArtistId": "372665",
+      "fans": 1685,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3811968252",
+          "title": "Push Up On Me"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4024582811",
+          "title": "What I Got"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2200674877",
+          "title": "Telegram"
+        }
+      ],
+      "trusted": true
+    },
+    "hilit kolet": {
+      "name": "Hilit Kolet",
+      "provider": "deezer",
+      "providerArtist": "Hilit Kolet",
+      "providerArtistId": "5417873",
+      "fans": 83,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3156197031",
+          "title": "POV Siren"
+        }
+      ],
+      "trusted": true
+    },
+    "yamagucci": {
+      "name": "Yamagucci",
+      "provider": "deezer",
+      "providerArtist": "Yamagucci",
+      "providerArtistId": "148074032",
+      "fans": 228,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4029682651",
+          "title": "My Killers"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3401736751",
+          "title": "What The F*** Is That"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4105149931",
+          "title": "Mumbai Taxi"
+        }
+      ],
+      "trusted": true
+    },
+    "sonny fodera": {
+      "name": "Sonny Fodera",
+      "provider": "deezer",
+      "providerArtist": "Sonny Fodera",
+      "providerArtistId": "431341",
+      "fans": 31672,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3876506281",
+          "title": "Feel Again"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2862271732",
+          "title": "Somedays"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4017971641",
+          "title": "Let Me Be In Your Arms"
+        }
+      ],
+      "trusted": true
+    },
+    "andrea oliva": {
+      "name": "Andrea Oliva",
+      "provider": "deezer",
+      "providerArtist": "Andrea Oliva",
+      "providerArtistId": "491428",
+      "fans": 1590,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3249922241",
+          "title": "Change"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2202005017",
+          "title": "Piano Not Piano"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "512947082",
+          "title": "Terrace"
+        }
+      ],
+      "trusted": true
+    },
+    "several definitions": {
+      "name": "Several Definitions • Audio Geneva",
+      "provider": "deezer",
+      "providerArtist": "Several Definitions",
+      "providerArtistId": "6920979",
+      "fans": 885,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "110906034",
+          "title": "Time (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "88803619",
+          "title": "The Beginning"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "110906026",
+          "title": "Wanted To"
+        }
+      ],
+      "trusted": true
+    },
+    "pasci": {
+      "name": "Pasci • Frieda's Büxe (ZH)",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "rosanna": {
+      "name": "Rosanna • Klaus (ZH)",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "gi0si": {
+      "name": "gi0si • Hidden Club (SO)",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "pedram": {
+      "name": "Pedram • Supermarket (ZH)",
+      "provider": "itunes",
+      "providerArtist": "pedram",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1609904188",
+          "title": "Song of the Fireflies"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1691334302",
+          "title": "Pretty When You Cry"
+        }
+      ],
+      "trusted": false
+    },
+    "aiia": {
+      "name": "AIIA • Hive Club (ZH)",
+      "provider": "itunes",
+      "providerArtist": "Aiia",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1858877253",
+          "title": "Me Llamaste Por Mi Nombre"
+        }
+      ],
+      "trusted": false
+    },
+    "sebastian konrad": {
+      "name": "Sebastian Konrad",
+      "provider": "deezer",
+      "providerArtist": "Sebastian Konrad",
+      "providerArtistId": "12448964",
+      "fans": 44,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3723087662",
+          "title": "Nothing Left to Say (Radio Edit)"
+        }
+      ],
+      "trusted": true
+    },
+    "vera amberg": {
+      "name": "Vera Amberg • Kiosk (LU)",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "dj equipment": {
+      "name": "DJ Equipment b2b Jenny Cara • Kauz (ZH)",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "nhu d club vd": {
+      "name": "NHÜ - D! Club (VD)",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "andy katz": {
+      "name": "Andy Katz • Exil (ZH)",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "alex nantaya": {
+      "name": "Alex Nantaya",
+      "provider": "deezer",
+      "providerArtist": "Alex Nantaya",
+      "providerArtistId": "282769461",
+      "fans": 32,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3338750091",
+          "title": "Cut You Open"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3395518211",
+          "title": "Steal Me Away"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3338750101",
+          "title": "Seven"
+        }
+      ],
+      "trusted": true
+    },
+    "satys fyre": {
+      "name": "Satys Fyre",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "prada2000": {
+      "name": "Prada2000",
+      "provider": "deezer",
+      "providerArtist": "PRADA2000",
+      "providerArtistId": "191706807",
+      "fans": 330,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3509866841",
+          "title": "GoGoGo! (VIP Intro Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3199350161",
+          "title": "BULLETS (VIP OPENING MIX)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2844878082",
+          "title": "FUSION"
+        }
+      ],
+      "trusted": true
+    },
+    "felicie": {
+      "name": "Félicie",
+      "provider": "deezer",
+      "providerArtist": "Félicie",
+      "providerArtistId": "11966387",
+      "fans": 102,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2758264931",
+          "title": "Late Checkout"
+        }
+      ],
+      "trusted": true
+    },
+    "ellen allien": {
+      "name": "Ellen Allien",
+      "provider": "deezer",
+      "providerArtist": "Ellen Allien",
+      "providerArtistId": "2031",
+      "fans": 62168,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1803086197",
+          "title": "Reality"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1066414052",
+          "title": "Jet"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3980659191",
+          "title": "Fantazy"
+        }
+      ],
+      "trusted": true
+    },
+    "johannes schuster": {
+      "name": "Johannes Schuster",
+      "provider": "deezer",
+      "providerArtist": "Johannes Schuster",
+      "providerArtistId": "71456032",
+      "fans": 388,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3823388571",
+          "title": "Kiss Me Again (Official Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3594022352",
+          "title": "Body Control"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1075978582",
+          "title": "Nebel"
+        }
+      ],
+      "trusted": true
+    },
+    "eric": {
+      "name": "Eric",
+      "provider": "deezer",
+      "providerArtist": "Eric",
+      "providerArtistId": "153965",
+      "fans": 208,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "385268751",
+          "title": "Give Me Your Love (Main Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "547881702",
+          "title": "Who's Your Boyfriend"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "99191424",
+          "title": "Who's Your Boyfriend"
+        }
+      ],
+      "trusted": false
+    },
+    "dymos jay fase": {
+      "name": "Dymos & Jay Fase",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "contenance": {
+      "name": "Contenance",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "animal trainer": {
+      "name": "Animal Trainer LIVE",
+      "provider": "deezer",
+      "providerArtist": "Animal Trainer",
+      "providerArtistId": "350447",
+      "fans": 3306,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "738262682",
+          "title": "Amaron (Einmusik Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1529255362",
+          "title": "Rave New World (Monkey Safari Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1174617152",
+          "title": "Verzasca"
+        }
+      ],
+      "trusted": true
+    },
+    "dangel twins": {
+      "name": "Dangel Twins",
+      "provider": "deezer",
+      "providerArtist": "Dangel Twins",
+      "providerArtistId": "281657791",
+      "fans": 10,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3324890431",
+          "title": "Like Dat (Misha and Dangel Twins Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2990489991",
+          "title": "The Symphony"
+        }
+      ],
+      "trusted": true
+    },
+    "read the news": {
+      "name": "Read the News",
+      "provider": "deezer",
+      "providerArtist": "Read the News",
+      "providerArtistId": "187269007",
+      "fans": 62,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2181955727",
+          "title": "Sight Of You (Read the News Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3613547572",
+          "title": "Rocks (Dyzen Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3606149912",
+          "title": "Funk"
+        }
+      ],
+      "trusted": true
+    },
+    "marcus meinhardt": {
+      "name": "Marcus Meinhardt",
+      "provider": "deezer",
+      "providerArtist": "marcus meinhardt",
+      "providerArtistId": "62288",
+      "fans": 3433,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "471388162",
+          "title": "Endjoy (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1928250497",
+          "title": "Bamboo (Mixed)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1901632087",
+          "title": "Bamboo"
+        }
+      ],
+      "trusted": true
+    },
+    "ambient pino": {
+      "name": "Ambient Pino",
+      "provider": "deezer",
+      "providerArtist": "Ambient Pino",
+      "providerArtistId": "97285762",
+      "fans": 43,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1149573242",
+          "title": "Melodic Techno (Afro House Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2087457437",
+          "title": "Wicked Game (Radio Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4005288451",
+          "title": "Layl Al-Sirr (Extended Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "oxy": {
+      "name": "OXY",
+      "provider": "deezer",
+      "providerArtist": "Oxy",
+      "providerArtistId": "263325991",
+      "fans": 7,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3969797411",
+          "title": "ти йдеш (Acoustic Version)"
+        }
+      ],
+      "trusted": false
+    },
+    "nikora northwind": {
+      "name": "Nikora & Northwind",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "frequenzkobold": {
+      "name": "Frequenzkobold",
+      "provider": "itunes",
+      "providerArtist": "Frequenzkobold",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1658383432",
+          "title": "Leprechaun"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1674251509",
+          "title": "Insanis Combinationibus"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1674251511",
+          "title": "Sensus Distortus"
+        }
+      ],
+      "trusted": true
+    },
+    "digital reflection": {
+      "name": "Digital Reflection",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "prodelic": {
+      "name": "Prodelic",
+      "provider": "itunes",
+      "providerArtist": "Prodelic",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1854208667",
+          "title": "Crown Me"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1854351343",
+          "title": "Trip Flip"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1854380690",
+          "title": "Safari"
+        }
+      ],
+      "trusted": true
+    },
+    "jumpstreet": {
+      "name": "Jumpstreet",
+      "provider": "deezer",
+      "providerArtist": "Jumpstreet",
+      "providerArtistId": "7370844",
+      "fans": 1459,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3581401241",
+          "title": "Gourmet Noise"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3030578921",
+          "title": "Sh_t, This Is New!"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2225876547",
+          "title": "Wicked Busters (Original Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "timo lissy": {
+      "name": "Timo Lissy",
+      "provider": "itunes",
+      "providerArtist": "Timo Lissy",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1701697159",
+          "title": "Electric Humidity"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1818890203",
+          "title": "Knotenpunkt"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1752887573",
+          "title": "Mimosa"
+        }
+      ],
+      "trusted": true
+    },
+    "kaufmann": {
+      "name": "Kaufmann",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "fyzz": {
+      "name": "Fyzz",
+      "provider": "itunes",
+      "providerArtist": "Fyzz",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1524581829",
+          "title": "The End"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1522401158",
+          "title": "Breakdown"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1634231887",
+          "title": "The End VIP"
+        }
+      ],
+      "trusted": false
+    },
+    "yves maurice": {
+      "name": "Yves-Maurice",
+      "provider": "deezer",
+      "providerArtist": "Yves-Maurice",
+      "providerArtistId": "261780491",
+      "fans": 3,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3552196761",
+          "title": "The People"
+        }
+      ],
+      "trusted": true
+    },
+    "mariat": {
+      "name": "Mariat",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "eliafred": {
+      "name": "Eliafred",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "daughter in law": {
+      "name": "Daughter in Law",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "michelle vanja": {
+      "name": "Michelle Vanja",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "okara": {
+      "name": "Okara",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "jess mawi": {
+      "name": "Jess Mawi",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "bina": {
+      "name": "Bina",
+      "provider": "deezer",
+      "providerArtist": "BINA.",
+      "providerArtistId": "48737741",
+      "fans": 562,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3899229061",
+          "title": "Zombies"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1908377417",
+          "title": "Blackjack"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2960331641",
+          "title": "Dopamine"
+        }
+      ],
+      "trusted": false
+    },
+    "ibor": {
+      "name": "IBOR",
+      "provider": "itunes",
+      "providerArtist": "Ibor",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "6796343408",
+          "title": "AŞKIM GERİ DÖN"
+        }
+      ],
+      "trusted": false
+    },
+    "tanner": {
+      "name": "Tanner vs. IBOR",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "bart skils": {
+      "name": "Bart Skils",
+      "provider": "deezer",
+      "providerArtist": "Bart Skils",
+      "providerArtistId": "468677",
+      "fans": 9365,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2393352885",
+          "title": "Your Mind"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "65009145",
+          "title": "Midnight Moving (2000 and One's 1984 Electro Synth Pop Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3550847581",
+          "title": "Sweet Harmony"
+        }
+      ],
+      "trusted": true
+    },
+    "isabelle beaucamp": {
+      "name": "Isabelle Beaucamp",
+      "provider": "deezer",
+      "providerArtist": "Isabelle Beaucamp",
+      "providerArtistId": "230773425",
+      "fans": 149,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3295104861",
+          "title": "Enigma"
+        }
+      ],
+      "trusted": true
+    },
+    "daxson": {
+      "name": "Daxson",
+      "provider": "deezer",
+      "providerArtist": "Daxson",
+      "providerArtistId": "11953297",
+      "fans": 1031,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1868669667",
+          "title": "The Only Way"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2329013205",
+          "title": "First Light"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2830205572",
+          "title": "Frantika"
+        }
+      ],
+      "trusted": false
+    },
+    "heliom": {
+      "name": "Heliom",
+      "provider": "deezer",
+      "providerArtist": "HELIOM",
+      "providerArtistId": "114059722",
+      "fans": 1,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4020943791",
+          "title": "Lara"
+        }
+      ],
+      "trusted": false
+    },
+    "madwave": {
+      "name": "Madwave",
+      "provider": "itunes",
+      "providerArtist": "Madwave",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1436689059",
+          "title": "Shinobi"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1414208358",
+          "title": "Solar Wind"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1446627853",
+          "title": "Melodia"
+        }
+      ],
+      "trusted": true
+    },
+    "wenyx": {
+      "name": "WeNyx",
+      "provider": "itunes",
+      "providerArtist": "WeNyx",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "6792793107",
+          "title": "Follow Up"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "6790834635",
+          "title": "FreQ the Bassline"
+        }
+      ],
+      "trusted": false
+    },
+    "rjan nilsen": {
+      "name": "Ørjan Nilsen",
+      "provider": "itunes",
+      "providerArtist": "Ørjan Nilsen",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1365014026",
+          "title": "Drowning (feat. IDA)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1365013921",
+          "title": "Iconic"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1257159633",
+          "title": "Drowning (feat. IDA)"
+        }
+      ],
+      "trusted": true
+    },
+    "capt n": {
+      "name": "Capt’n",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "gianluca felline": {
+      "name": "Gianluca Felline",
+      "provider": "itunes",
+      "providerArtist": "Gianluca Felline",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1720765438",
+          "title": "Broadway"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1720765374",
+          "title": "Adlibs"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1787898749",
+          "title": "Broadway"
+        }
+      ],
+      "trusted": true
+    },
+    "juzz": {
+      "name": "Juzz",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "symoh sares": {
+      "name": "Symoh Sares",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "theia": {
+      "name": "Theia",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "valentino": {
+      "name": "Valentino",
+      "provider": "deezer",
+      "providerArtist": "Valentino",
+      "providerArtistId": "102011",
+      "fans": 8214,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3240288681",
+          "title": "Besame"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "457686092",
+          "title": "Punto y Coma"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "528818511",
+          "title": "Tú Y Yo (feat. Nicky Jam & Justin Quiles)"
+        }
+      ],
+      "trusted": true
+    },
+    "bonzai": {
+      "name": "Bonzai",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "centaury": {
+      "name": "Centaury",
+      "provider": "itunes",
+      "providerArtist": "Centaury",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1725036153",
+          "title": "Timeless Reflections"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1662562842",
+          "title": "Morning Sun (432Hz)"
+        }
+      ],
+      "trusted": true
+    },
+    "dee jay g p": {
+      "name": "Dee Jay G.P.",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "fabio g": {
+      "name": "Fabio G",
+      "provider": "deezer",
+      "providerArtist": "Fabio G",
+      "providerArtistId": "4983843",
+      "fans": 26,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1158719472",
+          "title": "Culpable de Tu Amor"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1724187607",
+          "title": "Te Vas de Mi"
+        }
+      ],
+      "trusted": true
+    },
+    "johan gielen": {
+      "name": "Johan Gielen",
+      "provider": "deezer",
+      "providerArtist": "Johan Gielen",
+      "providerArtistId": "10979",
+      "fans": 1779,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2613871232",
+          "title": "L'Esperanza (Radio Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3881084781",
+          "title": "Trance Society"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3528021801",
+          "title": "The Beauty Of Silence"
+        }
+      ],
+      "trusted": true
+    },
+    "nuphaze": {
+      "name": "Nuphaze",
+      "provider": "itunes",
+      "providerArtist": "Nuphaze",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1465252449",
+          "title": "Signs of Life (Radio Mix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1465252370",
+          "title": "Signs of Life (Extended Mix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1465252440",
+          "title": "Signs of Life (Dito Remix)"
+        }
+      ],
+      "trusted": true
+    },
+    "quicksilver": {
+      "name": "Quicksilver",
+      "provider": "deezer",
+      "providerArtist": "Quicksilver",
+      "providerArtistId": "102131",
+      "fans": 125,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "15686133",
+          "title": "Speak Softly You're Talking To My Heart"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686199",
+          "title": "Beyond The Sunset For Me"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686268",
+          "title": "I'll Trade The Old Cross (For A Crown)"
+        }
+      ],
+      "trusted": true
+    },
+    "s p h e r e": {
+      "name": "S.P.H.E.R.E",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "tatana": {
+      "name": "Tatana",
+      "provider": "deezer",
+      "providerArtist": "Tatana",
+      "providerArtistId": "144003",
+      "fans": 3250,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1004958892",
+          "title": "Brand New (Club Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3843514761",
+          "title": "Need Somebody (feat. Bastien)"
+        }
+      ],
+      "trusted": false
+    },
+    "gil glaze": {
+      "name": "Gil Glaze",
+      "provider": "deezer",
+      "providerArtist": "Gil Glaze",
+      "providerArtistId": "7178246",
+      "fans": 670,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4105434851",
+          "title": "Allein"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4105012281",
+          "title": "Eyes (feat. Bipolar Sunshine)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1549363482",
+          "title": "The Green Light (feat. Georgi Kay)"
+        }
+      ],
+      "trusted": true
+    },
+    "maks": {
+      "name": "Maks",
+      "provider": "deezer",
+      "providerArtist": "Maks",
+      "providerArtistId": "185523757",
+      "fans": 171,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1930941347",
+          "title": "Brandblusser"
+        }
+      ],
+      "trusted": false
+    },
+    "whereisvero": {
+      "name": "Whereisvero",
+      "provider": "deezer",
+      "providerArtist": "whereisvero",
+      "providerArtistId": "329162061",
+      "fans": 0,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3401750111",
+          "title": "Under the Sun"
+        }
+      ],
+      "trusted": true
+    },
+    "dominic strike": {
+      "name": "Dominic Strike",
+      "provider": "deezer",
+      "providerArtist": "Dominic Strike",
+      "providerArtistId": "14178119",
+      "fans": 66,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1815319787",
+          "title": "Not For Me"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2987789101",
+          "title": "Without My Love"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2756194011",
+          "title": "Oh My My"
+        }
+      ],
+      "trusted": true
+    },
+    "lenny lou": {
+      "name": "Lenny Lou",
+      "provider": "itunes",
+      "providerArtist": "Lenny Lou",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1829237081",
+          "title": "Night"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1873362997",
+          "title": "Same Thing"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1869462687",
+          "title": "Forgive"
+        }
+      ],
+      "trusted": true
+    },
+    "passik": {
+      "name": "Passik",
+      "provider": "deezer",
+      "providerArtist": "PASSIK",
+      "providerArtistId": "10374888",
+      "fans": 124,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2142277807",
+          "title": "Habits (Stay High)[Techno Edit]"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2678356052",
+          "title": "Frozen"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3234057211",
+          "title": "Ocarina"
+        }
+      ],
+      "trusted": false
+    },
+    "rosa pagano": {
+      "name": "Rosa Pagano",
+      "provider": "itunes",
+      "providerArtist": "Rosa Pagano",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1610152569",
+          "title": "My Love (Route 94)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1735476848",
+          "title": "Bassline Junkie"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1815416257",
+          "title": "Gunman Sound"
+        }
+      ],
+      "trusted": true
+    },
+    "b k": {
+      "name": "B.K.",
+      "provider": "itunes",
+      "providerArtist": "B.K",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1196390722",
+          "title": "Bellydancehall (feat. Mr. Saik)"
+        }
+      ],
+      "trusted": true
+    },
+    "david moreno": {
+      "name": "David Moreno",
+      "provider": "deezer",
+      "providerArtist": "David Moreno",
+      "providerArtistId": "1235607",
+      "fans": 993,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3776022442",
+          "title": "Cielito Lindo"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3776022462",
+          "title": "La Marcha de Zacatecas"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2461320005",
+          "title": "Las Bodas de Luis Alonso"
+        }
+      ],
+      "trusted": true
+    },
+    "mario ferrini": {
+      "name": "Mario Ferrini",
+      "provider": "itunes",
+      "providerArtist": "Mario Ferrini",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "337403487",
+          "title": "Morning Breeze (Original Vocal Mix) [feat. Jim C.]"
+        }
+      ],
+      "trusted": true
+    },
+    "rom 303": {
+      "name": "ROM 303",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "sachi toyama": {
+      "name": "Sachi Toyama",
+      "provider": "itunes",
+      "providerArtist": "Sachi Toyama",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1678095630",
+          "title": "No Comment 2019 (M - Zone Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1678095629",
+          "title": "No Comment 2019 (DJ Darroo Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1674749500",
+          "title": "No Comment (Wavetraxx) [Mixed]"
+        }
+      ],
+      "trusted": true
+    },
+    "tito torres": {
+      "name": "Tito Torres",
+      "provider": "itunes",
+      "providerArtist": "Tito Torres",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1301405739",
+          "title": "Deep Vibes"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1440268391",
+          "title": "Sunset Dream"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "361470502",
+          "title": "Sunset Dream"
+        }
+      ],
+      "trusted": true
+    },
+    "dre guazzelli": {
+      "name": "Dre Guazzelli",
+      "provider": "deezer",
+      "providerArtist": "Dre Guazzelli",
+      "providerArtistId": "7000331",
+      "fans": 5485,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3737871932",
+          "title": "Instrumento de Paz (Radio edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "826416972",
+          "title": "Linda, Louca e Zen"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3121613221",
+          "title": "Bateu (Dre Guazzelli & João Faria Remix)"
+        }
+      ],
+      "trusted": true
+    },
+    "luqo live saxophon": {
+      "name": "Luqo – Live Saxophon",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "marisha live violin": {
+      "name": "Marisha – Live Violin",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "mimmo": {
+      "name": "MIMMO",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "paul lomax": {
+      "name": "Paul Lomax",
+      "provider": "itunes",
+      "providerArtist": "Paul Lomax",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "652101977",
+          "title": "Ibizarosa"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "317069866",
+          "title": "Aviator"
+        }
+      ],
+      "trusted": true
+    },
+    "valerio lombardo live percussion": {
+      "name": "Valerio Lombardo – Live Percussion",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "aleno": {
+      "name": "Aleno",
+      "provider": "itunes",
+      "providerArtist": "Aleno",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1793409291",
+          "title": "Vida Loca"
+        }
+      ],
+      "trusted": false
+    },
+    "anthik": {
+      "name": "Anthik",
+      "provider": "deezer",
+      "providerArtist": "Anthik",
+      "providerArtistId": "6740085",
+      "fans": 89,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2000528997",
+          "title": "Point of View"
+        }
+      ],
+      "trusted": false
+    },
+    "arado": {
+      "name": "Arado",
+      "provider": "deezer",
+      "providerArtist": "Arado",
+      "providerArtistId": "1631548",
+      "fans": 986,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "7632944",
+          "title": "Strange Neighbors"
+        }
+      ],
+      "trusted": false
+    },
+    "kellerkind": {
+      "name": "Kellerkind",
+      "provider": "deezer",
+      "providerArtist": "Kellerkind",
+      "providerArtistId": "313789",
+      "fans": 4760,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1342793172",
+          "title": "The World Beyond"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "17116648",
+          "title": "Disco On the Dancefloor"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "464611392",
+          "title": "Shakti Pan"
+        }
+      ],
+      "trusted": true
+    },
+    "la mila": {
+      "name": "La Mila",
+      "provider": "itunes",
+      "providerArtist": "La Mila",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1450994245",
+          "title": "Mi Gato Está en la Rama"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994225",
+          "title": "Soy un Caracol"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994232",
+          "title": "Don Pávico y Doña Lechónica"
+        }
+      ],
+      "trusted": true
+    },
+    "rick lee": {
+      "name": "Rick Lee",
+      "provider": "itunes",
+      "providerArtist": "Rick Lee",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "272384366",
+          "title": "The Prodigal Son"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "272384429",
+          "title": "Drunken Sailor/Star O'Munster"
+        }
+      ],
+      "trusted": true
+    },
+    "chris p": {
+      "name": "Chris.P",
+      "provider": "itunes",
+      "providerArtist": "Chris P.",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "536239539",
+          "title": "Feel Like a New Born Child (Extended Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "ilona maras": {
+      "name": "Ilona Maras",
+      "provider": "deezer",
+      "providerArtist": "Ilona Maras",
+      "providerArtistId": "8406800",
+      "fans": 467,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3287726491",
+          "title": "The Poem (Original Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "inamar": {
+      "name": "Inamar",
+      "provider": "deezer",
+      "providerArtist": "INAMAR",
+      "providerArtistId": "73546812",
+      "fans": 75,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2851971512",
+          "title": "Sky Is the Limit"
+        }
+      ],
+      "trusted": false
+    },
+    "alessio sassano": {
+      "name": "Alessio Sassano",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "bam bam": {
+      "name": "Bäm Bäm",
+      "provider": "deezer",
+      "providerArtist": "Bam Bam",
+      "providerArtistId": "172500",
+      "fans": 1627,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "11732645",
+          "title": "Chica la Femenina"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "11860754",
+          "title": "Lucho Por Sobrevivir"
+        }
+      ],
+      "trusted": true
+    },
+    "drs": {
+      "name": "DRS",
+      "provider": "itunes",
+      "providerArtist": "Drs",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1791224837",
+          "title": "Trip in motion"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1765332898",
+          "title": "Endless night"
+        }
+      ],
+      "trusted": false
+    },
+    "e x e c u t e": {
+      "name": "E.x.e.c.u.t.e",
+      "provider": "deezer",
+      "providerArtist": "E.X.E.C.U.T.E",
+      "providerArtistId": "213156917",
+      "fans": 25,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3851234451",
+          "title": "On The Block"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3642051832",
+          "title": "Bring The Pain"
+        }
+      ],
+      "trusted": true
+    },
+    "giuly": {
+      "name": "Giuly",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "j d a": {
+      "name": "J.D.A",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "nitrile": {
+      "name": "Nitrile",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "the cold demon": {
+      "name": "The Cold Demon",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "clari ann": {
+      "name": "Clari Ann",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "fezzyfezz": {
+      "name": "FezzYFezz",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "khainz": {
+      "name": "Khainz",
+      "provider": "deezer",
+      "providerArtist": "Khainz",
+      "providerArtistId": "146900",
+      "fans": 10247,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2501380881",
+          "title": "Complications"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3807627352",
+          "title": "Getting Lost"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3552722691",
+          "title": "Stop Go"
+        }
+      ],
+      "trusted": true
+    },
+    "progiglobi": {
+      "name": "Progiglobi",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "guy mac": {
+      "name": "Guy Mac",
+      "provider": "deezer",
+      "providerArtist": "Guy Mac",
+      "providerArtistId": "117835712",
+      "fans": 40,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2200758027",
+          "title": "Sonic Boom"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3432623951",
+          "title": "Divine Call"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3156191421",
+          "title": "PASSION (Extended Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "mark reeve": {
+      "name": "Mark Reeve",
+      "provider": "deezer",
+      "providerArtist": "Mark Reeve",
+      "providerArtistId": "380054",
+      "fans": 4380,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2255506837",
+          "title": "Breathe (Breakbeat Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2489785991",
+          "title": "Message (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3978127951",
+          "title": "Love Within"
+        }
+      ],
+      "trusted": true
+    },
+    "nadine vinzens": {
+      "name": "Nadine Vinzens",
+      "provider": "deezer",
+      "providerArtist": "Nadine Vinzens",
+      "providerArtistId": "99061222",
+      "fans": 7,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1004958892",
+          "title": "Brand New (Club Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "roum": {
+      "name": "Roum",
+      "provider": "deezer",
+      "providerArtist": "Roum",
+      "providerArtistId": "91817272",
+      "fans": 6,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4036763881",
+          "title": "Chemicals"
+        }
+      ],
+      "trusted": false
+    },
+    "alex july aka leeroy": {
+      "name": "Alex July aka LeeRoy",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "black spirit": {
+      "name": "Black Spirit",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "sven m": {
+      "name": "Sven M.",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "vanita": {
+      "name": "Vanita",
+      "provider": "deezer",
+      "providerArtist": "Vanita",
+      "providerArtistId": "3122811",
+      "fans": 146,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2418376425",
+          "title": "Ghost"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1456325322",
+          "title": "Postquam (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1894045557",
+          "title": "Slowly"
+        }
+      ],
+      "trusted": false
+    },
+    "falk": {
+      "name": "Falk",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "luca agnelli": {
+      "name": "Luca Agnelli",
+      "provider": "deezer",
+      "providerArtist": "Luca Agnelli",
+      "providerArtistId": "130922",
+      "fans": 12378,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4036312231",
+          "title": "Dangereux"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2550200612",
+          "title": "Time Machine"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4143807212",
+          "title": "Tokyo Drift (Extended Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "pretty pink": {
+      "name": "Pretty Pink",
+      "provider": "deezer",
+      "providerArtist": "Pretty Pink",
+      "providerArtistId": "450214",
+      "fans": 8828,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3948748281",
+          "title": "Midnight (Khainz Remix Extended Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2245759407",
+          "title": "Suvi"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4130230451",
+          "title": "Away"
+        }
+      ],
+      "trusted": true
+    },
+    "vendex": {
+      "name": "Vendex",
+      "provider": "deezer",
+      "providerArtist": "Vendex",
+      "providerArtistId": "4066344",
+      "fans": 934,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3604460682",
+          "title": "M.L.A."
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2975592281",
+          "title": "Desire"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3509993901",
+          "title": "Herz In Flammen"
+        }
+      ],
+      "trusted": false
+    },
+    "guaved": {
+      "name": "Guaved",
+      "provider": "deezer",
+      "providerArtist": "Guaved",
+      "providerArtistId": "303814131",
+      "fans": 4,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3241515471",
+          "title": "Need You"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4033967051",
+          "title": "Feel So Good"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4057880241",
+          "title": "Your Love"
+        }
+      ],
+      "trusted": false
+    },
+    "luca dario": {
+      "name": "Luca Dario",
+      "provider": "itunes",
+      "providerArtist": "Luca Dario",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1750032264",
+          "title": "Piccolo Cielo Azzurro"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032274",
+          "title": "Sfumature Di Nostalgia"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032286",
+          "title": "Chiaro di Luna"
+        }
+      ],
+      "trusted": true
+    },
+    "paranomasia": {
+      "name": "Paranomasia",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "rayo": {
+      "name": "Rayo b2b Bina",
+      "provider": "deezer",
+      "providerArtist": "Rayo",
+      "providerArtistId": "4617661",
+      "fans": 230,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3274659881",
+          "title": "Bella Kali"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2724343332",
+          "title": "Cẩm Tú Cầu"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2277197217",
+          "title": "I'll Wait for You"
+        }
+      ],
+      "trusted": false
+    },
+    "teseo": {
+      "name": "Teseo",
+      "provider": "deezer",
+      "providerArtist": "Teseo",
+      "providerArtistId": "8257046",
+      "fans": 157,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1705966517",
+          "title": "ABCDEFU"
+        }
+      ],
+      "trusted": false
+    },
+    "rolf imhof": {
+      "name": "Rolf Imhof",
+      "provider": "itunes",
+      "providerArtist": "Rolf Imhof",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "275897059",
+          "title": "Electric Zulu (Original)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "275897060",
+          "title": "Electric Zulu (Jasmin Barbir Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "379041077",
+          "title": "Sharing Time (Lützenkirchen Only Digital 2009 Remix)"
+        }
+      ],
+      "trusted": true
+    },
+    "sam madi": {
+      "name": "Sam Madi",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "sendrix": {
+      "name": "Sendrix",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "anyken": {
+      "name": "Anyken",
+      "provider": "itunes",
+      "providerArtist": "Anyken",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1860652544",
+          "title": "The Cosmos"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1885507359",
+          "title": "In the Dark"
+        }
+      ],
+      "trusted": false
+    },
+    "bodo kaiser": {
+      "name": "Bodo Kaiser",
+      "provider": "deezer",
+      "providerArtist": "Bodo Kaiser",
+      "providerArtistId": "2280961",
+      "fans": 620,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3863862971",
+          "title": "Heartless"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2785785822",
+          "title": "Being Human"
+        }
+      ],
+      "trusted": true
+    },
+    "jean lostebien": {
+      "name": "Jean Lostebien",
+      "provider": "itunes",
+      "providerArtist": "Jean Lostebien",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1488114813",
+          "title": "I Love Techno (Cybnosis Live Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1488114799",
+          "title": "I Love Techno (Rework)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1488114806",
+          "title": "I Love Techno (Franck FTC Remix)"
+        }
+      ],
+      "trusted": true
+    },
+    "mario piu": {
+      "name": "Mario Piu",
+      "provider": "deezer",
+      "providerArtist": "Mario Più",
+      "providerArtistId": "817097",
+      "fans": 2528,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4167634332",
+          "title": "Somebody Answer The Phone (Communication) (Rerecorded)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "60681301",
+          "title": "The Vision (Vision 1 Originalmix Logoside)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "382405081",
+          "title": "Communication (Somebody Answer The Phone)"
+        }
+      ],
+      "trusted": true
+    },
+    "partick mathez": {
+      "name": "Partick Mathez",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "s i one": {
+      "name": "S.I.One",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "x plosiv": {
+      "name": "X-Plosiv",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "agent c": {
+      "name": "Agent C",
+      "provider": "itunes",
+      "providerArtist": "Agent C",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "475485531",
+          "title": "On Récolte"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "475485406",
+          "title": "Reflet D'une Lueur"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "475485538",
+          "title": "Xiii-Xiv"
+        }
+      ],
+      "trusted": true
+    },
+    "darius d": {
+      "name": "Darius D",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "du lait": {
+      "name": "Du Lait",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "frog u": {
+      "name": "Frog U",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "infernal bastard": {
+      "name": "Infernal Bastard",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "mad b": {
+      "name": "Mad B",
+      "provider": "deezer",
+      "providerArtist": "Mad-B",
+      "providerArtistId": "6883355",
+      "fans": 100,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "378108071",
+          "title": "Bomberman 2017"
+        }
+      ],
+      "trusted": true
+    },
+    "semtex": {
+      "name": "Semtex",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "snes": {
+      "name": "SNES",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "z groove": {
+      "name": "Z-Groove",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "nade": {
+      "name": "‘nade",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "15 15": {
+      "name": "15:15",
+      "provider": "itunes",
+      "providerArtist": "15 15",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1858554535",
+          "title": "Infinite Beach"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1858554342",
+          "title": "Take Off Late"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1858554528",
+          "title": "Queen's Goodbye"
+        }
+      ],
+      "trusted": true
+    },
+    "byorn": {
+      "name": "Byorn",
+      "provider": "deezer",
+      "providerArtist": "Byorn",
+      "providerArtistId": "54829882",
+      "fans": 255,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3642862732",
+          "title": "LA TEMPERATURA"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4051556381",
+          "title": "Darkness I'm Feeling"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3466072051",
+          "title": "Bassline People"
+        }
+      ],
+      "trusted": false
+    },
+    "flymeon": {
+      "name": "Flymeon",
+      "provider": "deezer",
+      "providerArtist": "Flymeon",
+      "providerArtistId": "15201259",
+      "fans": 1698,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2987815391",
+          "title": "Phatt Bass"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3989852731",
+          "title": "Fast Music"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3662993222",
+          "title": "No One Ever Really Dies"
+        }
+      ],
+      "trusted": true
+    },
+    "radio slave": {
+      "name": "Radio Slave",
+      "provider": "deezer",
+      "providerArtist": "Radio Slave",
+      "providerArtistId": "13158",
+      "fans": 2765,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2205301547",
+          "title": "Don't Stop No Sleep (Marco Faraone Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2205362127",
+          "title": "Feel The Same"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2204484257",
+          "title": "Nasty"
+        }
+      ],
+      "trusted": true
+    },
+    "flo le fortis": {
+      "name": "Flo le Fortis",
+      "provider": "itunes",
+      "providerArtist": "Flo le Fortis",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1644708548",
+          "title": "Ancient Power"
+        }
+      ],
+      "trusted": true
+    },
+    "nono maui": {
+      "name": "NoNo & Maui",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "oio": {
+      "name": "Oio",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "andrew larave": {
+      "name": "Andrew Larave",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "barthezz": {
+      "name": "Barthezz",
+      "provider": "deezer",
+      "providerArtist": "Barthezz",
+      "providerArtistId": "146",
+      "fans": 1372,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3575548861",
+          "title": "On The Move"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3437499271",
+          "title": "On The Move (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3693662182",
+          "title": "Infected (Radio Edit)"
+        }
+      ],
+      "trusted": true
+    },
+    "doom": {
+      "name": "DOOM",
+      "provider": "deezer",
+      "providerArtist": "Doom",
+      "providerArtistId": "73226732",
+      "fans": 247,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "5062362",
+          "title": "Sick Joke"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062361",
+          "title": "Scared"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062364",
+          "title": "Exploitation"
+        }
+      ],
+      "trusted": false
+    },
+    "ic n": {
+      "name": "ICØN",
+      "provider": "itunes",
+      "providerArtist": "Icøn",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1798903168",
+          "title": "Check"
+        }
+      ],
+      "trusted": true
+    },
+    "mind x": {
+      "name": "Mind-X",
+      "provider": "deezer",
+      "providerArtist": "Mind-x",
+      "providerArtistId": "247629",
+      "fans": 237,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3976182311",
+          "title": "The Marillion"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3881228231",
+          "title": "Simple Truth"
+        }
+      ],
+      "trusted": true
+    },
+    "patrick ravn": {
+      "name": "Patrick Ravn",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "synergee": {
+      "name": "SYNERGEE",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "djerry": {
+      "name": "DJerry",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "don agnello": {
+      "name": "Don Agnello",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "robin hassler": {
+      "name": "Robin Hassler",
+      "provider": "itunes",
+      "providerArtist": "Robin Hassler",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1726031871",
+          "title": "By Your Side (Extended Mix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1540955253",
+          "title": "By Your Side"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1652020597",
+          "title": "For You (Extended Mix)"
+        }
+      ],
+      "trusted": true
+    },
+    "somos": {
+      "name": "Somos",
+      "provider": "deezer",
+      "providerArtist": "Somos",
+      "providerArtistId": "5562288",
+      "fans": 655,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "735901182",
+          "title": "My Way to You"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "124251216",
+          "title": "When You Pass"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "735901122",
+          "title": "Iron Heel"
+        }
+      ],
+      "trusted": false
+    },
+    "v tino": {
+      "name": "V.Tino",
+      "provider": "deezer",
+      "providerArtist": "V.TINO",
+      "providerArtistId": "321837391",
+      "fans": 2,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3284119731",
+          "title": "Dakiti (feat. Zeitlos (CH))"
+        }
+      ],
+      "trusted": true
+    },
+    "zeitlos": {
+      "name": "Zeitlos",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "meera": {
+      "name": "Meera",
+      "provider": "deezer",
+      "providerArtist": "Meera",
+      "providerArtistId": "4656417",
+      "fans": 92,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2165266657",
+          "title": "Grevling"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3157820301",
+          "title": "Sirkustelt"
+        }
+      ],
+      "trusted": false
+    },
+    "alanor": {
+      "name": "Alanor",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "baba ganouj": {
+      "name": "Baba Ganouj",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "der kohler": {
+      "name": "Der Köhler",
+      "provider": null,
+      "tracks": [],
+      "trusted": false
+    },
+    "nickster": {
+      "name": "Nickster",
+      "provider": "deezer",
+      "providerArtist": "Nickster",
+      "providerArtistId": "5752130",
+      "fans": 7,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "2858489242",
+          "title": "Out of This World"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3750904152",
+          "title": "Mosaica"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3330624231",
+          "title": "Phone Me (feat. Mere Notilde)"
+        }
+      ],
+      "trusted": true
+    },
+    "alex morales": {
+      "name": "Alex Morales",
+      "provider": "itunes",
+      "providerArtist": "Alex Morales",
+      "providerArtistId": null,
+      "fans": null,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "itunes",
+          "trackId": "1717941591",
+          "title": "Tú Serás la Primera / Amor Misterioso / 24 Horas Cada Día"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1082243912",
+          "title": "In the House"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1082243919",
+          "title": "Music Lost"
+        }
+      ],
+      "trusted": true
+    },
+    "ciaran mcauley": {
+      "name": "Ciaran McAuley",
+      "provider": "deezer",
+      "providerArtist": "Ciaran McAuley",
+      "providerArtistId": "533202",
+      "fans": 1397,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "4063715011",
+          "title": "Separate Ways"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1547183332",
+          "title": "All I Want (Craig Connelly Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3713102542",
+          "title": "When I Found You"
+        }
+      ],
+      "trusted": true
+    },
+    "cold blue": {
+      "name": "Cold Blue",
+      "provider": "deezer",
+      "providerArtist": "Cold Blue",
+      "providerArtistId": "69514",
+      "fans": 2460,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1016461342",
+          "title": "August Rain"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "105871850",
+          "title": "Fever (Radio Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1270943562",
+          "title": "Land Of The Free (ASOT 1007)"
+        }
+      ],
+      "trusted": true
+    },
+    "fly": {
+      "name": "Fly",
+      "provider": "deezer",
+      "providerArtist": "FLY",
+      "providerArtistId": "72396062",
+      "fans": 139,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "1738774067",
+          "title": "Sing It Back (Afro Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2758772921",
+          "title": "Pasilda (Afro Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2171097797",
+          "title": "Sing It Back (Cantame Spanish Version OR3X Remix)"
+        }
+      ],
+      "trusted": false
+    },
+    "kyau albert": {
+      "name": "Kyau & Albert",
+      "provider": "deezer",
+      "providerArtist": "Kyau & Albert",
+      "providerArtistId": "6536",
+      "fans": 14919,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "382844481",
+          "title": "Memory Lane (Album Rework)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3908707931",
+          "title": "1000 Years"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "535117432",
+          "title": "Tube Hearts"
+        }
+      ],
+      "trusted": true
+    }
+  }
+}

@@ -1,0 +1,1205 @@
+{
+  "scrapedAt": "2026-08-04T13:16:52.959Z",
+  "event": {
+    "name": "Street Parade Zürich 2026",
+    "date": "2026-08-08"
+  },
+  "headliners": [
+    "Adam Beyer",
+    "Andrea Oliva",
+    "Archie Hamilton",
+    "Argy",
+    "Bart Skils",
+    "Blond:ish",
+    "Daria Kolosova",
+    "Ellen Allien",
+    "Félicie",
+    "Hilit Kolet",
+    "Honeyluv",
+    "Johannes Schuster",
+    "Kaufmann",
+    "Maceo Plex",
+    "Marlon Hoffstadt",
+    "Prada2000",
+    "Rampa",
+    "Satys Fyre",
+    "Sonny Fodera",
+    "Vintage Culture"
+  ],
+  "venues": [
+    {
+      "type": "stage",
+      "name": "Opéra Stage",
+      "styles": "House, Techno",
+      "desc": "The high-flyers from the «world of top DJs» play here. The international world-class line-up shows who sets the pace in the DJ universe.",
+      "artists": [
+        {
+          "name": "Rampa",
+          "time": "13:00"
+        },
+        {
+          "name": "Blond:ish",
+          "time": "14:30"
+        },
+        {
+          "name": "Vintage Culture",
+          "time": "15:45"
+        },
+        {
+          "name": "Maceo Plex",
+          "time": "17:00"
+        },
+        {
+          "name": "Argy",
+          "time": "18:30"
+        },
+        {
+          "name": "Marlon Hoffstadt",
+          "time": "19:30"
+        },
+        {
+          "name": "Daria Kolosova",
+          "time": "21:00"
+        },
+        {
+          "name": "Adam Beyer",
+          "time": "22:30"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Center Stage",
+      "styles": "House, Tech House",
+      "desc": "AllINeed presents the Centre Stage. This venue is an insider tip from the organisers: great DJs, top sound quality and a unique atmosphere between the lake and downtown Zurich",
+      "artists": [
+        {
+          "name": "Jaquet",
+          "time": "13:00"
+        },
+        {
+          "name": "Honeyluv",
+          "time": "14:30"
+        },
+        {
+          "name": "Archie Hamilton",
+          "time": "16:30"
+        },
+        {
+          "name": "Hilit Kolet",
+          "time": "18:30"
+        },
+        {
+          "name": "Yamagucci",
+          "time": "19:45"
+        },
+        {
+          "name": "Sonny Fodera",
+          "time": "21:00"
+        },
+        {
+          "name": "Andrea Oliva",
+          "time": "22:30"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Clubbing Stage",
+      "styles": "House, Techno, Disco",
+      "desc": "The electronic music output of Swiss artists is world class. The clubbing scene presents leading Swiss clubs, each of which organises a slot - with their selected resident DJs.",
+      "artists": [
+        {
+          "name": "Several Definitions • Audio Geneva",
+          "time": "13:00"
+        },
+        {
+          "name": "Pasci • Frieda's Büxe (ZH)",
+          "time": "14:00"
+        },
+        {
+          "name": "Rosanna • Klaus (ZH)",
+          "time": "15:00"
+        },
+        {
+          "name": "gi0si • Hidden Club (SO)",
+          "time": "16:00"
+        },
+        {
+          "name": "Pedram • Supermarket (ZH)",
+          "time": "17:00"
+        },
+        {
+          "name": "AIIA • Hive Club (ZH)",
+          "time": "18:00"
+        },
+        {
+          "name": "Sebastian Konrad",
+          "time": "19:00"
+        },
+        {
+          "name": "Vera Amberg • Kiosk (LU)",
+          "time": "20:00"
+        },
+        {
+          "name": "DJ Equipment b2b Jenny Cara • Kauz (ZH)",
+          "time": "21:00"
+        },
+        {
+          "name": "NHÜ - D! Club (VD)",
+          "time": "22:00"
+        },
+        {
+          "name": "Andy Katz • Exil (ZH)",
+          "time": "23:00"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Innovation Stage",
+      "styles": "Hard Techno, Techno",
+      "desc": "Electronic music thrives on fresh ideas. The Innovation Stage showcases creative national and international acts from the electronic music scene—bringing «underground» gems to light. The stage is hosted by the label and event collective UNREAL GERMANY, which is known for bringing new energy to the scene with its focus on hard techno.",
+      "artists": [
+        {
+          "name": "Alex Nantaya",
+          "time": "13:00"
+        },
+        {
+          "name": "Satys Fyre",
+          "time": "14:30"
+        },
+        {
+          "name": "Prada2000",
+          "time": "16:30"
+        },
+        {
+          "name": "Félicie",
+          "time": "18:30"
+        },
+        {
+          "name": "Ellen Allien",
+          "time": "20:30"
+        },
+        {
+          "name": "Johannes Schuster",
+          "time": "22:00"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Zürich Sound Stage",
+      "styles": "House, Indie Dance, Tech House, Melodic House",
+      "desc": "Zurich sound from Zurich DJs. The “Beats of the Limmatstadt” will be celebrated in the park (flea market area) near Bürkliplatz. The sets by Zurich's local heroes can be enjoyed in the shade of the trees in front of a small but exquisite stage.",
+      "artists": [
+        {
+          "name": "Eric",
+          "time": "13:00"
+        },
+        {
+          "name": "Dymos & Jay Fase",
+          "time": "15:00"
+        },
+        {
+          "name": "Contenance",
+          "time": "16:00"
+        },
+        {
+          "name": "Animal Trainer LIVE",
+          "time": "17:00"
+        },
+        {
+          "name": "Dangel Twins",
+          "time": "18:00"
+        },
+        {
+          "name": "Animal Trainer",
+          "time": "19:30"
+        },
+        {
+          "name": "Read the News",
+          "time": "21:00"
+        },
+        {
+          "name": "Marcus Meinhardt",
+          "time": "22:30"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Generations Stage",
+      "styles": "Psytrance, Progressive Psy",
+      "desc": "This stage unites the diversity and unity of psy music. All generations, colourful birds and people of all gender and disability identities are welcome. Mixed-age DJs and live acts connect the most diverse people with their music. >culturegroove.ch.",
+      "artists": [
+        {
+          "name": "Ambient Pino",
+          "time": "13:00"
+        },
+        {
+          "name": "OXY",
+          "time": "14:24"
+        },
+        {
+          "name": "Nikora & Northwind",
+          "time": "15:45"
+        },
+        {
+          "name": "Frequenzkobold",
+          "time": "17:06"
+        },
+        {
+          "name": "Digital Reflection",
+          "time": "18:30"
+        },
+        {
+          "name": "Prodelic",
+          "time": "19:30"
+        },
+        {
+          "name": "Jumpstreet",
+          "time": "21:00"
+        },
+        {
+          "name": "Timo Lissy",
+          "time": "22:30"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Opening Truck",
+      "styles": "Techno",
+      "desc": "The first stage up is Love Mobile No. 1, hosted by the «Drumcode» label. Adam Beyer will kick off the parade with a spectacular start at 1 p.m.! If you miss this amazing opening, you’ve only got yourself to blame.",
+      "artists": [
+        {
+          "name": "Adam Beyer",
+          "time": "13:00"
+        },
+        {
+          "name": "Kaufmann",
+          "time": "16:00"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Young Talent Stage",
+      "styles": "House, Tech House, Indie Dance",
+      "desc": "This stage showcases the work of a young generation of DJs. Artists who are largely active in the underground scene today fill the air with the beats of tomorrow. Here, regional influences blend together to form a collective representation of the Swiss electronic music scene.",
+      "artists": [
+        {
+          "name": "Fyzz",
+          "time": "13:00"
+        },
+        {
+          "name": "Yves-Maurice",
+          "time": "14:30"
+        },
+        {
+          "name": "Mariat",
+          "time": "16:00"
+        },
+        {
+          "name": "Eliafred",
+          "time": "17:00"
+        },
+        {
+          "name": "Daughter in Law",
+          "time": "18:30"
+        },
+        {
+          "name": "Michelle Vanja",
+          "time": "19:30"
+        },
+        {
+          "name": "Okara",
+          "time": "20:30"
+        },
+        {
+          "name": "Jess Mawi",
+          "time": "21:30"
+        },
+        {
+          "name": "Bina",
+          "time": "22:30"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "name": "Electric Circus Stage",
+      "styles": "Techno, Psytrance",
+      "desc": "Techno and psytrance fans are in for a real treat here. As the last Love Mobile in the parade, the «Magic Maroni x Labil mit Stil» truck will stop around 9:15 p.m. near «Stockerstrasse» and keep the fans dancing until midnight.",
+      "artists": [
+        {
+          "name": "IBOR",
+          "time": "21:15"
+        },
+        {
+          "name": "Tanner vs. IBOR",
+          "time": "22:00"
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 1,
+      "name": "Drumcode x Friends of Street Parade (SWE/ZH)",
+      "styles": "House, Techhouse, Techno",
+      "theme": "Space",
+      "timeWindow": "13:00 - 18:00",
+      "desc": "Manche bauen ein Love Mobile. Wir bauen ein Erlebnis. Zusammen mit dem Schwedischen Techno-Label «Drumcode» erschaffen wir eine Welt, die für einen Tag alles Gewohnte vergessen lässt. Eine Welt voller Energie, Emotionen und elektronischer Klänge, in der Tausende Menschen gemeinsam feiern, tanzen und den Moment geniessen. Inspiriert von den Weiten des Weltraums entsteht eine Atmosphäre voller Licht, Farben und besonderer Momente. Was euch genau erwartet, bleibt noch unser Geheimnis – nur so viel sei verraten: Es wird überraschend, kreativ und mit viel Liebe zum Detail umgesetzt. Monatelange Planung, unzählige freiwillige Arbeitsstunden und die Leidenschaft unserer Crew verschmelzen zu etwas, das weit mehr ist als ein Truck. Es ist unser Beitrag zur grössten Technoparty der Welt – laut, bunt, einzigartig und mit ganz viel Herz. Willkommen in unserem Space!",
+      "artists": [
+        {
+          "name": "Adam Beyer",
+          "time": "13:00"
+        },
+        {
+          "name": "Bart Skils",
+          "time": null
+        },
+        {
+          "name": "Isabelle Beaucamp",
+          "time": null
+        },
+        {
+          "name": "Kaufmann",
+          "time": "16:00"
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 2,
+      "name": "SYNERGY (VD/ZH)",
+      "styles": "Trance, Progressive",
+      "theme": "Trance Paradise",
+      "timeWindow": "14:08 - 18:08",
+      "desc": "Twelve editions in, SYNERGY Events brings its Love Mobile back to the Street Parade, this year under the theme Trance Paradise. A 100% trance float at the heart of the world's biggest electronic music gathering in Zurich. Headlining the float are two international names: Daxson (UK), widely recognized for his repeated appearances at Transmission festival and the anthems he created for it, and Ørjan Nilsen (Norway), a long-standing pillar of the trance scene and a familiar face of A State Of Trance. Alongside them, Madwave, a key figure of the Swiss trance scene and the embodiment of the SYNERGY spirit, WeNyx, a rising Swiss talent with a sharp, heartfelt sound and a drive that makes her impossible to ignore, and Heliom (aka Höhnflug), a faithful presence in the Swiss community whose energy has been part of the SYNERGY story for years. The celebration continues at the traditional After Parade Party at Alte Kaserne, Zurich.",
+      "artists": [
+        {
+          "name": "Daxson",
+          "time": null
+        },
+        {
+          "name": "Heliom",
+          "time": null
+        },
+        {
+          "name": "Madwave",
+          "time": null
+        },
+        {
+          "name": "WeNyx",
+          "time": null
+        },
+        {
+          "name": "Ørjan Nilsen",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 3,
+      "name": "Friedas Büxe (ZH)",
+      "styles": "House, Techno, Minimal",
+      "theme": "Liebe aus der Büxe",
+      "timeWindow": "14:15 - 18:15",
+      "desc": "Bunt in den Farben. Offen im Herzen. Frei im Geist. Unser Love Mobile steht für Vielfalt, Respekt offene Liebe und die Freude am Leben.",
+      "artists": [
+        {
+          "name": "Capt’n",
+          "time": null
+        },
+        {
+          "name": "Gianluca Felline",
+          "time": null
+        },
+        {
+          "name": "Juzz",
+          "time": null
+        },
+        {
+          "name": "Symoh Sares",
+          "time": null
+        },
+        {
+          "name": "Theia",
+          "time": null
+        },
+        {
+          "name": "Valentino",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 4,
+      "name": "Daytona (AG)",
+      "styles": "Trance, Remember, Techno, Progessive",
+      "theme": "TIME - 25 Years Anniversary",
+      "timeWindow": "14:22 - 18:22",
+      "desc": "Dieses Jahr erzählt «TIME» unsere Geschichte. Vom ersten Funken einer Idee im Jahr 2000 bis zum ins Detail perfektionierten Projekt von heute – eine Reise voller Leidenschaft, Mut und unzähliger unvergesslicher Momente. 25 Jahre sind nicht nur eine Zahl – sie sind Geschichten, Freundschaften, Begegnungen und die Evolution des Love Mobiles. Das sind Generationen von RaverInnen, DJs, VisionärInnen aus Technik, Grafik und kreativen Bereichen.",
+      "artists": [
+        {
+          "name": "Bonzai",
+          "time": null
+        },
+        {
+          "name": "Centaury",
+          "time": null
+        },
+        {
+          "name": "Dee Jay G.P.",
+          "time": null
+        },
+        {
+          "name": "Fabio G",
+          "time": null
+        },
+        {
+          "name": "Johan Gielen",
+          "time": null
+        },
+        {
+          "name": "Nuphaze",
+          "time": null
+        },
+        {
+          "name": "Quicksilver",
+          "time": null
+        },
+        {
+          "name": "S.P.H.E.R.E",
+          "time": null
+        },
+        {
+          "name": "Tatana",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 5,
+      "name": "Sunrise Love Mobile",
+      "styles": "House, Afrohouse, Techhouse",
+      "theme": "Where music connects us",
+      "timeWindow": "14:30 - 18:30",
+      "desc": "Sunrise ist auch dieses Jahr Presenting Partner der Street Parade und sorgt mit dem Love Mobile für mitreissende Stimmung am grössten Electronic Music Event der Welt. Mit an Bord sind Top-DJs wie Dangel Twins, AIIA, whereisvero, Maks und Gil Glaze, die den Beat für einen unvergesslichen Tag auf den Strassen Zürichs liefern. Gemeinsam feiern wir kulturelle Vielfalt, die Faszination elektronischer Musik und die einzigartige Atmosphäre der Street Parade – laut, bunt und voller Liebe. Sunrise Love Mobile – where music connects us. One beat, one love, one city.",
+      "artists": [
+        {
+          "name": "AIIA",
+          "time": null
+        },
+        {
+          "name": "Dangel Twins",
+          "time": null
+        },
+        {
+          "name": "Gil Glaze",
+          "time": null
+        },
+        {
+          "name": "Jaquet",
+          "time": null
+        },
+        {
+          "name": "Maks",
+          "time": null
+        },
+        {
+          "name": "Whereisvero",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 6,
+      "name": "SEAQUENCE (ZH)",
+      "styles": "Future House, EDM, Hypertechno, Drum and Bass",
+      "theme": "Tides of Wonder",
+      "timeWindow": "14:38 - 18:38",
+      "desc": "Tief unter der Wasseroberfläche beginnt eine neue Reise. Die Gezeiten bewegen das Meer, Lichtwellen tanzen in Violett, Pink und Blau, und leuchtende Seesterne weisen den Weg durch eine Welt voller Energie und Emotion. Fliessende Formen, schimmernde Farben und pulsierende Beats verschmelzen zu einem sinnlichen Rausch. Jeder Klang folgt dem Rhythmus des Meeres, jede Bewegung wird Teil der Strömung. Musik wird zur Verbindung – intensiv, treibend und voller Gefühl. Tauche ein in das SEAQUENCE-Love Mobile und erlebe Tides Of Wonder – wo Wellen zu Emotionen werden, Beats durch die Tiefe tragen und die Magie des Meeres auf der Street Parade lebendig wird.",
+      "artists": [
+        {
+          "name": "Dominic Strike",
+          "time": null
+        },
+        {
+          "name": "Lenny Lou",
+          "time": null
+        },
+        {
+          "name": "Passik",
+          "time": null
+        },
+        {
+          "name": "Rosa Pagano",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 7,
+      "name": "Tito Torres & Friends (AG)",
+      "styles": "Tech House, House, Progressive House",
+      "theme": "Dance For Unity",
+      "timeWindow": "14:46 - 18:46",
+      "desc": "Dance for Unity - Tanz wird als universelle Sprache verstanden, die Menschen über kulturelle und gesellschaftliche Grenzen hinweg verbindet. Im Zentrum des visuellen Erscheinungsbildes steht eine stilisierte Erdkuel mit einer dynamischen Tanz-Silhouette als Symbol für Bewegung, Energie und den Menschen im Mittelpunkt einer gemeinsamen Welt. Die bedruckten Blachen bilden die gestalterische Basis des Trucks. Sie sind in einem futuristisch wirkenden, metallisch-türkisen Farbraum gehalten und trasportieren visuell Rhythmus und Dynamik. Seitlich der zentralen Kugel sind kraftvolle Tanzmotive mit freisgestellten, dynamischen Personen in Bewegung integriert. Diese stehen sinnbildlich für Vielfalt, Ausdruck und internationale Verbundenheit. Das Gesamtkonzept vereint Bewegung, visuelle Kraft und Gemeinschaft in einer klaren, zeitgemässen From.",
+      "artists": [
+        {
+          "name": "B.K.",
+          "time": null
+        },
+        {
+          "name": "David Moreno",
+          "time": null
+        },
+        {
+          "name": "Mario Ferrini",
+          "time": null
+        },
+        {
+          "name": "ROM 303",
+          "time": null
+        },
+        {
+          "name": "Sachi Toyama",
+          "time": null
+        },
+        {
+          "name": "Tito Torres",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 8,
+      "name": "Tanzgarten x Arosa (GR)",
+      "styles": "Afro House & Melodic House, Tech House",
+      "theme": "Alpine Dance Culture on Wheels",
+      "timeWindow": "14:55 - 18:55",
+      "desc": "Das Tanzgarten-Love Mobile bringt alpine Tanzkultur aus den Bergen mitten ins Herz von Zürich. Unter dem Motto «Alpine Dance Culture» verbindet das Projekt elektronischen Sound, Live- Performance, Hospitality und ein speziell inszeniertes Wagendesign zu einem hochwertigen Street-Parade-Erlebnis. Der Look in Schwarz, Grün und Weiß mit dezenten Shine-/Glitter- Akzenten steht für alpine Eleganz, Clubkultur und Festival-Energie. Musikalisch erwarten die Gäste Afro House, Melodic House und Tech House mit internationalen DJs, Live-Violine, Percussion, Saxophon und Dance-Performance. Kein klassischer Werbewagen, sondern ein rollender Tanzgarten mit besonderer Atmosphäre, starkem Sound und kuratiertem nationalem und internationalem Publikum.",
+      "artists": [
+        {
+          "name": "Dre Guazzelli",
+          "time": null
+        },
+        {
+          "name": "Luqo – Live Saxophon",
+          "time": null
+        },
+        {
+          "name": "Marisha – Live Violin",
+          "time": null
+        },
+        {
+          "name": "MIMMO",
+          "time": null
+        },
+        {
+          "name": "Paul Lomax",
+          "time": null
+        },
+        {
+          "name": "Valerio Lombardo – Live Percussion",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 9,
+      "name": "Magic Mountain Zermatt x Cosmic Circle (VS)",
+      "styles": "House, Techhouse",
+      "theme": "Feel the Magic",
+      "timeWindow": "15:04 - 19:04",
+      "desc": "Erlebe die Street Parade exklusiv wie nie zuvor – auf unserem einzigartigen Magic Circle Love Mobile! Ein streng limitierter Platz bedeutet: nicht nur dabei sein, sondern mitten im pulsierenden Herz der Parade. Dich erwarten pure Energie, elektrisierende Beats und unvergessliche Momente, während Top-DJs den perfekten Soundtrack liefern. Geniesse All-Inclusive Drinks – von Softdrinks über Bier bis hin zu Prosecco & Spirituosen – und feiere mit Gleichgesinnten in einer mitreissenden Atmosphäre voller Euphorie. Unser überdachtes Love Mobile schützt dich bei Sonne wie Regen. Dresscode: black, white, silver. Sichere dir jetzt deinen Platz und erlebe den schönsten Tag des Jahres aus der besten Perspektive. Alle Details erhältst du eine Woche vor der Parade per Mail.",
+      "artists": [
+        {
+          "name": "Aleno",
+          "time": null
+        },
+        {
+          "name": "Anthik",
+          "time": null
+        },
+        {
+          "name": "Arado",
+          "time": null
+        },
+        {
+          "name": "Kellerkind",
+          "time": null
+        },
+        {
+          "name": "La Mila",
+          "time": null
+        },
+        {
+          "name": "Michelle Vanja",
+          "time": null
+        },
+        {
+          "name": "Rick Lee",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 10,
+      "name": "Sonntagskinder (LU)",
+      "styles": "Techhouse, Melodic Techno",
+      "theme": "90s Rave",
+      "timeWindow": "15:13 - 19:13",
+      "desc": "Zum 7. Mal sind die Sonntagskinder Teil der Street Parade und bereit, gemeinsam mit euch die Strassen in ein buntes Meer aus Musik, Freude und Energie zu verwandeln. 🌈 Motto 2026: 90er RAVE 🌈 Wir feiern die Zeit der legendären Raves, der grenzenlosen Freiheit und der unvergesslichen Nächte. Neonfarben, treibende Beats und pure Lebensfreude stehen im Mittelpunkt. 💥 Dresscode: Neon, bunt, schrill und alles, was leuchtet! Auf unserem 35 Meter langen Love Mobile erwarten euch druckvolle Sounds, kühle Getränke, eine Toilette an Bord und eine einzigartige Atmosphäre voller guter Vibes. Wenn der Bass durch die Straßen rollt, die Hände in die Luft gehen und tausende Menschen gemeinsam feiern, entstehen Erinnerungen, die bleiben. 🫶 Sonntagskinder – mehr als ein Name. Eine Gemeinschaft. Ein Gefühl. Eine Familie.",
+      "artists": [
+        {
+          "name": "Chris.P",
+          "time": null
+        },
+        {
+          "name": "Ilona Maras",
+          "time": null
+        },
+        {
+          "name": "Inamar",
+          "time": null
+        },
+        {
+          "name": "Marcus Meinhardt",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 11,
+      "name": "Hard Music Association",
+      "styles": "Hardcore, Up-Tempo und Gabber",
+      "theme": "Gabberbusters",
+      "timeWindow": "15:22 - 19:22",
+      "desc": "Die Hard Music Association bringt mit dem Hardcore Love Mobile «Gabberbusters» das Zürcher Seebecken zum Beben. Bereite dich auf gnadenlose Beats, donnernde Basslines und pure Eskalation vor. Hardcore, Uptempo und Gabber vom Feinsten rollen durch die Strassen Zürichs. Unter dem Motto «Gabberbusters» verwandelt sich unser Love Mobile in eine rollende Einsatzzentrale gegen jede Form von Stille. 180 BPM, kompromissloser Sound und eine Community, die die härtesten Styles der elektronischen Musik mit voller Leidenschaft lebt. Mit einem internationalen Line-up, jeder Menge Energie und einer unvergesslichen Atmosphäre liefern wir auch 2026 wieder eines der absoluten Highlights der Street Parade. Ob Newcomer oder Szene-Veteran – hier bebt der Asphalt! Who you gonna call? GABBERBUSTERS 👻",
+      "artists": [
+        {
+          "name": "Alessio Sassano",
+          "time": null
+        },
+        {
+          "name": "Bäm Bäm",
+          "time": null
+        },
+        {
+          "name": "DRS",
+          "time": null
+        },
+        {
+          "name": "E.x.e.c.u.t.e",
+          "time": null
+        },
+        {
+          "name": "Giuly",
+          "time": null
+        },
+        {
+          "name": "J.D.A",
+          "time": null
+        },
+        {
+          "name": "Nitrile",
+          "time": null
+        },
+        {
+          "name": "The Cold Demon",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 12,
+      "name": "Disco Garten (ZH)",
+      "styles": "House, TechHouse, Indie Dance",
+      "theme": "Forward to the past",
+      "timeWindow": "15:31 - 19:31",
+      "desc": "Der Disco Garten. Ein liebevoll gestalteter Ort für Musik, Begegnung und echte Verbindung. Wir besinnen uns zurück zum Wesentlichen – weg vom Spektakel, hin zu handgemachter Liebe zur elektronischen Musik, Gemeinschaft und bewusstem Feiern. Gemeinsam wollen wir ausgelassen tanzen, lachen, leben und den Moment spüren. Unser Wagen entsteht in Eigenarbeit, aus Holz und mit nachhaltigem Anspruch – als Zeichen gegen Wegwerfmentalität und für eine Zukunft, in der Feiern schön sein darf, ohne beliebig zu werden. Der Disco Garten ist ein Fest von Freunden für Freunde.",
+      "artists": [
+        {
+          "name": "Clari Ann",
+          "time": null
+        },
+        {
+          "name": "FezzYFezz",
+          "time": null
+        },
+        {
+          "name": "Khainz",
+          "time": null
+        },
+        {
+          "name": "Progiglobi",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 14,
+      "name": "Roda Studios (ZG)",
+      "styles": "Techno, Tech House, Peak Time Techno",
+      "theme": "Medusa – The Curse Of Beauty",
+      "timeWindow": "15:49 - 19:49",
+      "desc": "Betritt einen fahrenden griechischen Tempel, in dem Schönheit zur Versuchung und Gefahr zugleich wird. Medusa steht im Zentrum – kraftvoll, faszinierend, unentrinnbar. Zwischen mächtigen Säulen, fliessenden weissen und beigen Vorhängen, goldenen Ornamenten und unzähligen Spiegeln verschwimmen Mythos und Realität. Doch Vorsicht: Wer sich nur von der äusseren Schönheit blenden lässt, riskiert, das Wesentliche zu verlieren. Roda Studios bringt 2026 ein kompromisslos starkes Line-up auf die Strasse – international gefeierte Artists, treibender Sound und pure Eskalation mitten im Herz der Street Parade. Dresscode: Weiss / Beigem, Accessoires: Gold, braunes Leder.",
+      "artists": [
+        {
+          "name": "Andrea Oliva",
+          "time": "22:30"
+        },
+        {
+          "name": "Guy Mac",
+          "time": null
+        },
+        {
+          "name": "Mark Reeve",
+          "time": null
+        },
+        {
+          "name": "Nadine Vinzens",
+          "time": null
+        },
+        {
+          "name": "Roum",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 15,
+      "name": "One Nation (ZH)",
+      "styles": "House, Electro, Hypertechno, Techno",
+      "theme": "Burning Love",
+      "timeWindow": "15:58 - 19:58",
+      "desc": "Burning Love – One Nation Lovemobile 2026 Presented by EventFaktor.com, The Pirates Hinwil & HouseMarkt Wir sind ready für 2026 – und starten zum 17. Mal mit unserem One Nation Lovemobile auf die Strecke der Street Parade! One Nation – das wird Burning Love auf Rädern: ein Ort voller Leidenschaft, Musik, Wärme und Vibes, wo Freundschaften und Beziehungen fürs Leben entstehen. ♥ Gemeinsam mit EventFaktor.com bringen wir euch auch dieses Jahr ein unvergessliches Parade-Erlebnis. Unsere fantastische Bauteam-Family erschafft mit viel Herzblut, Schweiss und Leidenschaft ein Lovemobile, das nicht nur mit seiner atemberaubenden Deko im Bohemian-Stil glänzt, sondern mit über 600'000 Watt Sound die Stadt erbeben lässt. 35 Meter voller Energie, Licht und Musik – powered by Burning Love. Und sie sind wieder mit an Bord: Die Piraten aus Hinwil versorgen uns 2026 erneut mit allem, was Leib und Seele zusammenhält – frisch, lecker und direkt auf dem Lovemobile. Erlebe die Magie der Street Parade aus bester Perspektive: mit Blick über den Zürisee, tanzenden Menschen und einer Atmosphäre, die in feurigen Farben vibriert. Tauche ein in unsere Welt voller Burning Love – tanz mit uns durch Zürich! Sei Teil unserer One Nation Family und lebe die Burning Love!",
+      "artists": [
+        {
+          "name": "Alex July aka LeeRoy",
+          "time": null
+        },
+        {
+          "name": "Black Spirit",
+          "time": null
+        },
+        {
+          "name": "Sven M.",
+          "time": null
+        },
+        {
+          "name": "Vanita",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 16,
+      "name": "SUNSHINE LIVE (CH/DE)",
+      "styles": "Techno",
+      "theme": "100% Electronic Music",
+      "timeWindow": "16:07 - 20:07",
+      "desc": "Mit dem SUNSHINE LIVE Love Mobile liefert SUNSHINE LIVE die besten elektronischen Beats direkt auf die Street Parade 2026. Seit fast 30 Jahren steht SUNSHINE LIVE für nonstop elektronische Sounds – 24 Stunden am Tag, 7 Tage die Woche. Ob im Radio, Web, in der App oder über zahlreiche Special-Interest-Streams: Hier trifft die elektronische Szene auf ihren Soundtrack. Das Love Mobile vereint treibende Beats, internationale DJs und pure Festival-Energie zu einem unvergesslichen Erlebnis mitten in Zürich. Von House über Techno bis Trance liefert SUNSHINE LIVE den perfekten Sound für alle Raver:innen und Electronic-Music-Fans. Mit weltweiten Event-Partnerschaften und internationalen Festivals bringt SUNSHINE LIVE die globale Clubkultur direkt zur Street Parade – laut, bunt und voller Liebe zur elektronischen Musik.",
+      "artists": [
+        {
+          "name": "Falk",
+          "time": null
+        },
+        {
+          "name": "Luca Agnelli",
+          "time": null
+        },
+        {
+          "name": "Pretty Pink",
+          "time": null
+        },
+        {
+          "name": "Vendex",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 17,
+      "name": "Sunlab x Coca-Cola",
+      "styles": "Afro House, Melodic House, Bounce",
+      "theme": "Icons move",
+      "timeWindow": "16:15 - 20:15",
+      "desc": "Coca-Cola ist auch dieses Jahr Co-Presenting Partner der Street Parade und bringt mit dem Love Mobile gemeinsam mit Kopfklang den Sound der Stadt auf die Strassen Zürichs. Unter dem Motto ICONS MOVE feiern wir zu Sounds von Afro House bis hin zu Bounce Vielfalt, Zusammenhalt und gegenseitigen Respekt – verbunden durch Musik und gemeinsame Energie. Mit dabei sind vor allem nationale Acts sowie auch Artist Luca Dario, der sich seinen Auftritt auf dem Coke Love Mobile beim DJ-Aufruf von Kopfklang und Street Parade gegen hunderte Bewerberinnen und Bewerber sichern konnte.",
+      "artists": [
+        {
+          "name": "Guaved",
+          "time": null
+        },
+        {
+          "name": "Luca Dario",
+          "time": null
+        },
+        {
+          "name": "Paranomasia",
+          "time": null
+        },
+        {
+          "name": "Rayo b2b Bina",
+          "time": null
+        },
+        {
+          "name": "Teseo",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 18,
+      "name": "Akt Family - Vo Züri für Züri",
+      "styles": "House, Techno, Techhouse",
+      "theme": "Heaven of Love",
+      "timeWindow": "16:25 - 20:25",
+      "desc": "Wir freuen uns einmal mehr ein Teil der Street Parade 2025 zu sein, an der wir bereits 1994 mit unserem 1. Love Mobile teilgenommen haben! Wir fiebern diesem Tag schon jetzt entgegen und können es kaum erwarten das Zürcher Seebecken an diesem Tag zu begeistern. Auf unserem Love Mobile erwarten dich coole Drinks und perfekte House Musik um den ganzen Tag abzutanzen UND, wie in guter alter AKT-Manier, eine Stimmung der Extraklasse! Dieses Jahr steht unser Love Mobile unter dem Motto «Heaven of Love». Mit dem Dresscode Blau und Weiss und dem Accessoire Gold heizen wir der Partymeute so richtig ein. Mit zwei Bars, zwei Toiletten, einem zentralen DJ-Pult und dem Besten, was die House-Musik zu bieten hat, bleiben keine Wünsche offen!",
+      "artists": [
+        {
+          "name": "Rolf Imhof",
+          "time": null
+        },
+        {
+          "name": "Sam Madi",
+          "time": null
+        },
+        {
+          "name": "Sendrix",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 19,
+      "name": "WE ARE UNITED (SZ, ZH, AG, BS, GE)",
+      "styles": "Trance, Hardtrance",
+      "theme": "90er Jahre Rave",
+      "timeWindow": "16:34 - 20:34",
+      "desc": "WE ARE UNITED steht für die verbindende Kraft der elektronischen Musik. Unser Love Mobile ist das Ergebnis eines Zusammenschlusses von fünf engagierten Akteuren der Schweizer Club und Trance Szene, die seit Jahrzehnten die Clubkultur prägen. Unser Love Mobile Motto ist NEON und Ravekultur der 90er.",
+      "artists": [
+        {
+          "name": "Anyken",
+          "time": null
+        },
+        {
+          "name": "Bodo Kaiser",
+          "time": null
+        },
+        {
+          "name": "Jean Lostebien",
+          "time": null
+        },
+        {
+          "name": "Mario Piu",
+          "time": null
+        },
+        {
+          "name": "Partick Mathez",
+          "time": null
+        },
+        {
+          "name": "S.I.One",
+          "time": null
+        },
+        {
+          "name": "X-Plosiv",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 20,
+      "name": "JUR Records (AG)",
+      "styles": "Drum and Bass",
+      "theme": "35 Years JUR Records",
+      "timeWindow": "16:43 - 20:43",
+      "desc": "Seit 1991 steht JUR Records für Drum and Bass in der Schweiz und bringt mit Events wie VIP Session, Therapy Session, Return to the Bassline, Club Hardware und BASS fette Vibes nach Aarau, Luzern und Zürich. Tiefe Bässe, treibende Beats und echter Oldschool-Spirit sind unser Fundament. Die Zusammenarbeit mit der Schweizer Szene ist zentral, genauso wie die Förderung von Newcomer-DJs, die bei uns eine Bühne bekommen. Seit 35 Jahren bleiben wir dem Sound treu und bringen die Crowd in Bewegung. 2026 feiern wir 35 Jahre JUR Records, sind zum achten Mal an der Street Parade dabei und bringen Zürich zum Beben.",
+      "artists": [
+        {
+          "name": "Agent C",
+          "time": null
+        },
+        {
+          "name": "Darius D",
+          "time": null
+        },
+        {
+          "name": "Du Lait",
+          "time": null
+        },
+        {
+          "name": "Frog U",
+          "time": null
+        },
+        {
+          "name": "Infernal Bastard",
+          "time": null
+        },
+        {
+          "name": "Mad B",
+          "time": null
+        },
+        {
+          "name": "Semtex",
+          "time": null
+        },
+        {
+          "name": "SNES",
+          "time": null
+        },
+        {
+          "name": "Z-Groove",
+          "time": null
+        },
+        {
+          "name": "‘nade",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 21,
+      "name": "Tech with us x Verbier Music (NE/VS)",
+      "styles": "Techno to Hard Techno",
+      "theme": "A breath of fresh air in the heart of summer",
+      "timeWindow": "16:52 - 20:52",
+      "desc": "Our love mobile will bring winter in Summer. It means our collaboration between La Chaux-de- Fonds (1000m altitude) and Verbier (1500m altitude), which are together mountain cities, will bring a breath of fresh air in the middle of summer. The decoration will reflect this theme with ice and mountains.",
+      "artists": [
+        {
+          "name": "15:15",
+          "time": null
+        },
+        {
+          "name": "Byorn",
+          "time": null
+        },
+        {
+          "name": "Flymeon",
+          "time": null
+        },
+        {
+          "name": "Radio Slave",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 22,
+      "name": "ELEVEN11DANCE & friends (OW)",
+      "styles": "Techno, Afro House, Melodic Techno",
+      "theme": "Vo Fründe für Fründe",
+      "timeWindow": "17:01 - 21:01",
+      "desc": "«Vo Fründe für Fründe» ist nicht nur das Motto unseres Love Mobiles, sondern die Grundhaltung hinter allen Events von eleven11dance. Es prägt unsere Art zu planen, zu feiern und Menschen zusammenzubringen – heute und in Zukunft. «Vo Fründe für Fründe» beschreibt, wie unsere Events entstehen: aus einer grossen, gewachsenen Community von Freundinnen und Freunden, die elektronische Musik gemeinsam feiern und weitertragen. Bei uns sind alle willkommen. Unser Love Mobile ist kein exklusiver Club, sondern ein Ort, an dem Menschen zusammenkommen, tanzen und sich auf Augenhöhe begegnen. Respekt, gute Stimmung und ein achtsames Miteinander stehen im Vordergrund. Unsere Zielgruppe sind Menschen zwischen 25 und 40 Jahren, die Qualität schätzen, Verantwortung übernehmen und Lust auf ein positives, verbindendes Event haben. „vo Fründe für Fründe“ ist unser Versprechen: ein Love Mobile von Menschen, die feiern wollen – für Menschen, die feiern wollen.",
+      "artists": [
+        {
+          "name": "Flo le Fortis",
+          "time": null
+        },
+        {
+          "name": "NoNo & Maui",
+          "time": null
+        },
+        {
+          "name": "Oio",
+          "time": null
+        },
+        {
+          "name": "Pretty Pink",
+          "time": null
+        },
+        {
+          "name": "Vanita",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 23,
+      "name": "Animalz x G-Town Production (SO)",
+      "styles": "Remember Trance, Uplifting Trance",
+      "theme": "Beats Of Colors",
+      "timeWindow": "17:10 - 21:10",
+      "desc": "ANIMALZ ist ein engagiertes Team mit einer klaren Vision: Wir gestalten und realisieren kulturelle und musikalische Projekte, die Menschen zusammenbringen und die Event- und Musikkultur aktiv mitprägen. Unser Fokus liegt auf der Organisation eigener Veranstaltungen sowie der Teilnahme an etablierten Events wie der Street Parade. Gleichzeitig setzen wir uns dafür ein, Nachwuchstalente zu fördern und kreativen Ideen eine Plattform zu geben. Darüber hinaus unterstützen wir Projekte im Bereich Kunst, Musik und Kultur, die einen sozialen Mehrwert schaffen und die Szene nachhaltig bereichern. Für Kooperationen, gemeinsame Projekte oder Unterstützung bei der Umsetzung von Events stehen wir jederzeit offen – wir freuen uns über den Austausch und neue Partnerschaften. Erlebe die Street Parade aus der besten Perspektive! Unser Chamäleon-Motto verspricht eine unvergessliche Party auf Rädern durch Zürich.",
+      "artists": [
+        {
+          "name": "Andrew Larave",
+          "time": null
+        },
+        {
+          "name": "Barthezz",
+          "time": null
+        },
+        {
+          "name": "DOOM",
+          "time": null
+        },
+        {
+          "name": "ICØN",
+          "time": null
+        },
+        {
+          "name": "Mind-X",
+          "time": null
+        },
+        {
+          "name": "Patrick Ravn",
+          "time": null
+        },
+        {
+          "name": "SYNERGEE",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 24,
+      "name": "Davos Nightlife (GR)",
+      "styles": "Indie House, Melodic Techno, Deep House, Tech House, Progyhouse, Afro Tech House",
+      "theme": "Alice im Bünderland",
+      "timeWindow": "17:19 - 21:19",
+      "desc": "Ein bunter Traum zwischen Bergwelt und Wunderland. Verspielt, verrückt und voller Magie – irgendwo zwischen Alpenromantik und Alice im Bündnerland entsteht unsere ganz eigene Welt. Farben explodieren, Realität verschwimmt und jede Ecke erzählt ihre eigene kleine Geschichte. Mal schrill, mal verträumt, mal komplett crazy – aber immer mit ganz viel Herz, Kreativität und Bündner Charme. Ein Mix aus fantasievoller Wonderland-Energie, leuchtenden Farben, surrealen Details und alpinem Flair. Zwischen Bergen, Karten, Uhren, Teepartys und einer Portion Wahnsinn feiern wir das Anderssein – laut, bunt und grenzenlos frei.",
+      "artists": [
+        {
+          "name": "DJerry",
+          "time": null
+        },
+        {
+          "name": "Don Agnello",
+          "time": null
+        },
+        {
+          "name": "Robin Hassler",
+          "time": null
+        },
+        {
+          "name": "Several Definitions",
+          "time": null
+        },
+        {
+          "name": "Somos",
+          "time": null
+        },
+        {
+          "name": "V.Tino",
+          "time": null
+        },
+        {
+          "name": "Zeitlos",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 25,
+      "name": "Nordstern x TEILE (BS/DE)",
+      "styles": "Techno",
+      "theme": "",
+      "timeWindow": "17:21 - 21:21",
+      "desc": "Nordstern Basel und TEILE spannen zusammen, um ein einzigartiges Love Mobile in diesem Jahr zu erschaffen. Meera, Sebastian Konrad und ein besonderer Gast werden die Sonics für die Fahrt entlang der Uferpromenade in Zürich bereitstellen.",
+      "artists": [
+        {
+          "name": "Meera",
+          "time": null
+        },
+        {
+          "name": "Sebastian Konrad",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": 26,
+      "name": "Magic MaRoNi x Labil mit Stil (TG/ZH)",
+      "styles": "Techno, Psy-Trance",
+      "theme": "Electric Circus",
+      "timeWindow": "17:37 - 21:37",
+      "desc": "Unter dem Motto «Electric Circus» zeigt sich unser Love Mobile in elegantem Schwarz-Weiß — klare Linien und kontrastreiche Flächen bilden die Bühne für ein visuell kraftvolles Gesamterlebnis. Die Gäste treten in Neonfarben und Schwarz auf, wodurch ein spannungsreicher Mix aus urbanem Chic und pulsierender Festivalenergie entsteht. Die Dekoration setzt auf Glamour: Spiegelkugeln an der Decke, funkelnder Glitzer und gezielte Lichtakzente erzeugen schillernde Reflexionen und eine verführerische Zirkusatmosphäre. Zusammen entsteht ein immersives, stilvolles und zugleich verspieltes Setting, das Bass, Bewegung und visuelle Eindrücke zu einem unvergesslichen Erlebnis verschmelzen lässt.",
+      "artists": [
+        {
+          "name": "Alanor",
+          "time": null
+        },
+        {
+          "name": "Baba Ganouj",
+          "time": null
+        },
+        {
+          "name": "Der Köhler",
+          "time": null
+        },
+        {
+          "name": "IBOR",
+          "time": null
+        },
+        {
+          "name": "Nickster",
+          "time": null
+        },
+        {
+          "name": "Tanner",
+          "time": null
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "num": null,
+      "name": "Orbit Events (ZH/SZ)",
+      "styles": "Techno, Melodic Techno und Trance, Psy Trance",
+      "theme": "Eternal Harmony",
+      "timeWindow": "15:40 - 19:40",
+      "desc": "Boom! Once again, it is time for Street Parade and we'll participate for the 29th time in a row with our Lovemobile (Float). This year our motto is \"Eternal Harmony\". Visually, we will recreate that with a decoration in the colours of black and white. But why? They are opposing colors, but they do complement each other. They are even interdepending as neither would exist without the other. As in Ying and Yang or Day and Night. Our guests will also dress in black and white but in combination with silver. The first monochrome float.... Musically we will showcase some Trance heavyweights: Stars Cold Blue (DE), Ciaran McAulay (IE) as well as Kyau & Albert (DE) will make our day unforgettable with their music. Our resident DJ Fly is completing the line-up. Newcomer Alex Morales will take control of the warm-up until the official start. Of course, our gorgeous Splendid Dancers will get us in the mood for dancing with their dance animations.",
+      "artists": [
+        {
+          "name": "Alex Morales",
+          "time": null
+        },
+        {
+          "name": "Ciaran McAuley",
+          "time": null
+        },
+        {
+          "name": "Cold Blue",
+          "time": null
+        },
+        {
+          "name": "Fly",
+          "time": null
+        },
+        {
+          "name": "Kyau & Albert",
+          "time": null
+        }
+      ]
+    }
+  ]
+}
