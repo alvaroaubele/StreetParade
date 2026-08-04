@@ -51,9 +51,13 @@ export async function GET(req: NextRequest) {
   const common = {
     "Content-Type": "audio/mpeg",
     "Accept-Ranges": "bytes",
-    // The bytes are immutable for a given track, so both the CDN and the
-    // browser may hold them; a track swap shows up within the hour.
-    "Cache-Control": "public, max-age=3600, s-maxage=86400",
+    // `private` on purpose: Vercel's edge answers Range requests against a
+    // cached copy with the right slice but status 200 (observed on cache
+    // HITs), and WebKit requires a real 206 or it treats the slice as the
+    // whole file. Keeping shared caches out means every request reaches
+    // this handler, whose statuses are spec-correct; the in-memory byte
+    // cache keeps that cheap, and browsers may still hold it for an hour.
+    "Cache-Control": "private, max-age=3600",
   };
 
   // iOS Safari probes media with Range requests (often `bytes=0-1`) and
