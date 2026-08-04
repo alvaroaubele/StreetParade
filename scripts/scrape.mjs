@@ -4,6 +4,34 @@
 // is inline in these pages (popups/accordions), so no extra requests needed.
 import * as cheerio from "cheerio";
 import { writeFileSync, mkdirSync } from "node:fs";
+import { normKey } from "../lib/normalize.mjs";
+
+// aria-label "soundcloud link" → kind "soundcloud"
+const SOCIAL_KINDS = ["soundcloud", "instagram", "facebook", "website", "spotify", "youtube", "tiktok"];
+
+function socialsFrom($, container) {
+  const out = [];
+  $(container)
+    .find("a.social-item")
+    .each((_, a) => {
+      const url = $(a).attr("href");
+      const label = ($(a).attr("aria-label") ?? "").toLowerCase();
+      const kind = SOCIAL_KINDS.find((k) => label.includes(k)) ?? "website";
+      if (url) out.push({ kind, url });
+    });
+  return out;
+}
+
+/** normKey(artist) → [{kind,url}] accumulated across all pages. */
+const socials = {};
+function addSocials(name, list) {
+  if (!list.length) return;
+  const key = normKey(name);
+  if (!key) return;
+  const cur = socials[key] ?? [];
+  for (const s of list) if (!cur.some((x) => x.url === s.url)) cur.push(s);
+  socials[key] = cur;
+}
 
 const BASE = "https://www.streetparade.com";
 const OUT = new URL("../data/", import.meta.url).pathname;
@@ -47,6 +75,7 @@ function parseStages(html) {
       const time = clean(spans.eq(1).text()).match(/\d{1,2}:\d{2}/)?.[0] ?? null;
       if (artist && !artists.some((x) => x.name === artist))
         artists.push({ name: artist, time });
+      if (artist) addSocials(artist, socialsFrom($, $(a).next(".accordion-container")));
     });
     stages.push({
       type: "stage",
@@ -86,6 +115,7 @@ function parseMobiles(html) {
       const time = clean(spans.eq(1).text()).match(/\d{1,2}:\d{2}/)?.[0] ?? null;
       if (artist && !artists.some((x) => x.name === artist))
         artists.push({ name: artist, time });
+      if (artist) addSocials(artist, socialsFrom($, $(a).next(".accordion-container")));
     });
     mobiles.push({ type: "mobile", num, name, styles, theme, timeWindow, desc, artists });
   });
@@ -105,6 +135,7 @@ function parseLineup(html) {
     const time = info.match(/\d{1,2}:\d{2}(?=\s)/)?.[0] ?? null;
     const venue = clean(info.replace(/^\d{1,2}:\d{2}\s*/, ""));
     const headliner = $el.hasClass("headliner-item");
+    addSocials(name, socialsFrom($, el));
     entries.push({ name, time, venue: venue || null, headliner });
   });
   return entries;
@@ -158,6 +189,7 @@ const event = {
   event: { name: "Street Parade Zürich 2026", date: "2026-08-08" },
   headliners: lineup.filter((e) => e.headliner).map((e) => e.name),
   venues,
+  socials,
 };
 
 mkdirSync(OUT, { recursive: true });
@@ -168,7 +200,8 @@ const nMobiles = venues.filter((v) => v.type === "mobile").length;
 const nArtists = venues.reduce((n, v) => n + v.artists.length, 0);
 console.log(
   `stages: ${nStages}, mobiles: ${nMobiles}, artist slots: ${nArtists} ` +
-    `(+${added} merged from line-up roster of ${lineup.length})`
+    `(+${added} merged from line-up roster of ${lineup.length}), ` +
+    `artists with social links: ${Object.keys(socials).length}`
 );
 if (nStages < 5 || nMobiles < 10 || nArtists < 100)
   throw new Error("Scrape looks incomplete — selectors may have drifted.");

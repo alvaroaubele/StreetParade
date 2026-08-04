@@ -1,5 +1,5 @@
 import { artistIndex, eventData, normKey, stylesToGenres } from "./data";
-import type { Venue, Vote } from "./types";
+import type { Venue, VoteTally } from "./types";
 
 export interface ScoredArtist {
   key: string;
@@ -40,19 +40,23 @@ const toMin = (t: string) => {
 const toHHMM = (min: number) =>
   `${String(Math.floor(min / 60) % 24).padStart(2, "0")}:${String(min % 60).padStart(2, "0")}`;
 
+const net = (t: VoteTally | undefined) => (t ? t.l - t.n : 0);
+const heard = (t: VoteTally | undefined) => !!t && t.l + t.n > 0;
+
 /**
- * Direct votes dominate; genre affinity (learned from votes) ranks everyone
- * else. Skips contribute nothing.
+ * Direct votes dominate (net likes over an artist's cards, clamped to ±2);
+ * genre affinity learned from votes ranks everyone else.
  */
-export function recommend(votes: Record<string, Vote>): Recommendation {
+export function recommend(votes: Record<string, VoteTally>): Recommendation {
   const genreScore = new Map<string, { sum: number; n: number }>();
-  for (const [key, vote] of Object.entries(votes)) {
-    if (vote === 0) continue;
+  for (const [key, tally] of Object.entries(votes)) {
+    if (!heard(tally)) continue;
     const info = artistIndex.get(key);
     if (!info) continue;
+    const signal = Math.max(-1, Math.min(1, net(tally)));
     for (const g of info.genres) {
       const e = genreScore.get(g) ?? { sum: 0, n: 0 };
-      e.sum += vote;
+      e.sum += signal;
       e.n++;
       genreScore.set(g, e);
     }
@@ -64,11 +68,13 @@ export function recommend(votes: Record<string, Vote>): Recommendation {
 
   const ranked: ScoredArtist[] = [];
   for (const [key, info] of artistIndex) {
-    const vote = votes[key];
+    const tally = votes[key];
     const genreAvg =
       info.genres.reduce((s, g) => s + genreAffinity(g), 0) / (info.genres.length || 1);
-    const direct = vote === 1 || vote === -1;
-    const score = direct ? vote * 2 + genreAvg * 0.5 : genreAvg;
+    const direct = heard(tally);
+    const score = direct
+      ? Math.max(-2, Math.min(2, net(tally))) + genreAvg * 0.5
+      : genreAvg;
     ranked.push({ key, name: info.name, score, direct, genres: info.genres, appearances: info.appearances });
   }
   ranked.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
@@ -122,9 +128,8 @@ export function recommend(votes: Record<string, Vote>): Recommendation {
         .sort((a, b) => b.s - a.s);
       const top = scores.slice(0, 3);
       const avg = top.length ? top.reduce((s, x) => s + x.s, 0) / top.length : 0;
-      const genreAvg =
-        stylesToGenres(v.styles).reduce((s, g) => s + genreAffinity(g), 0) /
-        (stylesToGenres(v.styles).length || 1);
+      const gs = stylesToGenres(v.styles);
+      const genreAvg = gs.reduce((s, g) => s + genreAffinity(g), 0) / (gs.length || 1);
       return {
         label: `${v.num ? "#" + v.num + " " : ""}${v.name}`,
         styles: v.styles,
@@ -140,4 +145,16 @@ export function recommend(votes: Record<string, Vote>): Recommendation {
     .sort((a, b) => b[1] - a[1]);
 
   return { ranked, timeline, mobiles, genreProfile };
+}
+
+/** Plain-text route summary for pasting into the group chat. */
+export function shareText(rec: Recommendation, voteCount: number): string {
+  const lines: string[] = [`My ParadeMatch route · Street Parade 8 Aug (from ${voteCount} blind votes)`];
+  for (const b of rec.timeline) lines.push(`${b.from}–${b.to}  ${b.artist} @ ${b.stage}${b.score > 1.5 ? " 🔥" : ""}`);
+  const mobiles = rec.mobiles.filter((m) => m.score > 0).slice(0, 3);
+  if (mobiles.length) {
+    lines.push("Love Mobiles:");
+    for (const m of mobiles) lines.push(`· ${m.label}${m.timeWindow ? ` (${m.timeWindow})` : ""}`);
+  }
+  return lines.join("\n");
 }

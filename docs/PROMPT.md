@@ -99,3 +99,25 @@ Done when the acceptance test above passes locally and the draft PR exists.
 Your final message states the Vercel preset/build/env answer, what was
 verified (with evidence), and any gaps with their fill-in path.
 </stop_conditions>
+
+---
+
+## v2 scope (owner feedback, 2026-08-04, after v1 merged and deployed)
+
+1. **Filters expand.** Alongside styles: time-of-day blocks, and a
+   click-to-open Advanced section containing full selection lists for all
+   artists (searchable), all stages, and all love mobiles. Default remains
+   everything on.
+2. **Snippet pool grows to exactly 369** (multiple tracks per artist; the
+   deck interleaves so an artist never repeats back-to-back; votes tally
+   per artist). The route still unlocks at 10 votes; UI must make clear 40
+   is the optimal.
+3. **UX pass to state of the art**: drag-to-swipe with like/nope overlays
+   and fly-out, undo, next-snippet prefetch for gapless play, desktop
+   keyboard shortcuts, haptic ticks, progress bar with unlock/optimal
+   markers, copy-route-to-clipboard share for the group chat.
+4. **Deep-dive links**: each revealed or recommended artist links to their
+   official SoundCloud/Instagram/website/etc. as scraped from
+   streetparade.com, with a Spotify search fallback. (Supersedes the v1
+   web-search-only link constraint.)
+

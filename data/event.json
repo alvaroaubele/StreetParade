@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-04T13:16:52.959Z",
+  "scrapedAt": "2026-08-04T15:26:22.857Z",
   "event": {
     "name": "Street Parade Zürich 2026",
     "date": "2026-08-08"
@@ -839,7 +839,7 @@
     {
       "type": "mobile",
       "num": 17,
-      "name": "Sunlab x Coca-Cola",
+      "name": "Kopfklang x Coca-Cola",
       "styles": "Afro House, Melodic House, Bounce",
       "theme": "Icons move",
       "timeWindow": "16:15 - 20:15",
@@ -847,6 +847,10 @@
       "artists": [
         {
           "name": "Guaved",
+          "time": null
+        },
+        {
+          "name": "Lubo b2b Lenzio",
           "time": null
         },
         {
@@ -859,10 +863,6 @@
         },
         {
           "name": "Rayo b2b Bina",
-          "time": null
-        },
-        {
-          "name": "Teseo",
           "time": null
         }
       ]
@@ -1201,5 +1201,2671 @@
         }
       ]
     }
-  ]
+  ],
+  "socials": {
+    "rampa": [
+      {
+        "kind": "website",
+        "url": "https://keinemusik.com/crue/rampa/"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/rampa_keinemusik"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/rampa"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/keinemusik.rampa"
+      }
+    ],
+    "blond ish": [
+      {
+        "kind": "website",
+        "url": "https://blondish.world"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/blondish/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/blondish"
+      },
+      {
+        "kind": "website",
+        "url": "https://x.com/blond_ish"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@BLONDISH"
+      }
+    ],
+    "vintage culture": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/vintageculturemusic"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/vintageculturemusic"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/vintageculture"
+      }
+    ],
+    "maceo plex": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/maceoplex"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/maceoplex/?hl=de"
+      },
+      {
+        "kind": "website",
+        "url": "https://maceoplex.komi.io"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@maceo.plex"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/channel/UC9SIHJ9kGwd40SVJ3Gmj2Dg"
+      }
+    ],
+    "argy": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/argy"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/argyofficial"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/Argyofficial/"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@ArgyMusic"
+      }
+    ],
+    "marlon hoffstadt": [
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@marlonhoffstadt"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/marlonhoffstadt"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/marlonhoffstadt"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/MarlonHoffstadt?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnVpw3DuRsgWkEd0dFpAMPqvuicocKeC3p8VFL46ruMyGL5PF7F0QR4-J-wNQ_aem_B78xSiw5gJA4ZbpDMvR5Uw"
+      }
+    ],
+    "daria kolosova": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/dar.key"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/kolosova.ua"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/dar_key"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/dar.key"
+      }
+    ],
+    "adam beyer": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/realadambeyer"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.drumcode.se"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/adambeyer"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/realadambeyer"
+      }
+    ],
+    "jaquet": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/yves_jaquet/"
+      },
+      {
+        "kind": "website",
+        "url": "https://hoo.be/yves_jaquet?fbclid=PAZXh0bgNhZW0CMTEAAae_Ox_vCMtjog8NG7jK2ezxk_xlfmzSBDk7MsPfsKKB3LTACT3lWq8uVOqkkw_aem_S1sgO2MjHsh3pJPDjKeJVg"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/jaquet_ofc"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@jaquet.ofc?_t=8mmoRkX3eIi&_r=1&utm_source=hoobe&utm_medium=social"
+      }
+    ],
+    "honeyluv": [
+      {
+        "kind": "website",
+        "url": "https://honeyluv.komi.io"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/honeyluv/"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@theehoneyluv?lang=en"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/honeyluvmusic"
+      }
+    ],
+    "archie hamilton": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/archiebhamilton/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/archiehamiltonmusic"
+      },
+      {
+        "kind": "website",
+        "url": "https://archie.lnk.to/listen"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/archiehamiltonmusic/"
+      },
+      {
+        "kind": "website",
+        "url": "https://x.com/archiebhamilton"
+      }
+    ],
+    "hilit kolet": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/hilitkolet/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/hilitkolet"
+      },
+      {
+        "kind": "website",
+        "url": "https://x.com/hilitkolet"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.mixcloud.com/hilitkolet/"
+      }
+    ],
+    "yamagucci": [
+      {
+        "kind": "website",
+        "url": "https://yamaguccimain.komi.io/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn10OmG0EING8EHeXhiDJWiwXfjslxZevtMnwcN_JWdOpreNE6UO2VUD7LYUg_aem_ZD34KPgQLiaTXMgkEvlG-g"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/yamagucci_music/?hl=de"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/yamaguchi_music"
+      }
+    ],
+    "sonny fodera": [
+      {
+        "kind": "website",
+        "url": "https://sonnyfodera.komi.io"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/sonnyfodera"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@sonnyfoderaofficial?is_from_webapp=1&sender_device=pc"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/channel/UC0q_gYblgTWdeH6zCMTzrDw"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/sonnyfodera?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+      }
+    ],
+    "andrea oliva": [
+      {
+        "kind": "website",
+        "url": "https://www.andreaolivamusic.com"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/andreaoliva1/"
+      },
+      {
+        "kind": "website",
+        "url": "https://x.com/andreaoliva1"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/andreaolivaofficial"
+      }
+    ],
+    "several definitions": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/severaldefinitions/"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/severaldefinitions?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn-jhmASbrl6nFVydKMCWhMcIP9EswqWdNwfI3BB0lwIXn8bUKMC83U4gSy-w_aem_GeWllGB5kwDtlt7unYJvpw"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/several-definitions"
+      }
+    ],
+    "pasci": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/pasci-friedasbuexe"
+      }
+    ],
+    "rosanna": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/rosannaita/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/rosanna_g"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.rosannagrueter.ch/?"
+      },
+      {
+        "kind": "website",
+        "url": "https://x.com/rosannaita"
+      }
+    ],
+    "gi0si": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/gi0si/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djseranthony?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnW4kVZpff974CLtJqu3wRjYBg0a1vnu_ASPMkP4D4eCiAFtE8wbfhWvZth8A_aem_ym5EdR4ed-QeN7xoEpuEiA&utm_id=97760_v0_s00_e0_tv3"
+      }
+    ],
+    "pedram": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/pedram-skurril?ref=clipboard&p=i&c=1&si=573851847E3945B7B553FD810440B8A0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/pedramowski/"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/pedramzaare/"
+      }
+    ],
+    "aiia": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/aiia.music_/"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://soundcloud.com/aiiamusic"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/channel/UCGaPKtvHdU-4vH_N1YtRFXw"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/aiia.music_"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/AIIA"
+      }
+    ],
+    "sebastian konrad": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/sebastiankonrad"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/sebastian.konrad/"
+      }
+    ],
+    "vera amberg": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/veraamberg/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/veraamberg"
+      }
+    ],
+    "dj equipment": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/equipmentdj?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnnk6lWA9kVk3Xus2nRWXmehTn7tPQsuWDVelGbCZjpNg3x1ltqsvQY1fRJaY_aem_1v4mcWPIId-nb-b1YdRU-Q&utm_id=97760_v0_s00_e0_tv3"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/jayhagedorn/"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/jennycara_/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/jennycara/sets/nts-residency"
+      }
+    ],
+    "nhu d club vd": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/something.nhu/"
+      },
+      {
+        "kind": "website",
+        "url": "https://nhumusic.com"
+      }
+    ],
+    "andy katz": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/andymadkatz"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/themadkatz"
+      }
+    ],
+    "alex nantaya": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/alexnantaya"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/alexnantaya?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn4pPztthCYoFpSfn5ObUGjLSlEAZGGwOZvVeE52PCsQVX0SEvjotLcrTzm28_aem_b9R-1zjw8iyzGh1Q677Kog"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@alexnantaya"
+      }
+    ],
+    "satys fyre": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/satysfyre"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/satysfyre"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@satysfyre"
+      }
+    ],
+    "prada2000": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/prada2000"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/prada2000"
+      },
+      {
+        "kind": "website",
+        "url": "https://de.ra.co/dj/prada2000"
+      }
+    ],
+    "felicie": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/feliciemusic"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/felicie.music/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/felicie.techno"
+      }
+    ],
+    "ellen allien": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/ellen-allien/tracks"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/ellen.allien/"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@EllenAllienTV/videoshttps:/www.youtube.com/channel/UCIoPM87CylYfFyzOmgNsHSQ"
+      }
+    ],
+    "johannes schuster": [
+      {
+        "kind": "website",
+        "url": "https://de.ra.co/dj/johannesschuster"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/johannesschuster_official/?hl=de"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/johannes-schuster"
+      }
+    ],
+    "eric": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/eric.msc?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnhcXZ4LHxo_sjRiaSpSXmbowEB_MISj7RPeKb9wrBPV3IHludZNcQZd0b5K0_aem_VUgeXXZhsRIel7d7-4i-pQ"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/eric.msc"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/eric_zurich"
+      }
+    ],
+    "dymos jay fase": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/dymos_shizzo/"
+      },
+      {
+        "kind": "website",
+        "url": "https://dymosshizzo.komi.io/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnTyNf_IW6ec109Sb08geGa1na3jUqTKdj0dZW8iBCvrQp_P1CPVvOlX2j4tk_aem_LhokDk5PSymevmEH0aosNw"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/jay.fase/"
+      },
+      {
+        "kind": "website",
+        "url": "https://jayfase.komi.io/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn0pEsSvydN5EVFjXAoa0PhhWY4FfylQcChCcc0jP4GwE0-c4kXY8Aa0r3FRg_aem_E86dT5JQ0n1INhuv_yjULw"
+      }
+    ],
+    "contenance": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/contenance_music/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/contenance_milesaway"
+      }
+    ],
+    "animal trainer": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/samyjacksonmusic/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/animaltrainer"
+      },
+      {
+        "kind": "website",
+        "url": "https://x.com/animal__trainer?lang=de"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/AnimalTrainerMusic?checkpoint_src=any"
+      }
+    ],
+    "dangel twins": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/dangeltwins/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/dangeltwins"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@dangeltwins"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@dangeltwins"
+      }
+    ],
+    "read the news": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/readthenews"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/readthenews_"
+      },
+      {
+        "kind": "website",
+        "url": "https://readthenews.komi.io/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn0J450DlgiVsvkyBlryJtTx3O8-mOm_4khdYN4eQ9VHtm4mXHGG-soF_-S08_aem_JuBwbOM0S45ku6EZHFsG-g"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@readthenews"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@readthenews_"
+      }
+    ],
+    "marcus meinhardt": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/marcus.meinhardt/?hl=de"
+      },
+      {
+        "kind": "website",
+        "url": "http://www.marcusmeinhardt.de/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/Marcus.Meinhardt.Artist"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/marcus-meinhardt"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/channel/UCkSTOcplWKzNHGxSR8cTLdw"
+      }
+    ],
+    "ambient pino": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/ambientpino?utm_source=linktree_profile_share&ltsid=4d925c96-9026-45c8-9d3b-3d3443eef9a5"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/ambientpino"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/pinomusic"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/pinomusichttps://soundcloud.com/pinomusic"
+      }
+    ],
+    "oxy": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/oxy.occytosign"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/occytosign"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/oxy.occytosign"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/OXY.occytosign"
+      }
+    ],
+    "nikora northwind": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/Northwindmusix"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/i_am_nikora"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/i.am.northwind"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/i.am.nikora"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/i-am-northwind"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/i_am_nikora"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/Northwindmusic"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/i.am.Nikora"
+      }
+    ],
+    "frequenzkobold": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/tamara.templin"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/frequenzkobold"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/tamara-templin"
+      }
+    ],
+    "digital reflection": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/digitalreflection"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/digital_reflection_official/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/digitalreflection"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/Digitalshamansrecords"
+      }
+    ],
+    "prodelic": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/prodelic"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/prodelic.music"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/prodelic"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/profile.php?id=61550201054040"
+      }
+    ],
+    "jumpstreet": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/jumpstreetlooney"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/jumpstreetlooney"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/jumpstreetlooney/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://www.soundcloud.com/jumpstreetlooney"
+      }
+    ],
+    "timo lissy": [
+      {
+        "kind": "website",
+        "url": "https://bio.link/timofuturum"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/timofuturum"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/timofuturum"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/timo-lissy"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/channel/UCNaUXR5-NIgGSMphb_TuQfg"
+      }
+    ],
+    "kaufmann": [
+      {
+        "kind": "website",
+        "url": "https://de.ra.co/dj/kaufmann"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/kaufmann.unofficial"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/kaufmann_unofficial"
+      }
+    ],
+    "fyzz": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/fyzz-ekoliers"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/hyperdrive.event?fref=ts"
+      }
+    ],
+    "yves maurice": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/yves_maurice"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/yvesmauricehellmann"
+      }
+    ],
+    "mariat": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/mariat.music/"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@janamariat0?_t=ZN-90VzsnDx4oI&_r=1"
+      },
+      {
+        "kind": "website",
+        "url": "https://mariatmusic.komi.io/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnxuFUgJFyp75nAZ2-sodFvlb_pB2P9AvOx0aF6_Rr3AR0bv4mQLZ9ueVO7-s_aem_Dqi8cFGDCDECfRw__3dr2g"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/mariat-45300410"
+      }
+    ],
+    "eliafred": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/deejay_eliafred/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/elia-640966092?ref=clipboard&p=i&c=1&si=1ACBE36255464EE3B8087296A178EAA9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+      }
+    ],
+    "daughter in law": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/daughteerinlaw/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/daughterinlaw"
+      }
+    ],
+    "michelle vanja": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/michelle.vanja"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/michelle.vanja"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/michellevanja"
+      }
+    ],
+    "okara": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/iamokara"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/iamokara/"
+      }
+    ],
+    "jess mawi": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/jessica-willi"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/jess.mawi/"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@jess.mawi"
+      }
+    ],
+    "bina": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/bina.music_/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/bina_musicc"
+      }
+    ],
+    "ibor": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/ibor_producing/"
+      },
+      {
+        "kind": "website",
+        "url": "https://labilmitstil.ch"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/robert-engel-243948526"
+      }
+    ],
+    "bart skils": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/bart-skils"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/bart_skils/"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.bartskils.com"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djbartskils"
+      }
+    ],
+    "isabelle beaucamp": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/isabelle-beaucamp?utm_source=mobi&utm_campaign=social_sharing&si=bb112e9ada8d4f73aa15398b150ba96e"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@isabelle_beaucamp"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/isabelle_beaucamp?igsh=dWJkMmFhNzZ2NGVm"
+      },
+      {
+        "kind": "website",
+        "url": "https://bazar-sauvage.com/isabelle-beaucamp/"
+      }
+    ],
+    "daxson": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/daxsonmusic"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/DaxsonMusic"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/daxsonmusic"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@daxsonmusic"
+      }
+    ],
+    "heliom": [
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@heliommusic"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/heliommusic"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/heliommusic?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+      }
+    ],
+    "madwave": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/madwave"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/madwave"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://www.soundcloud.com/madwave"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@madwave"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/djmadwave"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.madwave.net"
+      }
+    ],
+    "wenyx": [
+      {
+        "kind": "website",
+        "url": "https://wenyx.ch/"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://instagram.com/wenyxdjane"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djanewenyx"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://on.soundcloud.com/O02E1g9wpdbLcLUp3q"
+      }
+    ],
+    "rjan nilsen": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/orjan_nilsen"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/orjann82"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@orjannilsen"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/OrjanMusic"
+      }
+    ],
+    "capt n": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/captain-fuego"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djcaptn_official/"
+      }
+    ],
+    "gianluca felline": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/gianlucafelline"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/gianlucafelline_612/"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/gianlucafelline"
+      }
+    ],
+    "juzz": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/juzz"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/_____juzz/"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/user/Juzzzh"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/juzzzh"
+      }
+    ],
+    "symoh sares": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/symohsares"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/symohsares"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/symohsares"
+      }
+    ],
+    "theia": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/theia.es/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/theia_es"
+      }
+    ],
+    "valentino": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/valentino_official_dj/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/valentino-wfm"
+      }
+    ],
+    "bonzai": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djbonzai_72/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/patrick.kung.568"
+      }
+    ],
+    "centaury": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/haldimannsascha"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/sascha.haldimann"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djcentaury"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/watch?v=krP-K6BnUH0"
+      }
+    ],
+    "dee jay g p": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/daniel.wuestgp"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.djgp.ch"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/daniel.wuestgp"
+      }
+    ],
+    "johan gielen": [
+      {
+        "kind": "website",
+        "url": "https://johangielen.com"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/johan-gielen-official"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/user/johangielenoffical"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/johangielenmusic/"
+      }
+    ],
+    "nuphaze": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/nuphazeofficial"
+      }
+    ],
+    "quicksilver": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/dj_quicksilver?utm_source=chatgpt.com"
+      },
+      {
+        "kind": "website",
+        "url": "https://dj-quicksilver.com"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/dj_quicksilver/"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/user/dustsucka"
+      }
+    ],
+    "s p h e r e": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/synergyofficiel/sphere-live-hte-zurich"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/share/18eCHWJ3sP/?mibextid=wwXIfr"
+      }
+    ],
+    "tatana": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djtatana"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djtatana/"
+      },
+      {
+        "kind": "website",
+        "url": "https://x.com/DJTatana"
+      }
+    ],
+    "gil glaze": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/gilglaze"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/gilglaze"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.gilglaze.com"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/GilGlaze"
+      }
+    ],
+    "maks": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/maks.ofc/?hl=de"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/maksmusic"
+      }
+    ],
+    "whereisvero": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/whereisvero_"
+      },
+      {
+        "kind": "website",
+        "url": "https://ubwg.ch/artist/whereisvero/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/whereisvero"
+      }
+    ],
+    "dominic strike": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/dominicstrike"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.dominicstrike.com/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/dominicstrikedj"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://www.soundcloud.com/dominicstrike"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@dominicstrikedj"
+      }
+    ],
+    "lenny lou": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/lennyylouu/"
+      },
+      {
+        "kind": "website",
+        "url": "https://lennylou.komi.io"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djlennylou"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/lenny-schmid-383812841"
+      }
+    ],
+    "passik": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/passikmusic"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.passikdj.ch/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/passikdj"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/passikdj"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@passikmusic"
+      }
+    ],
+    "rosa pagano": [
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@rosapagano.dnb"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/rosapagano.dnb"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/rosa-pagano-dnb"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@Rosapagano-dnb"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/RosaPagano86/"
+      }
+    ],
+    "b k": [
+      {
+        "kind": "website",
+        "url": "https://djbk.ch"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/DeejayB.K"
+      }
+    ],
+    "david moreno": [
+      {
+        "kind": "website",
+        "url": "https://www.pureibizaradio.com"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djdavidmoreno"
+      }
+    ],
+    "mario ferrini": [
+      {
+        "kind": "website",
+        "url": "https://marioferrini.com"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/ferrinirecords"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/marioferrinim/"
+      }
+    ],
+    "rom 303": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/rom303_dj/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/ROM303/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/rom3-3?utm_id=97758_v0_s00_e233_tv0&fbclid=IwY2xjawSPW8RleHRuA2FlbQIxMABicmlkETBiSjhVYWxYbnhHRFZqWjZLc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHkcsyOuJpnNlI89daqRpcPec7UUUTtkKRls3qjf9CXuwxd6eTc7YhHFQZe6__aem_p6KXIluzkMSU31GK_2_jtQ"
+      }
+    ],
+    "sachi toyama": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/DJ-Sachi-Toyama-141003849255953/"
+      }
+    ],
+    "tito torres": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/titotorresdeejay"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/titotorresdj"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/tito-torres"
+      },
+      {
+        "kind": "youtube",
+        "url": "http://www.youtube.com/user/djtitotorres"
+      },
+      {
+        "kind": "website",
+        "url": "https://tito-torres.com"
+      }
+    ],
+    "dre guazzelli": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/dreguazzelli"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/dreguazzelli"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/dreguazzelli"
+      },
+      {
+        "kind": "website",
+        "url": "https://dreguazzelli.com"
+      }
+    ],
+    "luqo live saxophon": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/luqomusic/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/luqomusic/?locale=de_DE"
+      }
+    ],
+    "mimmo": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djmimmo"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djmimmo.ch/"
+      }
+    ],
+    "paul lomax": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/paul.lomax"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/paul-lomax-endlesscity"
+      },
+      {
+        "kind": "website",
+        "url": "https://endlesscity-records.com"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/paul.lomax1"
+      }
+    ],
+    "valerio lombardo live percussion": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/Valerio.Lombardo.Drums/?locale=de_DE"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/Valerio.lombardo?fbclid=IwY2xjawS0SwxleHRuA2FlbQIxMABicmlkETBiSjhVYWxYbnhHRFZqWjZLc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHlEHZ2OztZPLUJyvGe-uVOkohEyzl1rYvcdOIYmv1TDJPHCA6Gp5jFzSww4a_aem_aO54OJhq_F5TPBgViXJCwQ"
+      }
+    ],
+    "aleno": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djaleno"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/aleno_ofc"
+      }
+    ],
+    "anthik": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/anthikmusic/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/anthikmusic"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/anthik"
+      }
+    ],
+    "arado": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/ARADO.ARTIST"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/arado"
+      },
+      {
+        "kind": "website",
+        "url": "https://ra.co/dj/arado"
+      }
+    ],
+    "kellerkind": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/kellerkindmusik/"
+      },
+      {
+        "kind": "website",
+        "url": "https://kellerkindmusik.ch"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/DjKellerkind.de/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/kellerkind"
+      }
+    ],
+    "la mila": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/lamila.music"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/lamila_music"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/lamila_music"
+      }
+    ],
+    "rick lee": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/rick_lee_music"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/rick_lee-1"
+      }
+    ],
+    "chris p": [
+      {
+        "kind": "facebook",
+        "url": "https://m.facebook.com/ChrisP-1728965257327664/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/chrisplatz"
+      }
+    ],
+    "ilona maras": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/ilonamaras"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/ilonamaras/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/IlonaMaras"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/ilonamaras"
+      }
+    ],
+    "inamar": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/inamarmusic?igsh=MXJoNGwxY3hvbTNpdA%3D%3D&utm_source=qr"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://youtube.com/@inamar6947?feature=shared"
+      },
+      {
+        "kind": "website",
+        "url": "https://inamarmusic.com/en"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://on.soundcloud.com/agne3PmXzcgfl2UxHX"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/share/17qUw2m5M1/?mibextid=wwXIfr"
+      }
+    ],
+    "alessio sassano": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/alessiosassano_official/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/alesssiosassano"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@alessiosassano_official"
+      }
+    ],
+    "bam bam": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/baembeambb"
+      }
+    ],
+    "drs": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/drs__official/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/OFFICIAL.DRS"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/dj-darkressive-system"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@drs__official"
+      }
+    ],
+    "e x e c u t e": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/execute_music"
+      },
+      {
+        "kind": "website",
+        "url": "https://execute-music.com"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/execute_music"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://www.soundcloud.com/e-x-e-c-u-t-e"
+      }
+    ],
+    "giuly": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/digeigiuly"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djgiuly"
+      }
+    ],
+    "j d a": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djjda_official/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/OfficialDJJDA?mibextid=wwXIfr&rdid=hX0rD3jeXjwpLppm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17mc2GVhTw%2F%3Fmibextid%3DwwXIfr"
+      }
+    ],
+    "nitrile": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/nitriledj"
+      }
+    ],
+    "the cold demon": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/thecolddemon.tcd/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/the-cold-demon"
+      }
+    ],
+    "clari ann": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/clari_ann_/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/clariann"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.clariann.com"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@clari_ann__?_t=8sKGLlObbeQ&_r=1"
+      }
+    ],
+    "fezzyfezz": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/fezz_y_fezz/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/fezz_y_fezz"
+      }
+    ],
+    "khainz": [
+      {
+        "kind": "website",
+        "url": "https://www.khainz.com/"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/khainz"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/khainzmusic/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://soundcloud.com/khainz"
+      }
+    ],
+    "progiglobi": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/progiglobi"
+      }
+    ],
+    "guy mac": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/guymac-1"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/guymacmusic"
+      },
+      {
+        "kind": "website",
+        "url": "https://guymac.co.uk"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/guymacuk"
+      }
+    ],
+    "mark reeve": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/markreeve"
+      },
+      {
+        "kind": "website",
+        "url": "https://markreeve.com"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/markreeve/"
+      }
+    ],
+    "nadine vinzens": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/nadinevinzens"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.nadinevinzens.com"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/nadinevinzensofficial/"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/nadinevinzensofficial/"
+      }
+    ],
+    "roum": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/roum_music?igshid=NTc4MTIwNjQ2YQ%3D%3D"
+      },
+      {
+        "kind": "website",
+        "url": "https://adormarecords.com/artists/roum/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/roum_music?ref=clipboard&p=i&c=1&si=4B3B7DAAA3A943E79543E27CADCB30EA&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/roummusic"
+      }
+    ],
+    "alex july aka leeroy": [
+      {
+        "kind": "instagram",
+        "url": "http://www.instagram.com/leeroydj"
+      },
+      {
+        "kind": "facebook",
+        "url": "http://www.facebook.com/LeeRoyOfficial"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "http://www.soundcloud.com/leeroydj"
+      }
+    ],
+    "black spirit": [
+      {
+        "kind": "instagram",
+        "url": "https://instagram.com/djblackspirit/"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.black-spirit.ch"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djblackspirit"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djblackspirit"
+      }
+    ],
+    "sven m": [
+      {
+        "kind": "website",
+        "url": "https://svenmay.ch/profile/svenmay"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/profile.php?id=100068229566939"
+      }
+    ],
+    "vanita": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/vanita"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/vanita_music"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djvanita?fref=ts"
+      }
+    ],
+    "falk": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djfalkofficial/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djfalkofficial"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djfalkofficial"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.sunshine-live.de/falk"
+      }
+    ],
+    "luca agnelli": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/lucaagnelli"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/lucaagnelli/"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@lucaagnelli"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djlucaagnelli"
+      }
+    ],
+    "pretty pink": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/prettypink"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/prettypinkmusic"
+      },
+      {
+        "kind": "website",
+        "url": "https://prettypink.de/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/prettypinkmusic"
+      }
+    ],
+    "vendex": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/vendexofficial/?hl=de"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/vendexofficial"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/channel/UCqIUOUqPxkCialZEoYIAftQ"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@vendex_official"
+      }
+    ],
+    "guaved": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/guaved/?hl=de"
+      },
+      {
+        "kind": "website",
+        "url": "https://guaved.komi.io/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadWkLKxH_T_R-kCGMiI6BsbXK8dQweF6LubpyOLU7tlk515o0Xu63sdNbjAww_aem_hHc_oojv5ccYMdK4eTTJ8A"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@guavedd"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/guaved"
+      }
+    ],
+    "luca dario": [
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/lucadario?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeHWj5wewJOkXhn9x82SaMM7wvhcMhUw5BT-VnZhDNT3c_i_1l3v_cDZmSYpw_aem_X1d_axK9hAzLpqGkv_2Dcg"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/lucadario.music?utm_medium=copy_link"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/lucadario"
+      }
+    ],
+    "paranomasia": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/paronomasia.dj/"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/paronomasiaa?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafpYWMqXqHfHLXQAC4yPJr6QfP5_3ZNzDXGCMxfmjuayJOZgKzq-U6olHmShg_aem_vbwqele6sanTvI-794JhBQ"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/paronomasia"
+      }
+    ],
+    "rayo": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/bina.music_"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/bina.music?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafW9JSn-cA2q5gUoQ9O1dr_DA2gKMV9pXMt7mi7ma0cNEMnwzIn5wHzwEk_Mw_aem_UexZNT1rFUZr4uQK75bn7w"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/bina_musicc"
+      }
+    ],
+    "rolf imhof": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/rolf.imhof/"
+      },
+      {
+        "kind": "website",
+        "url": "https://rolfimhof.ch"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/rolf.imhof/"
+      }
+    ],
+    "sam madi": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/sammadimusic"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.sammadi.com"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/sammadi"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/sammadi?skip_registered_account_check=true"
+      }
+    ],
+    "sendrix": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djsendrix/"
+      },
+      {
+        "kind": "website",
+        "url": "https://ruvahouse.lnk.to/TheSolution?fbclid=PAZXh0bgNhZW0CMTEAAadCQ3HYpyB-Mc0VWH39d65ftoKNgCLmrx_ajA4GZLy7TpFttGz5KhWFcRpQpw_aem_O9sWiUAzOeoDIfpsS1MkJg"
+      }
+    ],
+    "anyken": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/anyken_music/"
+      },
+      {
+        "kind": "website",
+        "url": "https://anyken-music.com/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/anykenmusic"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/anyken"
+      }
+    ],
+    "bodo kaiser": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/bodokaisermusic/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/bodokaisermusic"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/bodokaiser"
+      },
+      {
+        "kind": "website",
+        "url": "https://bodokaiser.com/"
+      }
+    ],
+    "jean lostebien": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/jeanlostebien"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/jeanlostebien/"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/jeanlostebien"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/marzanprod/"
+      }
+    ],
+    "mario piu": [
+      {
+        "kind": "soundcloud",
+        "url": "https://on.soundcloud.com/VaggVLI9PMXUEyfOpO"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/share/1SvtGGX7HZ/?mibextid=wwXIfr"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/mariopiuofficial/"
+      }
+    ],
+    "partick mathez": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/patrick_mathez/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/profile.php?id=61569835105521"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://on.soundcloud.com/eqVwdl3OEmETGIo7k1"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.sanctuaryoftrance.ch/"
+      }
+    ],
+    "s i one": [
+      {
+        "kind": "website",
+        "url": "https://www.spaceplanet-official.com"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/spaceplanetofficial"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/spaceplanetofficial"
+      }
+    ],
+    "x plosiv": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/dj-x-plosiv"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/deejayxplosiv"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djxplosiv"
+      },
+      {
+        "kind": "website",
+        "url": "https://linktr.ee/djxplosiv"
+      }
+    ],
+    "agent c": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/cerni_agent_c"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.jurrecords.ch"
+      }
+    ],
+    "darius d": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/demiandarius"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.jurrecords.ch"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/darius-d"
+      }
+    ],
+    "du lait": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djdulait"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/realdulait"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/du_lait"
+      }
+    ],
+    "frog u": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/frog_u_"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/frog_u"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.jurrecords.ch"
+      }
+    ],
+    "infernal bastard": [
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/InfernalBastard"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.jurrecords.ch"
+      }
+    ],
+    "mad b": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djmadb"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/mad_b"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/martin.buehrer"
+      }
+    ],
+    "semtex": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/semtex_jurrecords"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.jurrecords.ch"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/p/Semtex-JUR-Records-100040406419323/"
+      }
+    ],
+    "snes": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/snesdnb"
+      },
+      {
+        "kind": "website",
+        "url": "https://localbassmovement.ch"
+      }
+    ],
+    "z groove": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/z_groove"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.jurrecords.ch"
+      }
+    ],
+    "nade": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/nade____"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/nadednb"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/nadednb"
+      },
+      {
+        "kind": "website",
+        "url": "https://www.jurrecords.ch"
+      }
+    ],
+    "byorn": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/byornmusic"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/byorn.music/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/BYORN.music"
+      },
+      {
+        "kind": "website",
+        "url": "https://de.ra.co/dj/byorn"
+      }
+    ],
+    "flymeon": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/flymeonmusic"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/flymeonmusic/"
+      },
+      {
+        "kind": "tiktok",
+        "url": "https://www.tiktok.com/@flymeonmusic"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/channel/UCyP6rkwkwiQ3We0wrav-e1Q"
+      }
+    ],
+    "radio slave": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/radioslave"
+      }
+    ],
+    "flo le fortis": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/flolefortis/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/flo-le-fortis"
+      }
+    ],
+    "nono maui": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/nonomaui/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/nonomaui"
+      }
+    ],
+    "andrew larave": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/andrew.larave"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/groups/andrewlarave"
+      }
+    ],
+    "barthezz": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/bartclaessen"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/barthezzofficial?igsh=ZmFuZ3k5NndjNDA%3D"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/p/Barthez-100065192040798/"
+      }
+    ],
+    "doom": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/mischa.enjoy.djdoom/?igsh=MzJwYzhobGdmM3Zr#"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djdoom"
+      }
+    ],
+    "ic n": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/achmed-halai?ref=clipboard&p=i&c=1&si=165104CA17054E9CA2F878C8A0E7A24D&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/officialdjicon_?igsh=MWF3b2pxZmFmMzJtZw%3D%3D&utm_source=qr"
+      }
+    ],
+    "mind x": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djmindx"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/p/DJ-Mind-X-100056872401276/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/mind-x"
+      }
+    ],
+    "patrick ravn": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/patrickravnofficial"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@patrickravn"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/profile.php?id=100094375019956"
+      },
+      {
+        "kind": "website",
+        "url": "https://sector-beatz.com"
+      }
+    ],
+    "synergee": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/marco-synergee-codoni"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/dj_synergee/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/DjSynergee"
+      }
+    ],
+    "djerry": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djerryofficial/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djerryofficial"
+      }
+    ],
+    "don agnello": [
+      {
+        "kind": "instagram",
+        "url": "https://instagram.com/djdonagnello"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://facebook.com/stefanoagnello"
+      }
+    ],
+    "robin hassler": [
+      {
+        "kind": "instagram",
+        "url": "https://instagram.com/robinhasslerdj"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://facebook.com/robinhassler"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/robinhassler?ref=clipboard&p=i&c=1&si=69898A5A253A44BAA2A1B71307712A5F&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+      }
+    ],
+    "somos": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/somos.ch/"
+      }
+    ],
+    "v tino": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/__v.tino__/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/v-tino-62186343"
+      }
+    ],
+    "zeitlos": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/zeitlos.ch"
+      }
+    ],
+    "meera": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/meeramixes/?hl=de"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/meera_etc"
+      }
+    ],
+    "alanor": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/djalanor"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djalanor"
+      },
+      {
+        "kind": "website",
+        "url": "https://labilmitstil.ch"
+      }
+    ],
+    "baba ganouj": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/baba_ganouj/"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/baba_ganouj"
+      },
+      {
+        "kind": "website",
+        "url": "https://labilmitstil.ch"
+      }
+    ],
+    "der kohler": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/der__koehler/"
+      },
+      {
+        "kind": "website",
+        "url": "https://labilmitstil.ch"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/der_koehler"
+      }
+    ],
+    "nickster": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/nicire"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/nicolas-reiff"
+      },
+      {
+        "kind": "website",
+        "url": "https://labilmitstil.ch"
+      }
+    ],
+    "tanner": [
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/marco.tanner/"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/djscare1"
+      },
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/djscare-1"
+      },
+      {
+        "kind": "website",
+        "url": "https://labilmitstil.ch"
+      }
+    ],
+    "alex morales": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/morales_morales"
+      }
+    ],
+    "ciaran mcauley": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/ciaranmcauleyofficial"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/ciaranmcauley"
+      }
+    ],
+    "cold blue": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/coldblue"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/coldbluemusic"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/@ColdBlueTv"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/coldbluemusic"
+      }
+    ],
+    "kyau albert": [
+      {
+        "kind": "soundcloud",
+        "url": "https://soundcloud.com/euphonicsessions"
+      },
+      {
+        "kind": "instagram",
+        "url": "https://www.instagram.com/KyauAndAlbert"
+      },
+      {
+        "kind": "youtube",
+        "url": "https://www.youtube.com/KyauandAlbertTV"
+      },
+      {
+        "kind": "facebook",
+        "url": "https://www.facebook.com/kyauandalbertofficial"
+      }
+    ]
+  }
 }

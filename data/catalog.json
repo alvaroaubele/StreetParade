@@ -1,12 +1,12 @@
 {
-  "builtAt": "2026-08-04T13:21:38.063Z",
+  "builtAt": "2026-08-04T15:29:15.011Z",
   "artists": {
     "rampa": {
       "name": "Rampa",
       "provider": "deezer",
       "providerArtist": "Rampa",
       "providerArtistId": "427945",
-      "fans": 18962,
+      "fans": 18964,
       "score": 1,
       "tracks": [
         {
@@ -23,6 +23,16 @@
           "provider": "deezer",
           "trackId": "2684663852",
           "title": "Thandaza"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1892122097",
+          "title": "Les Gout"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3367072751",
+          "title": "Crazy For It"
         }
       ],
       "trusted": true
@@ -32,7 +42,7 @@
       "provider": "deezer",
       "providerArtist": "Blond:ish",
       "providerArtistId": "1179872",
-      "fans": 13198,
+      "fans": 13199,
       "score": 1,
       "tracks": [
         {
@@ -49,6 +59,16 @@
           "provider": "deezer",
           "trackId": "2871918512",
           "title": "Never Walk Alone"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3509352081",
+          "title": "Don't Cha"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1906729817",
+          "title": "Hold Tight (feat. Darla Jade) (Dombresky Remix)"
         }
       ],
       "trusted": true
@@ -58,7 +78,7 @@
       "provider": "deezer",
       "providerArtist": "Vintage Culture",
       "providerArtistId": "4782876",
-      "fans": 530206,
+      "fans": 530213,
       "score": 1,
       "tracks": [
         {
@@ -75,6 +95,16 @@
           "provider": "deezer",
           "trackId": "2079969417",
           "title": "You Give Me A Feeling"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3919388491",
+          "title": "Freaky 1"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4043532201",
+          "title": "Toxic"
         }
       ],
       "trusted": true
@@ -84,7 +114,7 @@
       "provider": "deezer",
       "providerArtist": "Maceo Plex",
       "providerArtistId": "1224771",
-      "fans": 92956,
+      "fans": 92957,
       "score": 1,
       "tracks": [
         {
@@ -101,6 +131,16 @@
           "provider": "deezer",
           "trackId": "2200125307",
           "title": "Solitary Daze"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2255418697",
+          "title": "Conjure Dreams"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2195281357",
+          "title": "Can't Leave You"
         }
       ],
       "trusted": true
@@ -110,7 +150,7 @@
       "provider": "deezer",
       "providerArtist": "Argy",
       "providerArtistId": "145050",
-      "fans": 14300,
+      "fans": 14303,
       "score": 1,
       "tracks": [
         {
@@ -127,6 +167,16 @@
           "provider": "deezer",
           "trackId": "2662867772",
           "title": "Dreamstates"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3380574911",
+          "title": "Voices In My Head"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3434762791",
+          "title": "Melodia (feat. PollyAnna)"
         }
       ],
       "trusted": true
@@ -153,6 +203,16 @@
           "provider": "deezer",
           "trackId": "3719324372",
           "title": "Makina Time"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3487145721",
+          "title": "Losing Control"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2882409592",
+          "title": "We Want More"
         }
       ],
       "trusted": true
@@ -206,6 +266,21 @@
           "provider": "deezer",
           "trackId": "3840091101",
           "title": "Make Sense"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3368101391",
+          "title": "Soft (Extended Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4033541491",
+          "title": "Save Me"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3583361731",
+          "title": "Stay (Jaquet Remix)"
         }
       ],
       "trusted": false
@@ -232,6 +307,16 @@
           "provider": "deezer",
           "trackId": "3856160011",
           "title": "Don't Stop"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2645179592",
+          "title": "This Is My Life (Bontan Extended Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3016403871",
+          "title": "Made For Me (HoneyLuv AfroLuv Remix)"
         }
       ],
       "trusted": true
@@ -258,6 +343,16 @@
           "provider": "deezer",
           "trackId": "2200674877",
           "title": "Telegram"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3637834762",
+          "title": "Emergency"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3535563631",
+          "title": "Reset"
         }
       ],
       "trusted": true
@@ -300,6 +395,16 @@
           "provider": "deezer",
           "trackId": "4105149931",
           "title": "Mumbai Taxi"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3106079171",
+          "title": "Selector"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3301650741",
+          "title": "Untitled Punk"
         }
       ],
       "trusted": true
@@ -326,6 +431,16 @@
           "provider": "deezer",
           "trackId": "4017971641",
           "title": "Let Me Be In Your Arms"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3578046411",
+          "title": "Think About Us"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3833088221",
+          "title": "My Loving"
         }
       ],
       "trusted": true
@@ -352,6 +467,16 @@
           "provider": "deezer",
           "trackId": "512947082",
           "title": "Terrace"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2276451587",
+          "title": "Resonance (Extended Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1446879452",
+          "title": "Final String"
         }
       ],
       "trusted": true
@@ -378,6 +503,16 @@
           "provider": "deezer",
           "trackId": "110906026",
           "title": "Wanted To"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3839816701",
+          "title": "Trappin'"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1694880277",
+          "title": "Hydrogene"
         }
       ],
       "trusted": true
@@ -531,6 +666,16 @@
           "provider": "deezer",
           "trackId": "2844878082",
           "title": "FUSION"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2655268452",
+          "title": "DO U LUV ME"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1290736332",
+          "title": "Demonlovers"
         }
       ],
       "trusted": true
@@ -556,7 +701,7 @@
       "provider": "deezer",
       "providerArtist": "Ellen Allien",
       "providerArtistId": "2031",
-      "fans": 62168,
+      "fans": 62169,
       "score": 1,
       "tracks": [
         {
@@ -573,6 +718,16 @@
           "provider": "deezer",
           "trackId": "3980659191",
           "title": "Fantazy"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "486397052",
+          "title": "Wish"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4005319221",
+          "title": "Riot"
         }
       ],
       "trusted": true
@@ -599,6 +754,11 @@
           "provider": "deezer",
           "trackId": "1075978582",
           "title": "Nebel"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3370986421",
+          "title": "Now Is The Time"
         }
       ],
       "trusted": true
@@ -625,6 +785,11 @@
           "provider": "deezer",
           "trackId": "99191424",
           "title": "Who's Your Boyfriend"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "65284849",
+          "title": "Mujer"
         }
       ],
       "trusted": false
@@ -663,6 +828,16 @@
           "provider": "deezer",
           "trackId": "1174617152",
           "title": "Verzasca"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "87370703",
+          "title": "Krambambuli (Original Version)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "76649019",
+          "title": "Keep Control (feat. Jan Blomqvist)"
         }
       ],
       "trusted": true
@@ -710,6 +885,16 @@
           "provider": "deezer",
           "trackId": "3606149912",
           "title": "Funk"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3606149902",
+          "title": "See the Light"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4007125321",
+          "title": "Little Jaguar"
         }
       ],
       "trusted": true
@@ -736,6 +921,16 @@
           "provider": "deezer",
           "trackId": "1901632087",
           "title": "Bamboo"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2626701282",
+          "title": "Rabbit Hole (Stereo Express Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1444179452",
+          "title": "Venus Vibes (Original Mix)"
         }
       ],
       "trusted": true
@@ -762,6 +957,11 @@
           "provider": "deezer",
           "trackId": "4005288451",
           "title": "Layl Al-Sirr (Extended Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1364153892",
+          "title": "Afro Tech Me (Alok Mix)"
         }
       ],
       "trusted": true
@@ -810,6 +1010,16 @@
           "provider": "itunes",
           "trackId": "1674251511",
           "title": "Sensus Distortus"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1618807865",
+          "title": "LEPRECHAUN"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1636910020",
+          "title": "Leprechaun"
         }
       ],
       "trusted": true
@@ -842,6 +1052,16 @@
           "provider": "itunes",
           "trackId": "1854380690",
           "title": "Safari"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1808631105",
+          "title": "Moonlight Prophecy"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1808631097",
+          "title": "Snake Enchanters"
         }
       ],
       "trusted": true
@@ -868,6 +1088,16 @@
           "provider": "deezer",
           "trackId": "2225876547",
           "title": "Wicked Busters (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3580088101",
+          "title": "I Need More Energy"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "1755122667",
+          "title": "Motherfking Jazz"
         }
       ],
       "trusted": true
@@ -894,6 +1124,16 @@
           "provider": "itunes",
           "trackId": "1752887573",
           "title": "Mimosa"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1822753838",
+          "title": "Delta Practise"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1701697160",
+          "title": "The Sky Is Always Blue"
         }
       ],
       "trusted": true
@@ -926,6 +1166,21 @@
           "provider": "itunes",
           "trackId": "1634231887",
           "title": "The End VIP"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1634231886",
+          "title": "Destiny"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1722766398",
+          "title": "Traición (Cover)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1810114174",
+          "title": "Here We Go"
         }
       ],
       "trusted": false
@@ -1004,6 +1259,21 @@
           "provider": "deezer",
           "trackId": "2960331641",
           "title": "Dopamine"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2999677061",
+          "title": "Inside Out"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2967368871",
+          "title": "Bossy"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2999677011",
+          "title": "Self Assured"
         }
       ],
       "trusted": false
@@ -1052,6 +1322,16 @@
           "provider": "deezer",
           "trackId": "3550847581",
           "title": "Sweet Harmony"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3245464631",
+          "title": "YKSI"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2970492101",
+          "title": "Set It Right"
         }
       ],
       "trusted": true
@@ -1094,6 +1374,21 @@
           "provider": "deezer",
           "trackId": "2830205572",
           "title": "Frantika"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4129598891",
+          "title": "Vixen"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3974263061",
+          "title": "RAMsterdam"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4088405291",
+          "title": "RAMsterdam (FSOE967)"
         }
       ],
       "trusted": false
@@ -1136,6 +1431,16 @@
           "provider": "itunes",
           "trackId": "1446627853",
           "title": "Melodia"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1279897037",
+          "title": "Torpedo"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1497871521",
+          "title": "13th District (Mixed)"
         }
       ],
       "trusted": true
@@ -1183,6 +1488,16 @@
           "provider": "itunes",
           "trackId": "1257159633",
           "title": "Drowning (feat. IDA)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1473996259",
+          "title": "Wait 4 It (Live) [Mixed]"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "983585564",
+          "title": "The Edge (Radio Edit)"
         }
       ],
       "trusted": true
@@ -1215,6 +1530,16 @@
           "provider": "itunes",
           "trackId": "1787898749",
           "title": "Broadway"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1798674266",
+          "title": "Hong Kong Shaman"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1669729907",
+          "title": "Purple Genie"
         }
       ],
       "trusted": true
@@ -1259,6 +1584,16 @@
           "provider": "deezer",
           "trackId": "528818511",
           "title": "Tú Y Yo (feat. Nicky Jam & Justin Quiles)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "860794202",
+          "title": "Te Encontré"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "457686042",
+          "title": "Boom Boom (feat. J Alvarez, Nova La Amenaza & Jory Boy)"
         }
       ],
       "trusted": true
@@ -1339,6 +1674,16 @@
           "provider": "deezer",
           "trackId": "3528021801",
           "title": "The Beauty Of Silence"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2163000507",
+          "title": "The Beauty of Silence (Remastered)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2109803787",
+          "title": "Beachbreeze [Remember The Summer] (Original Vocal Mix)"
         }
       ],
       "trusted": true
@@ -1365,6 +1710,16 @@
           "provider": "itunes",
           "trackId": "1465252440",
           "title": "Signs of Life (Dito Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1641071053",
+          "title": "Mental Thing 2005 (Radio Mix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1624070220",
+          "title": "Mental Thing 2005 (Extended Mix)"
         }
       ],
       "trusted": true
@@ -1391,6 +1746,21 @@
           "provider": "deezer",
           "trackId": "15686268",
           "title": "I'll Trade The Old Cross (For A Crown)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686347",
+          "title": "On The Sea Of Life"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686170",
+          "title": "I Was, I Am, I Will"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "15686159",
+          "title": "Jesus Gave Me Water"
         }
       ],
       "trusted": true
@@ -1444,6 +1814,21 @@
           "provider": "deezer",
           "trackId": "1549363482",
           "title": "The Green Light (feat. Georgi Kay)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3596485852",
+          "title": "Hold On (feat. EVIE)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3507248581",
+          "title": "Human"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "509585922",
+          "title": "Want From U"
         }
       ],
       "trusted": true
@@ -1502,6 +1887,11 @@
           "provider": "deezer",
           "trackId": "2756194011",
           "title": "Oh My My"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2806572692",
+          "title": "Heartbeat"
         }
       ],
       "trusted": true
@@ -1528,6 +1918,21 @@
           "provider": "itunes",
           "trackId": "1869462687",
           "title": "Forgive"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1882048246",
+          "title": "On&On"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1869511731",
+          "title": "Loud Enough"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1873530026",
+          "title": "Dream"
         }
       ],
       "trusted": true
@@ -1554,6 +1959,21 @@
           "provider": "deezer",
           "trackId": "3234057211",
           "title": "Ocarina"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2616976092",
+          "title": "Mwaki (Techno Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2401347925",
+          "title": "Englishman (Techno Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2095879117",
+          "title": "Bloody Mary"
         }
       ],
       "trusted": false
@@ -1580,6 +2000,21 @@
           "provider": "itunes",
           "trackId": "1815416257",
           "title": "Gunman Sound"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1609552038",
+          "title": "Champion Sound"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1724088811",
+          "title": "Never"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1743764742",
+          "title": "Really Know Me"
         }
       ],
       "trusted": true
@@ -1622,6 +2057,16 @@
           "provider": "deezer",
           "trackId": "2461320005",
           "title": "Las Bodas de Luis Alonso"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2461320065",
+          "title": "Sentimiento de Poder"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2461320095",
+          "title": "Arabesco de Alambra"
         }
       ],
       "trusted": true
@@ -1638,6 +2083,21 @@
           "provider": "itunes",
           "trackId": "337403487",
           "title": "Morning Breeze (Original Vocal Mix) [feat. Jim C.]"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "852185546",
+          "title": "Freedom (Sing Along Version) [feat. Ylenia]"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1460165679",
+          "title": "Missing You (feat. Frik n Chic & Nathan Brumley)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1468081959",
+          "title": "Missing You (feat. Frik n Chic & Nathan Brumley)"
         }
       ],
       "trusted": true
@@ -1670,6 +2130,21 @@
           "provider": "itunes",
           "trackId": "1674749500",
           "title": "No Comment (Wavetraxx) [Mixed]"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "376352103",
+          "title": "No Comment (Franky Fonell And Chris Reece Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1794576972",
+          "title": "Again"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1678095631",
+          "title": "No Comment 2019"
         }
       ],
       "trusted": true
@@ -1696,6 +2171,21 @@
           "provider": "itunes",
           "trackId": "361470502",
           "title": "Sunset Dream"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "386586698",
+          "title": "Deep Vibes"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "431952152",
+          "title": "Sunset Dream"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "503906895",
+          "title": "Deep Vibes"
         }
       ],
       "trusted": true
@@ -1722,6 +2212,21 @@
           "provider": "deezer",
           "trackId": "3121613221",
           "title": "Bateu (Dre Guazzelli & João Faria Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3895347351",
+          "title": "All In"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3173373721",
+          "title": "Água Salgada (Dre Guazzelli Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "972204842",
+          "title": "Fica Comigo - Remix"
         }
       ],
       "trusted": true
@@ -1761,6 +2266,11 @@
           "provider": "itunes",
           "trackId": "317069866",
           "title": "Aviator"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1688762003",
+          "title": "Burning Up (Radio Mix)"
         }
       ],
       "trusted": true
@@ -1841,6 +2351,21 @@
           "provider": "deezer",
           "trackId": "464611392",
           "title": "Shakti Pan"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3938906151",
+          "title": "I've Been Cooking"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "65719646",
+          "title": "Tristesse"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3135657881",
+          "title": "Alive"
         }
       ],
       "trusted": true
@@ -1867,6 +2392,21 @@
           "provider": "itunes",
           "trackId": "1450994232",
           "title": "Don Pávico y Doña Lechónica"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994238",
+          "title": "Twist del Cuerpo Loco"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994233",
+          "title": "Panetón Ton Ton"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1450994234",
+          "title": "Me Gustan los Gusanos"
         }
       ],
       "trusted": true
@@ -1888,6 +2428,26 @@
           "provider": "itunes",
           "trackId": "272384429",
           "title": "Drunken Sailor/Star O'Munster"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "272384365",
+          "title": "Rise When the Rooster Crows"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "272384425",
+          "title": "Lazy Sailor"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "272384426",
+          "title": "Massachusetts Bay"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1545202999",
+          "title": "Always"
         }
       ],
       "trusted": true
@@ -2067,6 +2627,21 @@
           "provider": "deezer",
           "trackId": "3552722691",
           "title": "Stop Go"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3206650391",
+          "title": "The Drift (DJ Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2903694101",
+          "title": "Find Me (Radio-Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2249403787",
+          "title": "The Drift"
         }
       ],
       "trusted": true
@@ -2099,6 +2674,16 @@
           "provider": "deezer",
           "trackId": "3156191421",
           "title": "PASSION (Extended Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "773938382",
+          "title": "Feeling Good (Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3241810311",
+          "title": "Empirical"
         }
       ],
       "trusted": true
@@ -2125,6 +2710,21 @@
           "provider": "deezer",
           "trackId": "3978127951",
           "title": "Love Within"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2255478747",
+          "title": "Distance"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3761070932",
+          "title": "Feed My Fire"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2256022247",
+          "title": "Fragile"
         }
       ],
       "trusted": true
@@ -2201,6 +2801,16 @@
           "provider": "deezer",
           "trackId": "1894045557",
           "title": "Slowly"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3413396891",
+          "title": "Nirvana"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2348223655",
+          "title": "Theory of Everything"
         }
       ],
       "trusted": false
@@ -2216,7 +2826,7 @@
       "provider": "deezer",
       "providerArtist": "Luca Agnelli",
       "providerArtistId": "130922",
-      "fans": 12378,
+      "fans": 12379,
       "score": 1,
       "tracks": [
         {
@@ -2233,6 +2843,21 @@
           "provider": "deezer",
           "trackId": "4143807212",
           "title": "Tokyo Drift (Extended Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4143807202",
+          "title": "Tokyo Drift"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3889546931",
+          "title": "Broken Voices"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2255703487",
+          "title": "Apollo"
         }
       ],
       "trusted": true
@@ -2259,6 +2884,21 @@
           "provider": "deezer",
           "trackId": "4130230451",
           "title": "Away"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3579847161",
+          "title": "Every You"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "903016002",
+          "title": "Move It (AKA AKA Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3914759231",
+          "title": "You & Me"
         }
       ],
       "trusted": true
@@ -2285,6 +2925,21 @@
           "provider": "deezer",
           "trackId": "3509993901",
           "title": "Herz In Flammen"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2587106722",
+          "title": "Sanguine Fountain"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3327450271",
+          "title": "Blood Rush"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3375747531",
+          "title": "Emotional Khaos"
         }
       ],
       "trusted": false
@@ -2315,6 +2970,22 @@
       ],
       "trusted": false
     },
+    "lubo": {
+      "name": "Lubo b2b Lenzio",
+      "provider": "deezer",
+      "providerArtist": "Lubo",
+      "providerArtistId": "156521",
+      "fans": 892,
+      "score": 1,
+      "tracks": [
+        {
+          "provider": "deezer",
+          "trackId": "3155547821",
+          "title": "Fallin"
+        }
+      ],
+      "trusted": false
+    },
     "luca dario": {
       "name": "Luca Dario",
       "provider": "itunes",
@@ -2337,6 +3008,21 @@
           "provider": "itunes",
           "trackId": "1750032286",
           "title": "Chiaro di Luna"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032458",
+          "title": "Mezzanotte"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032465",
+          "title": "Cala la Notte"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1750032650",
+          "title": "Serenata del Crepuscolo"
         }
       ],
       "trusted": true
@@ -2369,22 +3055,21 @@
           "provider": "deezer",
           "trackId": "2277197217",
           "title": "I'll Wait for You"
-        }
-      ],
-      "trusted": false
-    },
-    "teseo": {
-      "name": "Teseo",
-      "provider": "deezer",
-      "providerArtist": "Teseo",
-      "providerArtistId": "8257046",
-      "fans": 157,
-      "score": 1,
-      "tracks": [
+        },
         {
           "provider": "deezer",
-          "trackId": "1705966517",
-          "title": "ABCDEFU"
+          "trackId": "2996985181",
+          "title": "Gió Tầng Gió Mây Tầng Mây"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3246631391",
+          "title": "Mapas"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3246631411",
+          "title": "Ciudad"
         }
       ],
       "trusted": false
@@ -2411,6 +3096,21 @@
           "provider": "itunes",
           "trackId": "379041077",
           "title": "Sharing Time (Lützenkirchen Only Digital 2009 Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "698378594",
+          "title": "Sharing Time (DJ Miguel Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "330130135",
+          "title": "Sharing Time (Lützenkirchen Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "275897061",
+          "title": "Electric Zulu (Scaramanga Mix)"
         }
       ],
       "trusted": true
@@ -2444,6 +3144,11 @@
           "provider": "itunes",
           "trackId": "1885507359",
           "title": "In the Dark"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1789532793",
+          "title": "Beam Sequence (Radio - Edit)"
         }
       ],
       "trusted": false
@@ -2491,6 +3196,21 @@
           "provider": "itunes",
           "trackId": "1488114806",
           "title": "I Love Techno (Franck FTC Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1488114801",
+          "title": "I Love Techno"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1488114804",
+          "title": "I Love Techno (Ludwig van Electro Remix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1469402052",
+          "title": "No Bad"
         }
       ],
       "trusted": true
@@ -2517,6 +3237,21 @@
           "provider": "deezer",
           "trackId": "382405081",
           "title": "Communication (Somebody Answer The Phone)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "382404981",
+          "title": "Techno Harmony"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "61394113",
+          "title": "My Love (Vocal Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "61187302",
+          "title": "Communication (Mas Mix)"
         }
       ],
       "trusted": true
@@ -2561,6 +3296,11 @@
           "provider": "itunes",
           "trackId": "475485538",
           "title": "Xiii-Xiv"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "475485407",
+          "title": "Agent_C"
         }
       ],
       "trusted": true
@@ -2677,6 +3417,11 @@
           "provider": "deezer",
           "trackId": "3466072051",
           "title": "Bassline People"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3966484891",
+          "title": "Genesis"
         }
       ],
       "trusted": false
@@ -2686,7 +3431,7 @@
       "provider": "deezer",
       "providerArtist": "Flymeon",
       "providerArtistId": "15201259",
-      "fans": 1698,
+      "fans": 1699,
       "score": 1,
       "tracks": [
         {
@@ -2703,6 +3448,21 @@
           "provider": "deezer",
           "trackId": "3662993222",
           "title": "No One Ever Really Dies"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3818370711",
+          "title": "Dance with the Devil"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2101451877",
+          "title": "Paris Acid City (Original Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "519800802",
+          "title": "Randomize"
         }
       ],
       "trusted": true
@@ -2729,6 +3489,21 @@
           "provider": "deezer",
           "trackId": "2204484257",
           "title": "Nasty"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2204339257",
+          "title": "Wait A Minute (Mark Broom’s Non Stop Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3421005761",
+          "title": "We Are Youth"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2205248997",
+          "title": "Another Club (Charlotte de Witte Remix)"
         }
       ],
       "trusted": true
@@ -2789,6 +3564,21 @@
           "provider": "deezer",
           "trackId": "3693662182",
           "title": "Infected (Radio Edit)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3732762912",
+          "title": "On The Move"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3437499331",
+          "title": "On The Move (Darwin & Stu Allen Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3575535991",
+          "title": "Infected (Radio Edit)"
         }
       ],
       "trusted": true
@@ -2815,6 +3605,21 @@
           "provider": "deezer",
           "trackId": "5062364",
           "title": "Exploitation"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062370",
+          "title": "Multinationals"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062357",
+          "title": "Same Mind"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "5062353",
+          "title": "Life Lock"
         }
       ],
       "trusted": false
@@ -2831,6 +3636,11 @@
           "provider": "itunes",
           "trackId": "1798903168",
           "title": "Check"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1784869193",
+          "title": "Nyr"
         }
       ],
       "trusted": true
@@ -2902,6 +3712,21 @@
           "provider": "itunes",
           "trackId": "1652020597",
           "title": "For You (Extended Mix)"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1652020593",
+          "title": "By Your Side"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1110377653",
+          "title": "Flounce Off"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1798928806",
+          "title": "Makrokosmos"
         }
       ],
       "trusted": true
@@ -2928,6 +3753,21 @@
           "provider": "deezer",
           "trackId": "735901122",
           "title": "Iron Heel"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "124251212",
+          "title": "Dead Wrong"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "130720174",
+          "title": "Eternal Yesterday"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "114303324",
+          "title": "Thorn In The Side"
         }
       ],
       "trusted": false
@@ -3041,6 +3881,21 @@
           "provider": "itunes",
           "trackId": "1082243919",
           "title": "Music Lost"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1082243915",
+          "title": "Groove"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1082243914",
+          "title": "Finally"
+        },
+        {
+          "provider": "itunes",
+          "trackId": "1082244881",
+          "title": "My House"
         }
       ],
       "trusted": true
@@ -3067,6 +3922,21 @@
           "provider": "deezer",
           "trackId": "3713102542",
           "title": "When I Found You"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3806428102",
+          "title": "The Road Less Travelled"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4006344071",
+          "title": "Why Not You?"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "930650992",
+          "title": "All I Want (Mark Sherry Extended Remix)"
         }
       ],
       "trusted": true
@@ -3093,6 +3963,21 @@
           "provider": "deezer",
           "trackId": "1270943562",
           "title": "Land Of The Free (ASOT 1007)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "918379522",
+          "title": "Ocean Breeze"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "592264142",
+          "title": "Symmetric"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "4005359071",
+          "title": "Storm (ASOT 1276)"
         }
       ],
       "trusted": true
@@ -3119,6 +4004,16 @@
           "provider": "deezer",
           "trackId": "2171097797",
           "title": "Sing It Back (Cantame Spanish Version OR3X Remix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2503900921",
+          "title": "Besame Mucho (Afro Dub Mix)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "2758772931",
+          "title": "Pasilda (Afro Extended Mix)"
         }
       ],
       "trusted": false
@@ -3128,7 +4023,7 @@
       "provider": "deezer",
       "providerArtist": "Kyau & Albert",
       "providerArtistId": "6536",
-      "fans": 14919,
+      "fans": 14920,
       "score": 1,
       "tracks": [
         {
@@ -3145,6 +4040,21 @@
           "provider": "deezer",
           "trackId": "535117432",
           "title": "Tube Hearts"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "836327242",
+          "title": "So True"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "3980491721",
+          "title": "1000 Years (ABGT674) (Mixed)"
+        },
+        {
+          "provider": "deezer",
+          "trackId": "438270482",
+          "title": "Mein Herz (Mix Cut) (Davey Asprey Remix)"
         }
       ],
       "trusted": true
