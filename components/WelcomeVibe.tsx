@@ -1,64 +1,110 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { welcomeTrack } from "@/lib/data";
 
 const MUTE_KEY = "parademtach-vibe-muted";
+/** Deezer preview URLs die ~15 min after issue and arrive minutes old via
+ * the CDN; past this age we re-resolve before trying to play. */
+const STALE_MS = 2 * 60 * 1000;
 
 /**
  * Chill ambience on the landing page: a warm house snippet from the line-up,
- * looped at low volume. Browsers block un-gestured audio, so if autoplay is
- * refused the first tap anywhere starts it; the speaker toggle always
- * renders once the track is resolved, so muting is reversible.
+ * looped at low volume (element volume — iOS plays at hardware volume, the
+ * acceptable trade after the WebAudio route proved fragile).
  *
- * Deliberately a plain media element: a WebAudio gain graph (tried for iOS
- * volume control) permanently claims the element's output, so any CORS
- * hiccup on any CDN hop turns into unrecoverable silence. Element volume
- * works everywhere except iOS, which plays at hardware volume — acceptable.
+ * Timing matters more than plumbing here: the URL resolves at page load but
+ * the first tap may come minutes later, past the URL's life. So the gesture
+ * path re-resolves (cache-busted) when the URL is stale or a play fails,
+ * and the in-gesture play() attempt "blesses" the element first so the
+ * post-await retry is still allowed by mobile autoplay policy.
  */
 export function WelcomeVibe() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const urlRef = useRef<{ url: string; at: number } | null>(null);
+  const trackRef = useRef(welcomeTrack());
   const [muted, setMuted] = useState(true);
   const [ready, setReady] = useState(false);
+
+  const resolve = useCallback(async (fresh = false): Promise<string | null> => {
+    const vibe = trackRef.current;
+    if (!vibe) return null;
+    if (!fresh && urlRef.current && Date.now() - urlRef.current.at < STALE_MS)
+      return urlRef.current.url;
+    const bust = fresh ? `&fresh=${Date.now()}` : "";
+    const res = await fetch(
+      `/api/preview?provider=${vibe.track.provider}&id=${vibe.track.trackId}${bust}`
+    );
+    if (!res.ok) return null;
+    const { url } = await res.json();
+    urlRef.current = { url, at: Date.now() };
+    return url;
+  }, []);
+
+  /** Play with freshness: stale src → re-resolve; failed play → one fresh
+   * retry. Safe to call from gesture handlers and the toggle alike. */
+  const startPlayback = useCallback(async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    // Bless the element inside the gesture so later awaited plays are allowed.
+    audio.play().catch(() => {});
+    try {
+      let url = await resolve();
+      if (!url) return;
+      if (audio.src !== url) {
+        audio.src = url;
+        audio.loop = true;
+        audio.volume = 0.3;
+      }
+      try {
+        await audio.play();
+        setMuted(false);
+        return;
+      } catch {}
+      // Stale or dead URL — one truly fresh retry.
+      url = await resolve(true);
+      if (!url) return;
+      audio.src = url;
+      audio.loop = true;
+      audio.volume = 0.3;
+      await audio.play();
+      setMuted(false);
+    } catch {
+      // Still blocked or unreachable — the page works silent.
+    }
+  }, [resolve]);
 
   useEffect(() => {
     const wantsMute = localStorage.getItem(MUTE_KEY) === "1";
     setMuted(wantsMute);
-    const vibe = welcomeTrack();
     const audio = audioRef.current;
-    if (!vibe || !audio) return;
+    if (!trackRef.current || !audio) return;
 
     let cancelled = false;
     let cleanupGesture = () => {};
     (async () => {
+      const url = await resolve();
+      if (cancelled || !url) return;
+      audio.src = url;
+      audio.loop = true;
+      audio.volume = 0.3;
+      setReady(true);
+      if (wantsMute) return; // resolved and toggleable, just not playing
       try {
-        const res = await fetch(`/api/preview?provider=${vibe.track.provider}&id=${vibe.track.trackId}`);
-        if (!res.ok) return;
-        const { url } = await res.json();
-        if (cancelled) return;
-        audio.src = url;
-        audio.loop = true;
-        audio.volume = 0.3;
-        setReady(true);
-        if (wantsMute) return; // resolved and toggleable, just not playing
-        try {
-          await audio.play();
-          setMuted(false);
-        } catch {
-          // Autoplay blocked — start on the first interaction anywhere.
-          const start = () => {
-            audio.play().then(() => setMuted(false)).catch(() => {});
-            cleanupGesture();
-          };
-          window.addEventListener("pointerdown", start, { once: true });
-          window.addEventListener("keydown", start, { once: true });
-          cleanupGesture = () => {
-            window.removeEventListener("pointerdown", start);
-            window.removeEventListener("keydown", start);
-          };
-        }
+        await audio.play();
+        setMuted(false);
       } catch {
-        // No ambience is fine — the page works silent.
+        // Autoplay blocked — start on the first interaction anywhere.
+        const start = () => {
+          startPlayback();
+          cleanupGesture();
+        };
+        window.addEventListener("pointerdown", start, { once: true });
+        window.addEventListener("keydown", start, { once: true });
+        cleanupGesture = () => {
+          window.removeEventListener("pointerdown", start);
+          window.removeEventListener("keydown", start);
+        };
       }
     })();
     return () => {
@@ -66,6 +112,7 @@ export function WelcomeVibe() {
       cleanupGesture();
       audio.pause();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggle = () => {
@@ -73,8 +120,7 @@ export function WelcomeVibe() {
     if (!audio) return;
     if (muted) {
       localStorage.removeItem(MUTE_KEY);
-      setMuted(false);
-      if (audio.src) audio.play().catch(() => {});
+      startPlayback();
     } else {
       localStorage.setItem(MUTE_KEY, "1");
       setMuted(true);
