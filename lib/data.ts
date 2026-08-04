@@ -157,15 +157,31 @@ export function playableCount(filters: Filters): { snippets: number; artists: nu
 }
 
 /**
+ * The landing-page ambience track: warm, mid-spectrum, nothing that would
+ * polarize a blind test (no hardstyle/psy). Preference-ordered so it stays
+ * stable across catalog rebuilds.
+ */
+export function welcomeTrack(): { artistKey: string; artistName: string; track: import("./types").CatalogTrack } | null {
+  for (const key of ["blond ish", "animal trainer", "andrea oliva", "sonny fodera", "vintage culture"]) {
+    const cat = catalog.artists[key];
+    if (cat?.trusted && cat.tracks.length) return { artistKey: key, artistName: cat.name, track: cat.tracks[0] };
+  }
+  return null;
+}
+
+/**
  * Deck = every (eligible artist, track) pair, shuffled, then spread so the
- * same artist never appears back-to-back.
+ * same artist never appears back-to-back. The welcome-vibe track is excluded —
+ * everyone has already heard it with the artist unknown but recognizable.
  */
 export function buildDeck(filters: Filters, seed = Date.now()): DeckCard[] {
+  const welcome = welcomeTrack();
   const cards: DeckCard[] = [];
   for (const info of eligibleArtists(filters)) {
     const cat = catalog.artists[info.key];
     if (!cat || !cat.trusted || !cat.tracks.length) continue;
-    for (const track of cat.tracks)
+    for (const track of cat.tracks) {
+      if (welcome && track.provider === welcome.track.provider && track.trackId === welcome.track.trackId) continue;
       cards.push({
         artistKey: info.key,
         artistName: info.name,
@@ -173,6 +189,7 @@ export function buildDeck(filters: Filters, seed = Date.now()): DeckCard[] {
         genres: info.genres,
         appearances: info.appearances,
       });
+    }
   }
   const rand = rng(seed);
   for (let i = cards.length - 1; i > 0; i--) {

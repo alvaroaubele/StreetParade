@@ -14,6 +14,7 @@ import {
   venueLabel,
 } from "@/lib/data";
 import { clearState, loadState, saveState } from "@/lib/store";
+import { WelcomeVibe } from "@/components/WelcomeVibe";
 import type { Filters } from "@/lib/types";
 
 function Chip({ on, label, onClick, dim }: { on: boolean; label: string; onClick: () => void; dim?: boolean }) {
@@ -87,14 +88,15 @@ export default function FilterPage() {
 
   return (
     <main className="flex min-h-dvh flex-col gap-6 pt-10 pb-28">
+      <WelcomeVibe />
       <header>
         <p className="text-sm font-semibold uppercase tracking-widest text-fuchsia-400">
           Street Parade Zürich · 8 Aug 2026
         </p>
         <h1 className="mt-1 text-4xl font-black">ParadeMatch</h1>
         <p className="mt-3 text-neutral-400">
-          Hear snippets from the actual line-up — no names shown. Swipe what you like. Get
-          your personal route through the parade.
+          {snippets} snippets from {artists} artists of the actual line-up — no names shown.
+          Swipe what you like. Get your personal route through the parade.
         </p>
       </header>
 
@@ -234,10 +236,11 @@ export default function FilterPage() {
           disabled={snippets === 0}
           className="w-full rounded-2xl bg-fuchsia-600 py-4 text-lg font-bold transition active:scale-[0.98] disabled:opacity-40"
         >
-          Start blind test · {snippets} snippets from {artists} artists
+          Start blind test
         </button>
         <p className="mt-1.5 text-center text-xs text-neutral-600">
-          Route unlocks at 10 votes — 40 gives the best match. New test resets the old one.
+          10 votes unlock your route — around 40 make it really yours. A new test resets the
+          old one.
         </p>
       </div>
     </main>

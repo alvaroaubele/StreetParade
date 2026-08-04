@@ -140,3 +140,16 @@ verified (with evidence), and any gaps with their fill-in path.
    that mobile to the top of the picks with a star. Locked blocks show ⭐ in
    the timeline and the shared route text.
 
+## v4 scope (owner feedback, 2026-08-04, after v3 merged)
+
+1. **Start button says only "Start blind test"** — the pool count moves
+   into the header subtitle, still live-updating with the filters.
+2. **Unlock copy rephrased**: 10 votes unlock the route, ~40 make it
+   really yours.
+3. **Welcome vibe** — the landing page plays a looped, low-volume chill
+   snippet from the line-up (warm house; deliberately nothing polarizing
+   like hardstyle or psytrance). Autoplay is attempted; when the browser
+   blocks it, the first tap anywhere starts it. A speaker toggle mutes it
+   and the choice persists. That exact track is excluded from the blind
+   deck since everyone has heard it.
+
