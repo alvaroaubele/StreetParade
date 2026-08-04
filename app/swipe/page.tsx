@@ -2,24 +2,30 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { catalog } from "@/lib/data";
 import { loadState, saveState } from "@/lib/store";
 import { ArtistLinks } from "@/components/ArtistLinks";
-import type { DeckCard, SwipeState, VoteTally } from "@/lib/types";
+import type { CatalogTrack, DeckCard, SwipeState, VoteTally } from "@/lib/types";
 
 const MIN_VOTES = 10;
 const OPTIMAL_VOTES = 40;
-type Vote = 1 | -1 | 0;
+/** 1 like · -1 nope · 0 skip · 2 superlike (locks artist into the route) */
+type Vote = 1 | -1 | 0 | 2;
 
 const bump = (t: VoteTally | undefined, v: Vote): VoteTally => ({
   l: (t?.l ?? 0) + (v === 1 ? 1 : 0),
   n: (t?.n ?? 0) + (v === -1 ? 1 : 0),
   s: (t?.s ?? 0) + (v === 0 ? 1 : 0),
+  sl: (t?.sl ?? 0) + (v === 2 ? 1 : 0),
 });
 const unbump = (t: VoteTally, v: Vote): VoteTally => ({
   l: t.l - (v === 1 ? 1 : 0),
   n: t.n - (v === -1 ? 1 : 0),
   s: t.s - (v === 0 ? 1 : 0),
+  sl: (t.sl ?? 0) - (v === 2 ? 1 : 0),
 });
+const totalVotes = (votes: Record<string, VoteTally>) =>
+  Object.values(votes).reduce((n, t) => n + t.l + t.n + (t.sl ?? 0), 0);
 
 export default function SwipePage() {
   const router = useRouter();
@@ -35,6 +41,7 @@ export default function SwipePage() {
   const historyRef = useRef<{ key: string; vote: Vote }[]>([]);
   const urlCache = useRef<Map<string, string>>(new Map());
   const dragStart = useRef<{ x: number; y: number } | null>(null);
+  const triedTracks = useRef<Set<string>>(new Set());
 
   useEffect(() => {
     const s = loadState();
@@ -48,18 +55,39 @@ export default function SwipePage() {
   const card = state && state.position < state.deck.length ? state.deck[state.position] : null;
   const nextCard = state && state.position + 1 < state.deck.length ? state.deck[state.position + 1] : null;
 
-  const previewUrl = useCallback(async (c: DeckCard): Promise<string> => {
-    const key = `${c.track.provider}:${c.track.trackId}`;
+  const resolveUrl = useCallback(async (track: CatalogTrack): Promise<string> => {
+    const key = `${track.provider}:${track.trackId}`;
     const hit = urlCache.current.get(key);
     if (hit) return hit;
-    const res = await fetch(`/api/preview?provider=${c.track.provider}&id=${c.track.trackId}`);
+    const res = await fetch(`/api/preview?provider=${track.provider}&id=${track.trackId}`);
     if (!res.ok) throw new Error("no preview");
     const { url } = await res.json();
     urlCache.current.set(key, url);
     return url;
   }, []);
 
-  // Load + try to play the current card's snippet; prefetch the next one.
+  /** Other tracks of the same artist, for when one snippet is dead. */
+  const siblingTracks = useCallback((c: DeckCard): CatalogTrack[] => {
+    const all = catalog.artists[c.artistKey]?.tracks ?? [];
+    return all.filter((t) => `${t.provider}:${t.trackId}` !== `${c.track.provider}:${c.track.trackId}`);
+  }, []);
+
+  const swapCardTrack = useCallback(
+    (track: CatalogTrack) => {
+      setState((s) => {
+        if (!s) return s;
+        const deck = [...s.deck];
+        deck[s.position] = { ...deck[s.position], track };
+        const next = { ...s, deck };
+        saveState(next);
+        return next;
+      });
+    },
+    []
+  );
+
+  // Load + play the current snippet; on a dead track, fall back to another
+  // track of the same artist before surfacing an error. Prefetch the next card.
   useEffect(() => {
     if (!card || revealed) return;
     let cancelled = false;
@@ -68,24 +96,55 @@ export default function SwipePage() {
     const audio = audioRef.current;
     if (!audio) return;
     audio.pause();
-    (async () => {
+
+    const tryPlay = async (track: CatalogTrack): Promise<boolean> => {
+      triedTracks.current.add(`${track.provider}:${track.trackId}`);
+      let url: string;
       try {
-        const url = await previewUrl(card);
-        if (cancelled) return;
-        audio.src = url;
-        try {
-          await audio.play();
-          setPlaying(true);
-          setNeedsTap(false);
-        } catch {
-          setPlaying(false);
-          setNeedsTap(true); // mobile autoplay policy — one tap needed
-        }
+        url = await resolveUrl(track);
       } catch {
-        if (!cancelled) setAudioErr(true);
+        return false;
       }
+      if (cancelled) return true;
+      const loaded = new Promise<boolean>((resolve) => {
+        const ok = () => { cleanup(); resolve(true); };
+        const bad = () => { cleanup(); resolve(false); };
+        const cleanup = () => {
+          audio.removeEventListener("canplay", ok);
+          audio.removeEventListener("error", bad);
+        };
+        audio.addEventListener("canplay", ok);
+        audio.addEventListener("error", bad);
+        setTimeout(() => { cleanup(); resolve(audio.readyState >= 2); }, 8000);
+      });
+      audio.src = url;
+      audio.load();
+      if (!(await loaded)) return false;
+      if (cancelled) return true;
+      try {
+        await audio.play();
+        setPlaying(true);
+        setNeedsTap(false);
+      } catch {
+        setPlaying(false);
+        setNeedsTap(true); // mobile autoplay policy — one tap needed
+      }
+      return true;
+    };
+
+    (async () => {
+      triedTracks.current = new Set();
+      if (await tryPlay(card.track)) return;
+      for (const t of siblingTracks(card)) {
+        if (cancelled) return;
+        if (await tryPlay(t)) {
+          if (!cancelled) swapCardTrack(t);
+          return;
+        }
+      }
+      if (!cancelled) setAudioErr(true);
     })();
-    if (nextCard) previewUrl(nextCard).catch(() => {});
+    if (nextCard) resolveUrl(nextCard.track).catch(() => {});
     return () => {
       cancelled = true;
       audio.pause();
@@ -112,7 +171,7 @@ export default function SwipePage() {
       if (!state || !card || flyOut !== null) return;
       audioRef.current?.pause();
       setPlaying(false);
-      navigator.vibrate?.(v === 0 ? 5 : 15);
+      navigator.vibrate?.(v === 0 ? 5 : v === 2 ? [10, 40, 20] : 15);
       historyRef.current.push({ key: card.artistKey, vote: v });
       const next: SwipeState = {
         ...state,
@@ -165,7 +224,10 @@ export default function SwipePage() {
       }
       if (e.key === "ArrowRight") vote(1);
       else if (e.key === "ArrowLeft") vote(-1);
-      else if (e.key === "ArrowDown" || e.key === "s") vote(0);
+      else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        vote(2);
+      } else if (e.key === "ArrowDown" || e.key === "s") vote(0);
       else if (e.key === " ") {
         e.preventDefault();
         togglePlay();
@@ -175,7 +237,7 @@ export default function SwipePage() {
     return () => window.removeEventListener("keydown", onKey);
   }, [vote, undo, togglePlay, revealed]);
 
-  // Drag gestures on the card.
+  // Drag gestures: right = like, left = nope, up = superlike.
   const onPointerDown = (e: React.PointerEvent) => {
     dragStart.current = { x: e.clientX, y: e.clientY };
     setDrag((d) => ({ ...d, active: true }));
@@ -189,7 +251,8 @@ export default function SwipePage() {
     if (!dragStart.current) return;
     const { dx, dy } = dragRef.current;
     dragStart.current = null;
-    if (Math.abs(dx) > 80) vote(dx > 0 ? 1 : -1, true);
+    if (dy < -80 && Math.abs(dy) > Math.abs(dx)) vote(2, true);
+    else if (Math.abs(dx) > 80) vote(dx > 0 ? 1 : -1, true);
     else if (Math.abs(dx) < 6 && Math.abs(dy) < 6) togglePlay();
     else setDrag({ dx: 0, dy: 0, active: false });
   };
@@ -198,7 +261,7 @@ export default function SwipePage() {
 
   if (!state) return null;
 
-  const votedCount = Object.values(state.votes).filter((t) => t.l + t.n > 0).length;
+  const votedCount = totalVotes(state.votes);
   const total = state.deck.length;
 
   // ---------- reveal card ----------
@@ -208,13 +271,17 @@ export default function SwipePage() {
     return (
       <main className="flex min-h-dvh flex-col pt-10 pb-6">
         <Progress votedCount={votedCount} position={state.position} total={total} />
-        <div className="mt-6 flex-1 rounded-3xl border border-neutral-800 bg-neutral-900 p-6">
+        <div
+          className={`mt-6 flex-1 rounded-3xl border p-6 ${
+            v === 2 ? "border-amber-500/60 bg-amber-950/15" : "border-neutral-800 bg-neutral-900"
+          }`}
+        >
           <p
             className={`text-sm font-bold uppercase tracking-widest ${
-              v === 1 ? "text-emerald-400" : v === -1 ? "text-rose-400" : "text-neutral-500"
+              v === 2 ? "text-amber-400" : v === 1 ? "text-emerald-400" : v === -1 ? "text-rose-400" : "text-neutral-500"
             }`}
           >
-            {v === 1 ? "Liked" : v === -1 ? "Not for you" : "Skipped"} — it was
+            {v === 2 ? "⭐ Superliked — locked into your route. It was" : v === 1 ? "Liked — it was" : v === -1 ? "Not for you — it was" : "Skipped — it was"}
           </p>
           <h2 className="mt-2 text-3xl font-black">{c.artistName}</h2>
           <p className="mt-1 text-lg text-neutral-300">“{c.track.title}”</p>
@@ -277,7 +344,9 @@ export default function SwipePage() {
   const rot = drag.dx / 18;
   const likeOpacity = Math.min(1, Math.max(0, drag.dx - 20) / 80);
   const nopeOpacity = Math.min(1, Math.max(0, -drag.dx - 20) / 80);
+  const superOpacity = Math.min(1, Math.max(0, -drag.dy - 20) / 80) * (Math.abs(drag.dy) > Math.abs(drag.dx) ? 1 : 0);
   const flyX = flyOut === 1 ? 600 : flyOut === -1 ? -600 : drag.dx;
+  const flyY = flyOut === 2 ? -800 : drag.dy * 0.2;
 
   return (
     <main className="flex min-h-dvh select-none flex-col pt-10 pb-6">
@@ -297,7 +366,7 @@ export default function SwipePage() {
           onPointerUp={onPointerUp}
           onPointerCancel={onPointerUp}
           style={{
-            transform: `translate(${flyX}px, ${drag.dy * 0.2}px) rotate(${flyOut ? flyOut * 30 : rot}deg)`,
+            transform: `translate(${flyX}px, ${flyY}px) rotate(${flyOut === 1 ? 30 : flyOut === -1 ? -30 : rot}deg)`,
             transition: drag.active && !flyOut ? "none" : "transform 180ms ease-out",
           }}
           className="relative grid h-64 w-64 cursor-grab place-items-center rounded-full border-8 border-neutral-800 bg-neutral-900 active:cursor-grabbing"
@@ -327,14 +396,20 @@ export default function SwipePage() {
           >
             NOPE
           </span>
+          <span
+            className="absolute bottom-8 rounded-lg border-2 border-amber-400 px-2 py-0.5 text-lg font-black text-amber-400"
+            style={{ opacity: superOpacity }}
+          >
+            ⭐ SUPER
+          </span>
           <span className="z-10 text-5xl">{audioErr ? "⚠️" : playing ? "❚❚" : "▶"}</span>
         </div>
         <p className="mt-6 px-6 text-center text-sm text-neutral-500">
           {audioErr
-            ? "Snippet unavailable — skip this one."
+            ? "No playable snippet for this one — skip it."
             : needsTap
               ? "Tap the disc to play"
-              : "Mystery set — drag right to like, left to nope."}
+              : "Drag right to like, left to nope, up to ⭐ lock into your route."}
         </p>
         {historyRef.current.length > 0 && (
           <button onClick={undo} className="mt-3 rounded-full border border-neutral-700 px-4 py-1.5 text-sm text-neutral-400 transition active:scale-95">
@@ -342,14 +417,17 @@ export default function SwipePage() {
           </button>
         )}
       </div>
-      <div className="mb-2 grid grid-cols-3 gap-3">
-        <button onClick={() => vote(-1)} className="rounded-2xl border-2 border-rose-500/60 bg-rose-950/40 py-5 text-lg font-bold text-rose-300 transition active:scale-95">
+      <div className="mb-2 grid grid-cols-4 gap-2">
+        <button onClick={() => vote(-1)} className="rounded-2xl border-2 border-rose-500/60 bg-rose-950/40 py-5 font-bold text-rose-300 transition active:scale-95">
           Nope
         </button>
-        <button onClick={() => vote(0)} className="rounded-2xl border border-neutral-700 bg-neutral-900 py-5 font-semibold text-neutral-400 transition active:scale-95">
+        <button onClick={() => vote(0)} className="rounded-2xl border border-neutral-700 bg-neutral-900 py-5 text-sm font-semibold text-neutral-400 transition active:scale-95">
           Skip
         </button>
-        <button onClick={() => vote(1)} className="rounded-2xl border-2 border-emerald-500/60 bg-emerald-950/40 py-5 text-lg font-bold text-emerald-300 transition active:scale-95">
+        <button onClick={() => vote(2)} className="rounded-2xl border-2 border-amber-500/60 bg-amber-950/30 py-5 text-xl transition active:scale-95" aria-label="Superlike — lock into route">
+          ⭐
+        </button>
+        <button onClick={() => vote(1)} className="rounded-2xl border-2 border-emerald-500/60 bg-emerald-950/40 py-5 font-bold text-emerald-300 transition active:scale-95">
           Like
         </button>
       </div>

@@ -6,6 +6,7 @@ export interface ScoredArtist {
   name: string;
   score: number;
   direct: boolean;
+  super: boolean;
   genres: string[];
   appearances: { venue: string; venueType: "stage" | "mobile"; time: string | null; timeWindow?: string | null }[];
 }
@@ -16,6 +17,7 @@ export interface ScheduleBlock {
   artist: string;
   stage: string;
   score: number;
+  locked?: boolean;
 }
 
 export interface MobilePick {
@@ -23,6 +25,7 @@ export interface MobilePick {
   styles: string;
   timeWindow: string | null;
   score: number;
+  starred?: boolean;
   topArtists: string[];
 }
 
@@ -40,12 +43,13 @@ const toMin = (t: string) => {
 const toHHMM = (min: number) =>
   `${String(Math.floor(min / 60) % 24).padStart(2, "0")}:${String(min % 60).padStart(2, "0")}`;
 
-const net = (t: VoteTally | undefined) => (t ? t.l - t.n : 0);
-const heard = (t: VoteTally | undefined) => !!t && t.l + t.n > 0;
+const sl = (t: VoteTally | undefined) => t?.sl ?? 0;
+const net = (t: VoteTally | undefined) => (t ? t.l + sl(t) - t.n : 0);
+const heard = (t: VoteTally | undefined) => !!t && t.l + t.n + sl(t) > 0;
 
 /**
- * Direct votes dominate (net likes over an artist's cards, clamped to ±2);
- * genre affinity learned from votes ranks everyone else.
+ * Superlikes lock an artist into the route; direct votes dominate scoring
+ * (net likes clamped to ±2); genre affinity ranks everyone else.
  */
 export function recommend(votes: Record<string, VoteTally>): Recommendation {
   const genreScore = new Map<string, { sum: number; n: number }>();
@@ -66,24 +70,27 @@ export function recommend(votes: Record<string, VoteTally>): Recommendation {
     return e && e.n ? e.sum / e.n : 0;
   };
 
+  const superKeys = new Set(Object.keys(votes).filter((k) => sl(votes[k]) > 0));
+
   const ranked: ScoredArtist[] = [];
   for (const [key, info] of artistIndex) {
     const tally = votes[key];
     const genreAvg =
       info.genres.reduce((s, g) => s + genreAffinity(g), 0) / (info.genres.length || 1);
     const direct = heard(tally);
-    const score = direct
-      ? Math.max(-2, Math.min(2, net(tally))) + genreAvg * 0.5
-      : genreAvg;
-    ranked.push({ key, name: info.name, score, direct, genres: info.genres, appearances: info.appearances });
+    const isSuper = superKeys.has(key);
+    const score = isSuper
+      ? 3 + genreAvg * 0.5
+      : direct
+        ? Math.max(-2, Math.min(2, net(tally))) + genreAvg * 0.5
+        : genreAvg;
+    ranked.push({ key, name: info.name, score, direct, super: isSuper, genres: info.genres, appearances: info.appearances });
   }
   ranked.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
 
   const scoreByKey = new Map(ranked.map((r) => [r.key, r.score]));
 
-  // Timeline over fixed stages: at each half-hour 13:00–24:00 pick the
-  // best-scoring set currently playing; merge consecutive picks.
-  interface Slot { artist: string; stage: string; start: number; end: number; score: number }
+  interface Slot { artist: string; artistKey: string; stage: string; start: number; end: number; score: number }
   const slots: Slot[] = [];
   for (const v of eventData.venues as Venue[]) {
     if (v.type !== "stage") continue;
@@ -93,17 +100,39 @@ export function recommend(votes: Record<string, VoteTally>): Recommendation {
       .sort((a, b) => a.start - b.start);
     timed.forEach((a, i) => {
       const end = i + 1 < timed.length ? timed[i + 1].start : Math.min(a.start + 90, 24 * 60);
-      slots.push({
-        artist: a.name,
-        stage: v.name,
-        start: a.start,
-        end,
-        score: scoreByKey.get(normKey(a.name)) ?? 0,
-      });
+      const key = normKey(a.name);
+      slots.push({ artist: a.name, artistKey: key, stage: v.name, start: a.start, end, score: scoreByKey.get(key) ?? 0 });
     });
   }
-  const picks: Slot[] = [];
+
+  // Lock one timed set per superliked artist. Artists with the fewest set
+  // options are placed first; each takes the set overlapping least with
+  // already-locked time.
+  const locked: Slot[] = [];
+  const overlap = (a: Slot, b: Slot) => Math.max(0, Math.min(a.end, b.end) - Math.max(a.start, b.start));
+  const superWithSets = [...superKeys]
+    .map((key) => ({ key, sets: slots.filter((s) => s.artistKey === key) }))
+    .filter((x) => x.sets.length > 0)
+    .sort((a, b) => a.sets.length - b.sets.length);
+  for (const { sets } of superWithSets) {
+    const best = [...sets].sort(
+      (a, b) =>
+        locked.reduce((n, l) => n + overlap(a, l), 0) - locked.reduce((n, l) => n + overlap(b, l), 0)
+    )[0];
+    locked.push(best);
+  }
+  const lockAt = (t: number) => locked.find((l) => l.start <= t && t < l.end);
+  // A later lock wins where two locked sets unavoidably overlap (fewest-
+  // options-first means the constrained artist placed the earlier claim).
+  const lockedAsc = [...locked].sort((a, b) => a.start - b.start);
+
+  const picks: (Slot & { locked?: boolean })[] = [];
   for (let t = 13 * 60; t < 24 * 60; t += 30) {
+    const lockHits = lockedAsc.filter((l) => l.start <= t && t < l.end);
+    if (lockHits.length) {
+      picks.push({ ...lockHits[lockHits.length - 1], start: t, end: t + 30, locked: true });
+      continue;
+    }
     const live = slots.filter((s) => s.start <= t && t < s.end);
     if (!live.length) continue;
     live.sort((a, b) => b.score - a.score);
@@ -114,15 +143,20 @@ export function recommend(votes: Record<string, VoteTally>): Recommendation {
     const last = timeline[timeline.length - 1];
     if (last && last.artist === p.artist && last.stage === p.stage) {
       last.to = toHHMM(p.end);
+      last.locked = last.locked || p.locked;
     } else {
-      timeline.push({ from: toHHMM(p.start), to: toHHMM(p.end), artist: p.artist, stage: p.stage, score: p.score });
+      timeline.push({ from: toHHMM(p.start), to: toHHMM(p.end), artist: p.artist, stage: p.stage, score: p.score, locked: p.locked });
     }
   }
 
-  // Love mobiles are roaming: rank them by their artists' scores.
+  // Love mobiles are roaming: rank by their artists' scores; a mobile is
+  // starred (and pinned) when it's the only place a superliked artist plays.
+  const superStageKeys = new Set(superWithSets.map((x) => x.key));
   const mobiles: MobilePick[] = (eventData.venues as Venue[])
     .filter((v) => v.type === "mobile")
     .map((v) => {
+      const keys = v.artists.map((a) => normKey(a.name));
+      const starred = keys.some((k) => superKeys.has(k) && !superStageKeys.has(k));
       const scores = v.artists
         .map((a) => ({ name: a.name, s: scoreByKey.get(normKey(a.name)) ?? 0 }))
         .sort((a, b) => b.s - a.s);
@@ -134,7 +168,8 @@ export function recommend(votes: Record<string, VoteTally>): Recommendation {
         label: `${v.num ? "#" + v.num + " " : ""}${v.name}`,
         styles: v.styles,
         timeWindow: v.timeWindow ?? null,
-        score: avg + genreAvg * 0.5,
+        score: avg + genreAvg * 0.5 + (starred ? 10 : 0),
+        starred,
         topArtists: top.filter((x) => x.s > 0).map((x) => x.name),
       };
     })
@@ -150,11 +185,13 @@ export function recommend(votes: Record<string, VoteTally>): Recommendation {
 /** Plain-text route summary for pasting into the group chat. */
 export function shareText(rec: Recommendation, voteCount: number): string {
   const lines: string[] = [`My ParadeMatch route · Street Parade 8 Aug (from ${voteCount} blind votes)`];
-  for (const b of rec.timeline) lines.push(`${b.from}–${b.to}  ${b.artist} @ ${b.stage}${b.score > 1.5 ? " 🔥" : ""}`);
-  const mobiles = rec.mobiles.filter((m) => m.score > 0).slice(0, 3);
+  for (const b of rec.timeline)
+    lines.push(`${b.from}–${b.to}  ${b.artist} @ ${b.stage}${b.locked ? " ⭐" : b.score > 1.5 ? " 🔥" : ""}`);
+  const mobiles = rec.mobiles.filter((m) => m.starred || m.score > 0).slice(0, 3);
   if (mobiles.length) {
     lines.push("Love Mobiles:");
-    for (const m of mobiles) lines.push(`· ${m.label}${m.timeWindow ? ` (${m.timeWindow})` : ""}`);
+    for (const m of mobiles)
+      lines.push(`· ${m.starred ? "⭐ " : ""}${m.label}${m.timeWindow ? ` (${m.timeWindow})` : ""}`);
   }
   return lines.join("\n");
 }

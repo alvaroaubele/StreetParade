@@ -121,3 +121,22 @@ verified (with evidence), and any gaps with their fill-in path.
    streetparade.com, with a Spotify search fallback. (Supersedes the v1
    web-search-only link constraint.)
 
+## v3 scope (owner feedback, 2026-08-04, after v2 merged)
+
+1. **Google Maps route** — results header gets an "Open in Google Maps"
+   button beside the copy button: a walking route through the timeline's
+   stages in visit order. Stage coordinates are curated landmarks (~100 m,
+   labeled approximate) since the official site publishes no geo data.
+2. **Progress counts every like/nope/superlike event** (skips still count
+   nothing). Under v2 it counted distinct voted artists, which read as
+   "15 cards for 10 votes"; that was working as designed but unintuitive.
+3. **Audio resilience** — a track that fails to resolve or load falls back
+   automatically to another track of the same artist before showing an
+   error (fixes a dead Marlon Hoffstadt snippet).
+4. **Superlike** — swipe up / ⭐ button / ArrowUp. A superliked artist is
+   guaranteed in the route at least once: one of their timed sets is locked
+   into the timeline (fewest-options-first, least-overlap placement when
+   several superlikes conflict); artists who only play a love mobile pin
+   that mobile to the top of the picks with a star. Locked blocks show ⭐ in
+   the timeline and the shared route text.
+
