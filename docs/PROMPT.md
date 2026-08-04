@@ -163,3 +163,34 @@ verified (with evidence), and any gaps with their fill-in path.
    grain to prevent banding. Pure CSS, `prefers-reduced-motion` disables
    the drift.
 
+## v6 scope (full audit remediation, 2026-08-04, after v5 merged)
+
+Every confirmed audit finding fixed; the three "bigger ideas" (card-stack
+architecture, day-of companion mode, group overlap) deliberately deferred.
+
+- **P0**: body background made transparent so the aurora actually shows on
+  phones; preview-URL caching cut below Deezer's measured 15-minute signed
+  lifetime at every layer (server 300s, CDN 300s, client 5-min TTL with
+  delete-on-error and one forced fresh re-resolve before sibling fallback);
+  superlike lock scheduler splits contested slots so every superliked
+  artist keeps route time even when sets share a start.
+- **P1**: genre keyword lookbehinds (Afro House / Psy-Trance no longer
+  mis-tag House / Trance, and "House, Afrohouse" keeps House); zero-vote
+  states gated on all three results entrances; the vibe mute toggle always
+  renders (muting is reversible) and loudness goes through a WebAudio gain
+  so iOS respects it; contrast raised on all load-bearing small text and
+  pinch-zoom re-enabled; audio keeps playing into the reveal (next snippet
+  starts under it, tap anywhere dismisses); share uses the native sheet
+  with clipboard fallback and visible failure, and the text carries the
+  maps link and app URL; the maps route visits each stage once.
+- **P2**: de-clump loops until no same-artist adjacency (tail included);
+  undo history persists in state, works from the reveal, and is guarded
+  against the fly-out race; one countVotes rule everywhere; the sibling
+  fallback can no longer play the welcome track; 10-vote unlock gets a
+  haptic-and-flash beat; a NOW marker anchors results on parade day
+  (Europe/Zurich); "Start over" needs a second tap; play/pause/warning and
+  speaker icons are SVG, the disc has role/label, the progress bar is a
+  labeled progressbar, chips expose pressed state, reduced-motion also
+  stops the disc spin; scraper time regex and venue matching hardened for
+  the pre-event refresh.
+

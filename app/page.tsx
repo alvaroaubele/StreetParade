@@ -13,7 +13,7 @@ import {
   playableCount,
   venueLabel,
 } from "@/lib/data";
-import { clearState, loadState, saveState } from "@/lib/store";
+import { clearState, countVotes, loadState, saveState } from "@/lib/store";
 import { WelcomeVibe } from "@/components/WelcomeVibe";
 import type { Filters } from "@/lib/types";
 
@@ -21,10 +21,11 @@ function Chip({ on, label, onClick, dim }: { on: boolean; label: string; onClick
   return (
     <button
       onClick={onClick}
+      aria-pressed={on}
       className={`rounded-full border px-3.5 py-2 text-sm font-medium transition active:scale-95 ${
         on
           ? "border-fuchsia-500 bg-fuchsia-600/20 text-fuchsia-200"
-          : `border-neutral-700 bg-neutral-900 ${dim ? "text-neutral-600" : "text-neutral-400"}`
+          : `border-neutral-700 bg-neutral-900 ${dim ? "text-neutral-500" : "text-neutral-400"}`
       }`}
     >
       {label}
@@ -36,7 +37,7 @@ function SectionHeader({ title, onAll, allOn }: { title: string; onAll: () => vo
   return (
     <div className="flex items-baseline justify-between">
       <h3 className="font-bold">{title}</h3>
-      <button onClick={onAll} className="text-sm text-fuchsia-400">
+      <button onClick={onAll} className="-m-2 p-2 text-sm text-fuchsia-400">
         {allOn ? "none" : "all"}
       </button>
     </div>
@@ -56,7 +57,7 @@ export default function FilterPage() {
   useEffect(() => {
     const s = loadState();
     if (s && Object.keys(s.votes).length > 0) {
-      setExisting({ votes: Object.values(s.votes).filter((t) => t.l + t.n > 0).length });
+      setExisting({ votes: countVotes(s.votes) });
       setFilters(s.filters);
     }
   }, []);
@@ -102,14 +103,18 @@ export default function FilterPage() {
 
       {existing && (
         <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-4">
-          <p className="text-sm text-neutral-300">You have a session with {existing.votes} votes.</p>
+          <p className="text-sm text-neutral-300">
+            You have a session with {existing.votes} vote{existing.votes === 1 ? "" : "s"}.
+          </p>
           <div className="mt-3 flex gap-2">
             <button onClick={() => router.push("/swipe")} className="flex-1 rounded-xl bg-fuchsia-600 py-2.5 font-semibold">
               Continue
             </button>
-            <button onClick={() => router.push("/results")} className="flex-1 rounded-xl bg-neutral-800 py-2.5 font-semibold">
-              See results
-            </button>
+            {existing.votes >= 1 && (
+              <button onClick={() => router.push("/results")} className="flex-1 rounded-xl bg-neutral-800 py-2.5 font-semibold">
+                See results
+              </button>
+            )}
           </div>
         </div>
       )}
@@ -238,7 +243,7 @@ export default function FilterPage() {
         >
           Start blind test
         </button>
-        <p className="mt-1.5 text-center text-xs text-neutral-600">
+        <p className="mt-1.5 text-center text-sm text-neutral-400">
           10 votes unlock your route — around 40 make it really yours. A new test resets the
           old one.
         </p>
