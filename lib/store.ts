@@ -2,7 +2,7 @@
 
 import type { SwipeState } from "./types";
 
-const KEY = "parademtach-state-v2";
+const KEY = "parademtach-state-v3";
 
 export function loadState(): SwipeState | null {
   if (typeof window === "undefined") return null;

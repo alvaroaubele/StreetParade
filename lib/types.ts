@@ -59,11 +59,13 @@ export interface DeckCard {
   appearances: { venue: string; venueType: VenueType; time: string | null; timeWindow?: string | null }[];
 }
 
-/** Like / nope / skip tallies per artist (an artist can appear on several cards). */
+/** Like / nope / skip / superlike tallies per artist (an artist can appear on several cards). */
 export interface VoteTally {
   l: number;
   n: number;
   s: number;
+  /** Superlikes — artist is guaranteed at least one appearance in the route. */
+  sl?: number;
 }
 
 export interface TimeBlock {

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { recommend, shareText, type Recommendation } from "@/lib/scoring";
+import { mapsRouteUrl } from "@/lib/geo";
 import { clearState, loadState } from "@/lib/store";
 import { ArtistLinks } from "@/components/ArtistLinks";
 
@@ -18,7 +19,7 @@ export default function ResultsPage() {
       router.replace("/");
       return;
     }
-    const n = Object.values(s.votes).filter((t) => t.l + t.n > 0).length;
+    const n = Object.values(s.votes).reduce((sum, t) => sum + t.l + t.n + (t.sl ?? 0), 0);
     setVoteCount(n);
     setRec(recommend(s.votes));
   }, [router]);
@@ -27,7 +28,8 @@ export default function ResultsPage() {
 
   const liked = rec.ranked.filter((r) => r.direct && r.score > 0);
   const discoveries = rec.ranked.filter((r) => !r.direct && r.score > 0.15).slice(0, 8);
-  const topMobiles = rec.mobiles.filter((m) => m.score > 0).slice(0, 5);
+  const topMobiles = rec.mobiles.filter((m) => m.starred || m.score > 0).slice(0, 5);
+  const mapsUrl = mapsRouteUrl(rec.timeline.map((b) => b.stage));
 
   const copyRoute = async () => {
     try {
@@ -58,12 +60,29 @@ export default function ResultsPage() {
             Based on {voteCount} votes — 40 gives the best match. You can keep swiping anytime.
           </p>
         )}
-        <button
-          onClick={copyRoute}
-          className="mt-4 w-full rounded-2xl border border-fuchsia-700/60 bg-fuchsia-950/30 py-3 font-bold text-fuchsia-200 transition active:scale-[0.98]"
-        >
-          {copied ? "Copied — paste it in the group chat ✓" : "📋 Copy route for the group chat"}
-        </button>
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          <button
+            onClick={copyRoute}
+            className="rounded-2xl border border-fuchsia-700/60 bg-fuchsia-950/30 px-2 py-3 text-sm font-bold text-fuchsia-200 transition active:scale-[0.98]"
+          >
+            {copied ? "Copied ✓" : "📋 Copy for the chat"}
+          </button>
+          {mapsUrl ? (
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener"
+              className="grid place-items-center rounded-2xl border border-sky-700/60 bg-sky-950/30 px-2 py-3 text-sm font-bold text-sky-200 transition active:scale-[0.98]"
+            >
+              🗺 Open in Google Maps
+            </a>
+          ) : (
+            <div />
+          )}
+        </div>
+        <p className="mt-1.5 text-xs text-neutral-600">
+          Map pins are approximate (~100 m) — the official app has exact spots.
+        </p>
       </header>
 
       <section>
@@ -74,7 +93,11 @@ export default function ResultsPage() {
             <div
               key={i}
               className={`flex items-center gap-3 rounded-xl border p-3 ${
-                b.score > 1.5 ? "border-fuchsia-700/60 bg-fuchsia-950/30" : "border-neutral-800 bg-neutral-900"
+                b.locked
+                  ? "border-amber-600/60 bg-amber-950/20"
+                  : b.score > 1.5
+                    ? "border-fuchsia-700/60 bg-fuchsia-950/30"
+                    : "border-neutral-800 bg-neutral-900"
               }`}
             >
               <div className="w-24 shrink-0 text-sm font-semibold text-neutral-400">
@@ -84,7 +107,7 @@ export default function ResultsPage() {
                 <p className="truncate font-bold">{b.artist}</p>
                 <p className="truncate text-sm text-neutral-400">{b.stage}</p>
               </div>
-              {b.score > 1.5 && <span className="shrink-0">🔥</span>}
+              {b.locked ? <span className="shrink-0">⭐</span> : b.score > 1.5 && <span className="shrink-0">🔥</span>}
             </div>
           ))}
         </div>
@@ -96,9 +119,14 @@ export default function ResultsPage() {
           <p className="mt-1 text-sm text-neutral-500">They roam the route — cross paths during their window.</p>
           <div className="mt-4 space-y-2">
             {topMobiles.map((m) => (
-              <div key={m.label} className="rounded-xl border border-neutral-800 bg-neutral-900 p-3">
+              <div
+                key={m.label}
+                className={`rounded-xl border p-3 ${
+                  m.starred ? "border-amber-600/60 bg-amber-950/20" : "border-neutral-800 bg-neutral-900"
+                }`}
+              >
                 <div className="flex items-baseline justify-between gap-2">
-                  <p className="font-bold">{m.label}</p>
+                  <p className="font-bold">{m.starred ? "⭐ " : ""}{m.label}</p>
                   {m.timeWindow && <p className="shrink-0 text-sm text-neutral-400">{m.timeWindow}</p>}
                 </div>
                 <p className="text-sm text-neutral-500">{m.styles}</p>
