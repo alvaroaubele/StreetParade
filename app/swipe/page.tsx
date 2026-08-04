@@ -308,11 +308,29 @@ export default function SwipePage() {
   const total = state.deck.length;
   const hasHistory = (state.history ?? []).length > 0;
 
+  // One audio element mounted in every branch, always at the same tree
+  // position, so React reuses the DOM node across reveal/blind/done
+  // switches. If it lived only inside the blind branch, the next card's
+  // load effect would fire while the reveal is up — into a null ref — and
+  // every snippet after the first would stay silent.
+  const audioEl = (
+    <audio
+      ref={audioRef}
+      onEnded={() => setPlaying(false)}
+      onTimeUpdate={(e) => {
+        const a = e.currentTarget;
+        if (a.duration) setProgress(a.currentTime / a.duration);
+      }}
+    />
+  );
+
   // ---------- reveal card ----------
   if (revealed) {
     const { card: c, vote: v } = revealed;
     const done = state.position >= total;
     return (
+      <>
+      {audioEl}
       <main className="flex min-h-dvh flex-col pt-10 pb-6">
         <Progress votedCount={votedCount} celebrate={celebrate} />
         <div
@@ -385,12 +403,15 @@ export default function SwipePage() {
           </button>
         </div>
       </main>
+      </>
     );
   }
 
   // ---------- deck exhausted ----------
   if (!card) {
     return (
+      <>
+      {audioEl}
       <main className="flex min-h-dvh flex-col items-center justify-center gap-4 text-center">
         <h2 className="text-2xl font-black">Deck complete</h2>
         <p className="text-neutral-300">{votedCount} votes in.</p>
@@ -407,6 +428,7 @@ export default function SwipePage() {
           </>
         )}
       </main>
+      </>
     );
   }
 
@@ -419,16 +441,10 @@ export default function SwipePage() {
   const flyY = flyOut === 2 ? -800 : drag.dy * 0.2;
 
   return (
+    <>
+    {audioEl}
     <main className="flex min-h-dvh select-none flex-col pt-10 pb-6">
       <Progress votedCount={votedCount} celebrate={celebrate} />
-      <audio
-        ref={audioRef}
-        onEnded={() => setPlaying(false)}
-        onTimeUpdate={(e) => {
-          const a = e.currentTarget;
-          if (a.duration) setProgress(a.currentTime / a.duration);
-        }}
-      />
       <div className="relative mt-6 flex flex-1 touch-none flex-col items-center justify-center">
         <div
           role="button"
@@ -505,6 +521,7 @@ export default function SwipePage() {
         </button>
       </div>
     </main>
+    </>
   );
 }
 
