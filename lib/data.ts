@@ -1,8 +1,10 @@
 import eventJson from "@/data/event.json";
 import catalogJson from "@/data/catalog.json";
-import type { Catalog, DeckCard, EventData, Venue } from "./types";
+import type { Catalog, DeckCard, EventData, Filters, SocialLink, TimeBlock } from "./types";
+export { normKey } from "./normalize.mjs";
+import { normKey } from "./normalize.mjs";
 
-export const eventData = eventJson as EventData;
+export const eventData = eventJson as unknown as EventData;
 export const catalog = catalogJson as unknown as Catalog;
 
 /** Canonical genres, each with keywords matched against venue style strings. */
@@ -36,13 +38,32 @@ export const allGenres: string[] = (() => {
   return GENRE_KEYWORDS.map(([g]) => g).filter((g) => s.has(g));
 })();
 
-export { normKey } from "./normalize.mjs";
-import { normKey } from "./normalize.mjs";
+export const TIME_BLOCKS: TimeBlock[] = [
+  { id: "early", label: "Early · 13–16", fromMin: 13 * 60, toMin: 16 * 60 },
+  { id: "afternoon", label: "Afternoon · 16–19", fromMin: 16 * 60, toMin: 19 * 60 },
+  { id: "evening", label: "Evening · 19–22", fromMin: 19 * 60, toMin: 22 * 60 },
+  { id: "night", label: "Night · 22–24", fromMin: 22 * 60, toMin: 24 * 60 },
+];
+
+export const venueLabel = (v: { type: string; num?: number | null; name: string }) =>
+  v.type === "mobile" ? `Love Mobile ${v.num ? "#" + v.num + " " : ""}${v.name}` : v.name;
+
+export const allStages = eventData.venues.filter((v) => v.type === "stage");
+export const allMobiles = eventData.venues.filter((v) => v.type === "mobile");
+
+const toMin = (t: string) => {
+  const [h, m] = t.split(":").map(Number);
+  return h * 60 + m;
+};
 
 export interface ArtistInfo {
   key: string;
   name: string;
   genres: string[];
+  venueNames: string[];
+  /** Set-start minutes (timed stage sets) and mobile windows [from,to]. */
+  setStarts: number[];
+  windows: [number, number][];
   appearances: DeckCard["appearances"];
 }
 
@@ -51,25 +72,68 @@ export const artistIndex: Map<string, ArtistInfo> = (() => {
   const map = new Map<string, ArtistInfo>();
   for (const v of eventData.venues) {
     const genres = stylesToGenres(v.styles);
+    const label = venueLabel(v);
+    let window: [number, number] | null = null;
+    const wm = v.timeWindow?.match(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/);
+    if (wm) window = [toMin(wm[1]), toMin(wm[2])];
     for (const a of v.artists) {
       const key = normKey(a.name);
       if (!key) continue;
-      const venueLabel = v.type === "mobile" ? `Love Mobile ${v.num ? "#" + v.num + " " : ""}${v.name}` : v.name;
-      const entry = map.get(key) ?? { key, name: a.name, genres: [], appearances: [] };
+      const entry =
+        map.get(key) ??
+        { key, name: a.name, genres: [], venueNames: [], setStarts: [], windows: [], appearances: [] };
       entry.genres = [...new Set([...entry.genres, ...genres])];
-      entry.appearances.push({
-        venue: venueLabel,
-        venueType: v.type,
-        time: a.time,
-        timeWindow: v.timeWindow ?? null,
-      });
+      if (!entry.venueNames.includes(v.name)) entry.venueNames.push(v.name);
+      if (a.time) entry.setStarts.push(toMin(a.time));
+      if (window) entry.windows.push(window);
+      entry.appearances.push({ venue: label, venueType: v.type, time: a.time, timeWindow: v.timeWindow ?? null });
       map.set(key, entry);
     }
   }
   return map;
 })();
 
-/** Mulberry32 — deterministic shuffle so a shared seed gives the same deck. */
+export function artistSocials(key: string): SocialLink[] {
+  return eventData.socials?.[key] ?? [];
+}
+
+export function defaultFilters(): Filters {
+  return {
+    genres: [...allGenres],
+    venues: eventData.venues.map((v) => v.name),
+    blocks: TIME_BLOCKS.map((b) => b.id),
+    artists: null,
+  };
+}
+
+function matchesBlocks(info: ArtistInfo, blockIds: string[]): boolean {
+  if (blockIds.length === TIME_BLOCKS.length) return true;
+  const blocks = TIME_BLOCKS.filter((b) => blockIds.includes(b.id));
+  // No timing info at all → can play any time; keep.
+  if (!info.setStarts.length && !info.windows.length) return true;
+  for (const b of blocks) {
+    if (info.setStarts.some((t) => t >= b.fromMin && t < b.toMin)) return true;
+    if (info.windows.some(([f, t]) => f < b.toMin && t > b.fromMin)) return true;
+  }
+  return false;
+}
+
+export function eligibleArtists(filters: Filters): ArtistInfo[] {
+  const genres = new Set(filters.genres);
+  const venues = new Set(filters.venues);
+  const whitelist = filters.artists ? new Set(filters.artists) : null;
+  const out: ArtistInfo[] = [];
+  for (const [key, info] of artistIndex) {
+    if (whitelist && !whitelist.has(key)) continue;
+    if (!info.genres.some((g) => genres.has(g))) continue;
+    if (!info.venueNames.some((v) => venues.has(v))) continue;
+    if (!matchesBlocks(info, filters.blocks)) continue;
+    out.push(info);
+  }
+  return out;
+}
+
+/** Mulberry32 — deterministic shuffle given a seed. */
 function rng(seed: number) {
   return () => {
     seed |= 0;
@@ -80,25 +144,45 @@ function rng(seed: number) {
   };
 }
 
-export function buildDeck(selectedGenres: string[], seed = Date.now()): DeckCard[] {
-  const chosen = new Set(selectedGenres);
+export function playableCount(filters: Filters): { snippets: number; artists: number } {
+  let snippets = 0, artists = 0;
+  for (const info of eligibleArtists(filters)) {
+    const cat = catalog.artists[info.key];
+    if (cat?.trusted && cat.tracks.length) {
+      artists++;
+      snippets += cat.tracks.length;
+    }
+  }
+  return { snippets, artists };
+}
+
+/**
+ * Deck = every (eligible artist, track) pair, shuffled, then spread so the
+ * same artist never appears back-to-back.
+ */
+export function buildDeck(filters: Filters, seed = Date.now()): DeckCard[] {
   const cards: DeckCard[] = [];
-  for (const [key, info] of artistIndex) {
-    const cat = catalog.artists[key];
+  for (const info of eligibleArtists(filters)) {
+    const cat = catalog.artists[info.key];
     if (!cat || !cat.trusted || !cat.tracks.length) continue;
-    if (!info.genres.some((g) => chosen.has(g))) continue;
-    cards.push({
-      artistKey: key,
-      artistName: info.name,
-      track: cat.tracks[Math.floor(rng(seed + key.length * 7919)() * cat.tracks.length)],
-      genres: info.genres,
-      appearances: info.appearances,
-    });
+    for (const track of cat.tracks)
+      cards.push({
+        artistKey: info.key,
+        artistName: info.name,
+        track,
+        genres: info.genres,
+        appearances: info.appearances,
+      });
   }
   const rand = rng(seed);
   for (let i = cards.length - 1; i > 0; i--) {
     const j = Math.floor(rand() * (i + 1));
     [cards[i], cards[j]] = [cards[j], cards[i]];
   }
-  return cards.slice(0, 40);
+  // Greedy de-clump: push a card one slot back when it repeats the previous artist.
+  for (let i = 1; i < cards.length - 1; i++) {
+    if (cards[i].artistKey === cards[i - 1].artistKey)
+      [cards[i], cards[i + 1]] = [cards[i + 1], cards[i]];
+  }
+  return cards;
 }

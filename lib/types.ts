@@ -16,10 +16,17 @@ export interface Venue {
   artists: VenueArtist[];
 }
 
+export interface SocialLink {
+  kind: "soundcloud" | "instagram" | "facebook" | "website" | "spotify" | "youtube" | "tiktok";
+  url: string;
+}
+
 export interface EventData {
   scrapedAt: string;
   event: { name: string; date: string };
+  headliners?: string[];
   venues: Venue[];
+  socials?: Record<string, SocialLink[]>;
 }
 
 export interface CatalogTrack {
@@ -43,7 +50,7 @@ export interface Catalog {
   artists: Record<string, CatalogArtist>;
 }
 
-/** One swipeable card: an artist with a playable track. */
+/** One swipeable card: an artist + one specific track. */
 export interface DeckCard {
   artistKey: string;
   artistName: string;
@@ -52,11 +59,33 @@ export interface DeckCard {
   appearances: { venue: string; venueType: VenueType; time: string | null; timeWindow?: string | null }[];
 }
 
-export type Vote = 1 | -1 | 0; // like | nope | skip
+/** Like / nope / skip tallies per artist (an artist can appear on several cards). */
+export interface VoteTally {
+  l: number;
+  n: number;
+  s: number;
+}
+
+export interface TimeBlock {
+  id: string;
+  label: string;
+  fromMin: number;
+  toMin: number;
+}
+
+export interface Filters {
+  genres: string[];
+  /** Venue names; missing name = deselected. */
+  venues: string[];
+  /** TimeBlock ids. */
+  blocks: string[];
+  /** null = all artists; otherwise whitelist of artist keys. */
+  artists: string[] | null;
+}
 
 export interface SwipeState {
-  selectedGenres: string[];
+  filters: Filters;
   deck: DeckCard[];
   position: number;
-  votes: Record<string, Vote>;
+  votes: Record<string, VoteTally>;
 }

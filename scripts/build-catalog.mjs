@@ -49,10 +49,10 @@ async function deezerLookup(name) {
     if (s > bestScore) { best = c; bestScore = s; }
   }
   if (!best || bestScore < 0.8) return null;
-  const top = await getJSON(`https://api.deezer.com/artist/${best.id}/top?limit=6`);
+  const top = await getJSON(`https://api.deezer.com/artist/${best.id}/top?limit=10`);
   const tracks = (top?.data ?? [])
     .filter((t) => t.preview)
-    .slice(0, 3)
+    .slice(0, 6)
     .map((t) => ({ provider: "deezer", trackId: String(t.id), title: t.title }));
   if (!tracks.length) return null;
   return {
@@ -68,7 +68,7 @@ async function deezerLookup(name) {
 async function itunesLookup(name) {
   const q = encodeURIComponent(name);
   const res = await getJSON(
-    `https://itunes.apple.com/search?term=${q}&entity=musicTrack&attribute=artistTerm&limit=8`
+    `https://itunes.apple.com/search?term=${q}&entity=musicTrack&attribute=artistTerm&limit=15`
   );
   const byArtist = new Map();
   for (const r of res?.results ?? []) {
@@ -77,7 +77,7 @@ async function itunesLookup(name) {
     if (s < 0.8) continue;
     if (!byArtist.has(r.artistName)) byArtist.set(r.artistName, { score: s, tracks: [] });
     const e = byArtist.get(r.artistName);
-    if (e.tracks.length < 3)
+    if (e.tracks.length < 6)
       e.tracks.push({ provider: "itunes", trackId: String(r.trackId), title: r.trackName });
   }
   let bestName = null, best = null;
@@ -143,7 +143,19 @@ for (const [key, displayName] of unique) {
   if (i % 20 === 0) console.log(`  ${i}/${unique.size} (${hits} trusted, ${generic} generic-flagged, ${misses} no preview)`);
 }
 
+// Trim the playable pool to exactly 369 snippets, shaving from the artists
+// with the most tracks first so nobody drops below their share.
+const POOL_TARGET = 369;
+const trusted = Object.values(catalog).filter((a) => a.trusted && a.tracks.length);
+let pool = trusted.reduce((n, a) => n + a.tracks.length, 0);
+while (pool > POOL_TARGET) {
+  trusted.sort((a, b) => b.tracks.length - a.tracks.length);
+  trusted[0].tracks.pop();
+  pool--;
+}
+
 writeFileSync(DATA + "catalog.json", JSON.stringify({ builtAt: new Date().toISOString(), artists: catalog }, null, 2));
 console.log(
-  `Done: ${hits} trusted matches, ${generic} generic-name flagged (kept out of deck), ${misses} without preview, of ${unique.size} artists.`
+  `Done: ${hits} trusted matches (${pool} playable snippets, target ${POOL_TARGET}), ` +
+    `${generic} generic-name flagged (kept out of deck), ${misses} without preview, of ${unique.size} artists.`
 );
