@@ -257,7 +257,7 @@ export default function ResultsPage() {
   );
 }
 
-/** Two-tap confirm: a stray tap must not erase up to 40 votes. */
+/** Two-tap confirm: a stray tap must not erase up to 50 votes. */
 function StartOverButton({ onConfirm }: { onConfirm: () => void }) {
   const [arm, setArm] = useState(false);
   useEffect(() => {

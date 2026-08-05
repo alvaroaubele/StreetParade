@@ -346,7 +346,7 @@ export default function SwipePage() {
         >
           {celebrate && (
             <p className="mb-3 rounded-xl border border-fuchsia-500/60 bg-fuchsia-950/40 p-3 text-center text-sm font-bold text-fuchsia-200">
-              🎉 Route unlocked — keep going, it gets sharper to 40
+              🎉 Route unlocked — keep going, it gets sharper to 50
             </p>
           )}
           <p
@@ -356,8 +356,10 @@ export default function SwipePage() {
           >
             {v === 2 ? "⭐ Superliked — locked into your route. It was" : v === 1 ? "Liked — it was" : v === -1 ? "Not for you — it was" : "Skipped — it was"}
           </p>
-          <h2 className="mt-2 text-3xl font-black">{c.artistName}</h2>
-          <p className="mt-1 text-lg text-neutral-300">“{c.track.title}”</p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-neutral-500">Artist</p>
+          <h2 className="mt-0.5 text-3xl font-black">{c.artistName}</h2>
+          <p className="mt-2.5 text-xs font-semibold uppercase tracking-widest text-neutral-500">Song</p>
+          <p className="mt-0.5 text-lg text-neutral-300">“{c.track.title}”</p>
           <div className="mt-4" onClick={(e) => e.stopPropagation()}>
             <ArtistLinks artistKey={c.artistKey} artistName={c.artistName} />
           </div>
