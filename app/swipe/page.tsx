@@ -80,6 +80,16 @@ export default function SwipePage() {
   const closeTutorial = useCallback(() => {
     localStorage.setItem(TUTORIAL_KEY, "1");
     setShowTutorial(false);
+    // Slow readers outlive the 30s snippet — restart it inside this
+    // gesture so nobody faces a silently stopped disc after "Got it".
+    const audio = audioRef.current;
+    if (audio && audio.src && audio.paused) {
+      audio.currentTime = 0;
+      audio.play().then(() => {
+        setPlaying(true);
+        setNeedsTap(false);
+      }).catch(() => {});
+    }
   }, []);
 
   const card = state && state.position < state.deck.length ? state.deck[state.position] : null;

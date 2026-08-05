@@ -53,19 +53,10 @@ export function SwipeTutorial({ onClose }: { onClose: () => void }) {
           </p>
         </div>
 
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500">The buttons do the same</p>
-          <ul className="mt-2 space-y-2">
-            <Row glyph="✕" color="text-rose-400"><b>Nope</b> — not your sound</Row>
-            <Row glyph="»" color="text-neutral-400"><b>Skip</b> — no opinion; doesn&apos;t count toward your route</Row>
-            <Row glyph="⭐" color="text-amber-400"><b>Superlike</b> — this artist must be on your route</Row>
-            <Row glyph="♥" color="text-emerald-400"><b>Like</b> — more of this</Row>
-          </ul>
-          <p className="mt-3 text-sm text-neutral-400">
-            After each vote the artist is revealed — tap the card to continue.
-            Mis-swiped? <b>Undo</b> appears under the disc and on the reveal.
-          </p>
-        </div>
+        <p className="text-sm text-neutral-400">
+          The buttons below the disc do the same. After each vote the artist is
+          revealed — tap the card to continue.
+        </p>
 
         <button
           onClick={onClose}
