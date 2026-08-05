@@ -5,10 +5,12 @@ import { useRouter } from "next/navigation";
 import { catalog, welcomeTrack } from "@/lib/data";
 import { countVotes, loadState, saveState } from "@/lib/store";
 import { ArtistLinks } from "@/components/ArtistLinks";
+import { SwipeTutorial } from "@/components/SwipeTutorial";
 import type { CatalogTrack, DeckCard, SwipeState, VoteTally } from "@/lib/types";
 
 const MIN_VOTES = 10;
-const OPTIMAL_VOTES = 40;
+const OPTIMAL_VOTES = 50;
+const TUTORIAL_KEY = "parademtach-tutorial-seen-v1";
 /** Deezer preview URLs live 15 min and arrive up to ~4 min old through the
  * CDN layers; hold them client-side only briefly. */
 const URL_TTL_MS = 2 * 60 * 1000;
@@ -58,6 +60,7 @@ export default function SwipePage() {
   const [celebrate, setCelebrate] = useState(false);
   const [drag, setDrag] = useState<{ dx: number; dy: number; active: boolean }>({ dx: 0, dy: 0, active: false });
   const [flyOut, setFlyOut] = useState<Vote | null>(null);
+  const [showTutorial, setShowTutorial] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const urlCache = useRef<Map<string, { url: string; at: number }>>(new Map());
   const dragStart = useRef<{ x: number; y: number } | null>(null);
@@ -69,7 +72,15 @@ export default function SwipePage() {
       return;
     }
     setState(s);
+    // First-timers get the walkthrough before their first snippet.
+    if (s.position === 0 && countVotes(s.votes) === 0 && localStorage.getItem(TUTORIAL_KEY) !== "1")
+      setShowTutorial(true);
   }, [router]);
+
+  const closeTutorial = useCallback(() => {
+    localStorage.setItem(TUTORIAL_KEY, "1");
+    setShowTutorial(false);
+  }, []);
 
   const card = state && state.position < state.deck.length ? state.deck[state.position] : null;
   const nextCard = state && state.position + 1 < state.deck.length ? state.deck[state.position + 1] : null;
@@ -262,6 +273,14 @@ export default function SwipePage() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement) return;
+      if (showTutorial) {
+        // Keys must not vote through the overlay; the usual closers close it.
+        if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
+          e.preventDefault();
+          closeTutorial();
+        }
+        return;
+      }
       if (revealed) {
         if (e.key === "Enter" || e.key === " " || e.key === "ArrowRight") {
           e.preventDefault();
@@ -282,7 +301,7 @@ export default function SwipePage() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [vote, undo, togglePlay, revealed]);
+  }, [vote, undo, togglePlay, revealed, showTutorial, closeTutorial]);
 
   // Drag gestures: right = like, left = nope, up = superlike.
   const onPointerDown = (e: React.PointerEvent) => {
@@ -449,8 +468,20 @@ export default function SwipePage() {
   return (
     <>
     {audioEl}
+    {showTutorial && <SwipeTutorial onClose={closeTutorial} />}
     <main className="flex min-h-dvh select-none flex-col pt-10 pb-6">
-      <Progress votedCount={votedCount} celebrate={celebrate} />
+      <div className="flex items-start gap-3">
+        <div className="flex-1">
+          <Progress votedCount={votedCount} celebrate={celebrate} />
+        </div>
+        <button
+          onClick={() => setShowTutorial(true)}
+          aria-label="how it works"
+          className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-neutral-700 bg-neutral-900 text-sm font-bold text-neutral-400 transition active:scale-95"
+        >
+          ?
+        </button>
+      </div>
       <div className="relative mt-6 flex flex-1 touch-none flex-col items-center justify-center">
         <div
           role="button"
