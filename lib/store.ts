@@ -8,6 +8,10 @@ export const countVotes = (votes: Record<string, VoteTally>) =>
   Object.values(votes).reduce((n, t) => n + t.l + t.n + (t.sl ?? 0), 0);
 
 const KEY = "parademtach-state-v3";
+/** "Walkthrough dismissed for the current test" — cleared by clearState so
+ * every new blind test opens with the tutorial, while reloads mid-test
+ * (dismissed but not yet voted) stay quiet. */
+export const TUTORIAL_KEY = "parademtach-tutorial-seen-v1";
 
 export function loadState(): SwipeState | null {
   if (typeof window === "undefined") return null;
@@ -30,5 +34,6 @@ export function saveState(state: SwipeState) {
 export function clearState() {
   try {
     localStorage.removeItem(KEY);
+    localStorage.removeItem(TUTORIAL_KEY);
   } catch {}
 }
