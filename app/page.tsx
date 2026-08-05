@@ -50,6 +50,7 @@ const toggle = (list: string[], item: string) =>
 export default function FilterPage() {
   const router = useRouter();
   const [filters, setFilters] = useState<Filters>(defaultFilters);
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [advancedOpen, setAdvancedOpen] = useState(false);
   const [artistQuery, setArtistQuery] = useState("");
   const [existing, setExisting] = useState<{ votes: number } | null>(null);
@@ -101,7 +102,7 @@ export default function FilterPage() {
         </p>
       </header>
 
-      {existing && (
+      {existing ? (
         <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-4">
           <p className="text-sm text-neutral-300">
             You have a session with {existing.votes} vote{existing.votes === 1 ? "" : "s"}.
@@ -117,33 +118,55 @@ export default function FilterPage() {
             )}
           </div>
         </div>
+      ) : (
+        <button
+          onClick={start}
+          disabled={snippets === 0}
+          className="rounded-2xl bg-fuchsia-600 py-3.5 text-lg font-bold transition active:scale-[0.98] disabled:opacity-40"
+        >
+          Start blind test
+        </button>
       )}
 
-      <section className="space-y-3">
-        <SectionHeader
-          title="Styles"
-          allOn={filters.genres.length === allGenres.length}
-          onAll={() => set({ genres: filters.genres.length === allGenres.length ? [] : [...allGenres] })}
-        />
-        <div className="flex flex-wrap gap-2">
-          {allGenres.map((g) => (
-            <Chip key={g} on={filters.genres.includes(g)} label={g} onClick={() => set({ genres: toggle(filters.genres, g) })} />
-          ))}
-        </div>
-      </section>
+      <section className="rounded-2xl border border-neutral-800">
+        <button
+          onClick={() => setFiltersOpen((o) => !o)}
+          className="flex w-full items-center justify-between p-4"
+          aria-expanded={filtersOpen}
+        >
+          <span className="font-bold">Filters</span>
+          <span className="text-sm text-neutral-500">
+            {filtersOpen ? "hide" : "styles · time of day · more"} {filtersOpen ? "▴" : "▾"}
+          </span>
+        </button>
 
-      <section className="space-y-3">
-        <SectionHeader
-          title="Time of day"
-          allOn={filters.blocks.length === TIME_BLOCKS.length}
-          onAll={() => set({ blocks: filters.blocks.length === TIME_BLOCKS.length ? [] : TIME_BLOCKS.map((b) => b.id) })}
-        />
-        <div className="flex flex-wrap gap-2">
-          {TIME_BLOCKS.map((b) => (
-            <Chip key={b.id} on={filters.blocks.includes(b.id)} label={b.label} onClick={() => set({ blocks: toggle(filters.blocks, b.id) })} />
-          ))}
-        </div>
-      </section>
+        {filtersOpen && (
+          <div className="space-y-6 border-t border-neutral-800 p-4">
+            <div className="space-y-3">
+              <SectionHeader
+                title="Styles"
+                allOn={filters.genres.length === allGenres.length}
+                onAll={() => set({ genres: filters.genres.length === allGenres.length ? [] : [...allGenres] })}
+              />
+              <div className="flex flex-wrap gap-2">
+                {allGenres.map((g) => (
+                  <Chip key={g} on={filters.genres.includes(g)} label={g} onClick={() => set({ genres: toggle(filters.genres, g) })} />
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <SectionHeader
+                title="Time of day"
+                allOn={filters.blocks.length === TIME_BLOCKS.length}
+                onAll={() => set({ blocks: filters.blocks.length === TIME_BLOCKS.length ? [] : TIME_BLOCKS.map((b) => b.id) })}
+              />
+              <div className="flex flex-wrap gap-2">
+                {TIME_BLOCKS.map((b) => (
+                  <Chip key={b.id} on={filters.blocks.includes(b.id)} label={b.label} onClick={() => set({ blocks: toggle(filters.blocks, b.id) })} />
+                ))}
+              </div>
+            </div>
 
       <section className="rounded-2xl border border-neutral-800">
         <button
@@ -151,7 +174,7 @@ export default function FilterPage() {
           className="flex w-full items-center justify-between p-4"
           aria-expanded={advancedOpen}
         >
-          <span className="font-bold">Advanced</span>
+          <span className="font-bold">Advanced Filters</span>
           <span className="text-sm text-neutral-500">
             {advancedOpen ? "hide" : "stages · love mobiles · artists"} {advancedOpen ? "▴" : "▾"}
           </span>
@@ -234,6 +257,9 @@ export default function FilterPage() {
           </div>
         )}
       </section>
+          </div>
+        )}
+      </section>
 
       <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md border-t border-neutral-800 bg-[#0a0a0f]/95 px-4 py-3 backdrop-blur">
         <button
@@ -244,7 +270,7 @@ export default function FilterPage() {
           Start blind test
         </button>
         <p className="mt-1.5 text-center text-sm text-neutral-400">
-          10 votes unlock your route — around 40 make it really yours. A new test resets the
+          10 votes unlock your route — around 50 make it really yours. A new test resets the
           old one.
         </p>
       </div>
