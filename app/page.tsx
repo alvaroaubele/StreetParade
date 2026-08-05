@@ -50,7 +50,9 @@ const toggle = (list: string[], item: string) =>
 export default function FilterPage() {
   const router = useRouter();
   const [filters, setFilters] = useState<Filters>(defaultFilters);
-  const [filtersOpen, setFiltersOpen] = useState(false);
+  // Open for first-timers so the options are discoverable; returning
+  // visitors (who already shaped their filters) get the compact view.
+  const [filtersOpen, setFiltersOpen] = useState(true);
   const [advancedOpen, setAdvancedOpen] = useState(false);
   const [artistQuery, setArtistQuery] = useState("");
   const [existing, setExisting] = useState<{ votes: number } | null>(null);
@@ -60,6 +62,7 @@ export default function FilterPage() {
     if (s && Object.keys(s.votes).length > 0) {
       setExisting({ votes: countVotes(s.votes) });
       setFilters(s.filters);
+      setFiltersOpen(false);
     }
   }, []);
 
