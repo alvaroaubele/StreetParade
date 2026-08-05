@@ -3,14 +3,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { catalog, welcomeTrack } from "@/lib/data";
-import { countVotes, loadState, saveState } from "@/lib/store";
+import { TUTORIAL_KEY, countVotes, loadState, saveState } from "@/lib/store";
 import { ArtistLinks } from "@/components/ArtistLinks";
 import { SwipeTutorial } from "@/components/SwipeTutorial";
 import type { CatalogTrack, DeckCard, SwipeState, VoteTally } from "@/lib/types";
 
 const MIN_VOTES = 10;
 const OPTIMAL_VOTES = 50;
-const TUTORIAL_KEY = "parademtach-tutorial-seen-v1";
 /** Deezer preview URLs live 15 min and arrive up to ~4 min old through the
  * CDN layers; hold them client-side only briefly. */
 const URL_TTL_MS = 2 * 60 * 1000;
